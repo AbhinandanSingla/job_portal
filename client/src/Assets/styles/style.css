@@ -1,0 +1,520 @@
+
+.navbar .max-width {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.nav-logo img {
+  width: 8rem;
+}
+
+.navsContainer li {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+.navs a{
+  text-decoration: none;
+  color: #000;
+}
+.home .max-width {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  align-items: center;
+}
+
+.h_side svg {
+  width: 60rem;
+}
+
+.h_main_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 100px;
+  color: #262626;
+}
+
+.h_sub_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  color: rgba(75, 75, 75, 0.8);
+  padding: 4rem 0;
+}
+
+.h_btns {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem 3.5rem;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  background: #6083fe;
+  border-radius: 10px;
+}
+
+.h_postJob {
+  margin-left: 4rem;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: #6083fe;
+}
+
+.ec_contents {
+  padding: 0 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.ec_main_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 74px;
+  color: #262626;
+}
+
+.ec_sub_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  padding-left: 2rem;
+  color: rgba(38, 38, 38, 0.8);
+  width: 30rem;
+}
+
+.ec_allCat {
+  margin-left: auto;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+
+  color: #4377fd;
+}
+
+.ec_categoryContainer {
+  position: relative;
+  margin-top: 4rem;
+  height: 50vh;
+  display: flex;
+  background: #dfe6ff;
+  align-items: center;
+  padding: 0 4rem;
+  z-index: -1;
+  justify-content: space-around;
+}
+
+.ec_card {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ec_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+
+  color: #262626;
+}
+
+.ec_Sub {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  padding: 2rem;
+  color: #6d6d6d;
+}
+
+.ec_btn {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background: #4377fd;
+  bottom: -8%;
+  right: 20%;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ec_dec {
+  top: -5%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ec_dec_card {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(96, 131, 254, 0.15);
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.steps .max-width {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps_heading {
+  display: flex;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 74px;
+  color: #262626;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.stepsContainer {
+  gap: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.stepsContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+
+  color: #262626;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.step span {
+  padding: 0 3rem;
+}
+
+.step_acc {
+  margin-left: auto;
+}
+
+.step_head {
+  display: flex;
+}
+
+.popularJobs {
+}
+
+.popularJobs .max-width {
+  margin-top: 8rem;
+  width: 100%;
+  position: relative;
+  padding: 6rem 0;
+}
+
+.pj_content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pj_content div {
+  display: flex;
+  align-items: center;
+}
+
+.pj_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 74px;
+  color: #262626;
+}
+
+.pj_sub {
+  width: 30rem;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  /* or 183% */
+  margin-left: 6rem;
+
+  color: rgba(38, 38, 38, 0.8);
+}
+
+.pj_back {
+  top: -10%;
+  position: absolute;
+  width: 70%;
+  height: 45vh;
+  background: #6083fe;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.pj_card {
+  background: #fff;
+  width: 28rem;
+  height: 20rem;
+  padding: 2rem;
+  box-shadow: 26px 64px 87px -21px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.pj_container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pj_card_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+}
+
+.pj_card_postion {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+
+  color: #6d6d6d;
+}
+
+.pj_view {
+  font-family: var(--Inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #6d6d6d;
+}
+
+.pj_bts {
+  display: flex;
+  align-items: center;
+}
+
+.pj_apply {
+  padding: 0.8rem 3rem;
+  margin-left: 2rem;
+  background: #4377fd;
+  opacity: 0.2;
+  border-radius: 8px;
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 25px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+
+  color: #000000;
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+}
+
+.news .max-width {
+  width: 60%;
+  height: 50vh;
+  background: #dfe6ff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.news_heading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 74px;
+  text-align: center;
+  color: #262626;
+}
+
+.news_bar {
+  display: flex;
+  width: 70%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.news_bar input {
+  outline: none;
+  border: none;
+
+  width: 100%;
+  height: 4rem;
+  padding: 1rem 8rem;
+}
+
+.nb_sub {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding: 1rem 4rem;
+  background: #4377fd;
+  border-radius: 10px;
+}
+
+.footer {
+  background: #262626;
+}
+
+.footerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.footer .navbar {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-around;
+}
+
+.footer .navs {
+  color: #fff;
+}
+
+.footerHeading {
+  font-family: var(--OpenSans);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 100px;
+  /* or 138% */
+
+  padding: 2rem 0;
+  color: #ffffff;
+}
+
+.jobNav {
+  padding: 1rem 0;
+  list-style: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 170.53%;
+  /* or 34px */
+
+  letter-spacing: 0.5px;
+
+  color: #e0e0e0;
+}
+
+.jobHead {
+  list-style: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 170.53%;
+  /* identical to box height, or 41px */
+
+  letter-spacing: 0.5px;
+
+  color: #8b8b8b;
+}
+.footnav {
+  font-family: var(--OpenSans);
+  color: #fff;
+  font-size: 2rem;
+}
