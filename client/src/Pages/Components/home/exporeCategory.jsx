@@ -1,30 +1,32 @@
-export function ExporeCategory(){
-    return(<section className="exploreCategory">
-            <div className="max-width">
-                <div className="ec_contents">
-                    <div className="ec_main_heading" data-aos="fade-right">
+import homeStyle from '../../../Assets/styles/style.module.css';
+
+export function ExporeCategory() {
+    return (<section>
+            <div>
+                <div className={homeStyle.ec_contents}>
+                    <div className={homeStyle.ec_main_heading} data-aos="fade-right">
                         Explore by
                         <br/>
                         category
                     </div>
-                    <div className="ec_sub_heading" data-aos="fade-right">
+                    <div className={homeStyle.ec_sub_heading} data-aos="fade-right">
                         Find your dream job according to your skills based on the categories
                         below
                     </div>
-                    <div className="ec_allCat" data-aos="fade-left">
+                    <div className={homeStyle.ec_allCat} data-aos="fade-left">
                         See all
                         <br/>
                         category here
                     </div>
                 </div>
-                <div className="ec_categoryContainer" data-aos="fade-up">
-                    <div className="ec_dec">
-                        <div className="ec_dec_card"></div>
-                        <div className="ec_dec_card"></div>
-                        <div className="ec_dec_card"></div>
-                        <div className="ec_dec_card"></div>
+                <div className={homeStyle.ec_categoryContainer} data-aos="fade-up">
+                    <div className={homeStyle.ec_dec}>
+                        <div className={homeStyle.ec_dec_card}></div>
+                        <div className={homeStyle.ec_dec_card}></div>
+                        <div className={homeStyle.ec_dec_card}></div>
+                        <div className={homeStyle.ec_dec_card}></div>
                     </div>
-                    <div className="ec_card">
+                    <div className={homeStyle.ec_card}>
                         <svg
                             width="33"
                             height="27"
@@ -37,13 +39,13 @@ export function ExporeCategory(){
                                 fill="#8B8B8B"
                             ></path>
                         </svg>
-                        <div className="ec_heading">Category 1</div>
-                        <div className="ec_Sub">do web, mobile, desktop and other programming</div>
-                        <div className="ec_btn">
+                        <div className={homeStyle.ec_heading}>Category 1</div>
+                        <div className={homeStyle.ec_Sub}>do web, mobile, desktop and other programming</div>
+                        <div className={homeStyle.ec_btn}>
                             <i className="fas fa-arrow-right"></i>
                         </div>
                     </div>
-                    <div className="ec_card">
+                    <div className={homeStyle.ec_card}>
                         <svg
                             width="33"
                             height="27"
@@ -56,13 +58,13 @@ export function ExporeCategory(){
                                 fill="#8B8B8B"
                             ></path>
                         </svg>
-                        <div className="ec_heading">Category 1</div>
-                        <div className="ec_Sub">do web, mobile, desktop and other programming</div>
-                        <div className="ec_btn">
+                        <div className={homeStyle.ec_heading}>Category 1</div>
+                        <div className={homeStyle.ec_Sub}>do web, mobile, desktop and other programming</div>
+                        <div className={homeStyle.ec_btn}>
                             <i className="fas fa-arrow-right"></i>
                         </div>
                     </div>
-                    <div className="ec_card">
+                    <div className={homeStyle.ec_card}>
                         <svg
                             width="33"
                             height="27"
@@ -75,13 +77,13 @@ export function ExporeCategory(){
                                 fill="#8B8B8B"
                             ></path>
                         </svg>
-                        <div className="ec_heading">Category 1</div>
-                        <div className="ec_Sub">do web, mobile, desktop and other programming</div>
-                        <div className="ec_btn">
+                        <div className={homeStyle.ec_heading}>Category 1</div>
+                        <div className={homeStyle.ec_Sub}>do web, mobile, desktop and other programming</div>
+                        <div className={homeStyle.ec_btn}>
                             <i className="fas fa-arrow-right"></i>
                         </div>
                     </div>
-                    <div className="ec_card">
+                    <div className={homeStyle.ec_card}>
                         <svg
                             width="33"
                             height="27"
@@ -94,13 +96,12 @@ export function ExporeCategory(){
                                 fill="#8B8B8B"
                             ></path>
                         </svg>
-                        <div className="ec_heading">Category 1</div>
-                        <div className="ec_Sub">do web, mobile, desktop and other programming</div>
-                        <div className="ec_btn">
+                        <div className={homeStyle.ec_heading}>Category 1</div>
+                        <div className={homeStyle.ec_Sub}>do web, mobile, desktop and other programming</div>
+                        <div className={homeStyle.ec_btn}>
                             <i className="fas fa-arrow-right"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

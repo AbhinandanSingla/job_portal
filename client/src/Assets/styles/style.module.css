@@ -1,5 +1,5 @@
 
-.navbar .max-width {
+.navbar .max_width {
   position: absolute;
   width: 100%;
   display: flex;
@@ -7,7 +7,7 @@
   padding: 2rem 4rem;
 }
 
-.nav-logo img {
+.nav_logo img {
   width: 8rem;
 }
 
@@ -26,7 +26,7 @@
   text-decoration: none;
   color: #000;
 }
-.home .max-width {
+.home .max_width {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -205,7 +205,7 @@
   z-index: 99;
 }
 
-.steps .max-width {
+.steps .max_width {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -270,7 +270,7 @@
 .popularJobs {
 }
 
-.popularJobs .max-width {
+.popularJobs .max_width {
   margin-top: 8rem;
   width: 100%;
   position: relative;
@@ -400,7 +400,7 @@
   align-items: center;
 }
 
-.news .max-width {
+.news .max_width {
   width: 60%;
   height: 50vh;
   background: #dfe6ff;

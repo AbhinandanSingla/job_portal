@@ -1,14 +1,16 @@
-export function PopularJobs(){
-    return(<section className="popularJobs">
-            <div className="max-width">
-                <div className="pj_back"></div>
-                <div className="pj_content">
+import homeStyle from '../../../Assets/styles/style.module.css';
+
+export function PopularJobs() {
+    return (<section className={homeStyle.popularJobs}>
+            <div className={homeStyle.max_width}>
+                <div className={homeStyle.pj_back}></div>
+                <div className={homeStyle.pj_content}>
                     <div>
-                        <div className="pj_heading">
+                        <div className={homeStyle.pj_heading}>
                             Recent most
                             <br/>popular job
                         </div>
-                        <div className="pj_sub">
+                        <div className={homeStyle.pj_sub}>
                             Find your dream job according to your skills based on the
                             categories below
                         </div>
@@ -19,8 +21,8 @@ export function PopularJobs(){
                         job here
                     </div>
                 </div>
-                <div className="pj_container">
-                    <div className="pj_card">
+                <div className={homeStyle.pj_container}>
+                    <div className={homeStyle.pj_card}>
                         <svg
                             width="60"
                             height="60"
@@ -43,14 +45,14 @@ export function PopularJobs(){
                                 fill="white"
                             ></path>
                         </svg>
-                        <div className="pj_card_heading">
+                        <div className={homeStyle.pj_card_heading}>
                             Position
                         </div>
-                        <div className="pj_card_postion">
+                        <div className={homeStyle.pj_card_postion}>
                             Position
                         </div>
-                        <div className="pj_bts">
-                            <div className="pj_view">
+                        <div className={homeStyle.pj_bts}>
+                            <div className={homeStyle.pj_view}>
                                 <svg
                                     width="18"
                                     height="18"
@@ -69,13 +71,13 @@ export function PopularJobs(){
                                 </svg>
                                 150 applied
                             </div>
-                            <div className="pj_apply">
+                            <div className={homeStyle.pj_apply}>
                                 Apply
                             </div>
                         </div>
 
                     </div>
-                    <div className="pj_card">
+                    <div className={homeStyle.pj_card}>
                         <svg
                             width="60"
                             height="60"
@@ -98,14 +100,14 @@ export function PopularJobs(){
                                 fill="white"
                             ></path>
                         </svg>
-                        <div className="pj_card_heading">
+                        <div className={homeStyle.pj_card_heading}>
                             Position
                         </div>
-                        <div className="pj_card_postion">
+                        <div className={homeStyle.pj_card_postion}>
                             Position
                         </div>
-                        <div className="pj_bts">
-                            <div className="pj_view">
+                        <div className={homeStyle.pj_bts}>
+                            <div className={homeStyle.pj_view}>
                                 <svg
                                     width="18"
                                     height="18"
@@ -124,13 +126,13 @@ export function PopularJobs(){
                                 </svg>
                                 150 applied
                             </div>
-                            <div className="pj_apply">
+                            <div className={homeStyle.pj_apply}>
                                 Apply
                             </div>
                         </div>
 
                     </div>
-                    <div className="pj_card">
+                    <div className={homeStyle.pj_card}>
                         <svg
                             width="60"
                             height="60"
@@ -153,14 +155,14 @@ export function PopularJobs(){
                                 fill="white"
                             ></path>
                         </svg>
-                        <div className="pj_card_heading">
+                        <div className={homeStyle.pj_card_heading}>
                             Position
                         </div>
-                        <div className="pj_card_postion">
+                        <div className={homeStyle.pj_card_postion}>
                             Position
                         </div>
-                        <div className="pj_bts">
-                            <div className="pj_view">
+                        <div className={homeStyle.pj_bts}>
+                            <div className={homeStyle.pj_view}>
                                 <svg
                                     width="18"
                                     height="18"
@@ -179,7 +181,7 @@ export function PopularJobs(){
                                 </svg>
                                 150 applied
                             </div>
-                            <div className="pj_apply">
+                            <div className={homeStyle.pj_apply}>
                                 Apply
                             </div>
                         </div>
