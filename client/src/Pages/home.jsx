@@ -1,4 +1,3 @@
-import '../Assets/styles/style.css';
 import {Navbar} from "./Components/home/Navbar";
 import {LandingPage} from "./Components/home/landingPage";
 import {ExporeCategory} from "./Components/home/exporeCategory";

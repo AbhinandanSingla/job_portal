@@ -1,9 +1,11 @@
-export function LandingPage(){
-    return(<section className="home">
-            <div className="max-width">
+import homeStyle from '../../../Assets/styles/style.module.css';
+
+export function LandingPage() {
+    return (<section className={homeStyle.home}>
+            <div className={homeStyle.max_width}>
                 <div className="home_content">
                     <div
-                        className="h_main_heading"
+                        className={homeStyle.h_main_heading}
                         data-aos="fade-up"
                         data-aos-duration="800"
                     >
@@ -13,14 +15,14 @@ export function LandingPage(){
                         <br/>
                         here
                     </div>
-                    <div className="h_sub_heading" data-aos="fade-up">
+                    <div className={homeStyle.h_sub_heading} data-aos="fade-up">
                         Doing a job that is loved and paid for is everyone's dream.
                         <br/>
                         find your dream job here
                     </div>
-                    <div className="h_btns">
-                        <div className="btn h_fj">Find a job</div>
-                        <div className="h_postJob">Post job</div>
+                    <div className={homeStyle.h_btns}>
+                        <div className={homeStyle.btn}>Find a job</div>
+                        <div className={homeStyle.h_postJob}>Post job</div>
                     </div>
                 </div>
                 <div className="h_side">
@@ -301,7 +303,6 @@ export function LandingPage(){
                             </filter>
                         </defs>
                     </svg>
-
                 </div>
             </div>
         </section>

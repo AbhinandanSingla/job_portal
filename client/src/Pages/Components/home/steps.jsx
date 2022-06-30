@@ -1,8 +1,10 @@
+import homeStyle from '../../../Assets/styles/style.module.css';
+
 export function Steps() {
-    return (<section className="steps">
-            <div className="max-width">
-                <div className="step_head">
-                    <div className="steps_heading">
+    return (<section className={homeStyle.steps}>
+            <div className={homeStyle.max_width}>
+                <div className={homeStyle.step_head}>
+                    <div className={homeStyle.steps_heading}>
                         Simple steps
                         <br/>
                         to get your job
@@ -13,7 +15,7 @@ export function Steps() {
                         // <!--            </div>-->
                     }</div>
 
-                <div className="stepsContainer">
+                <div className={homeStyle.stepsContainer}>
                     <svg
                         width="590"
                         height="353"
@@ -29,8 +31,8 @@ export function Steps() {
                             fill="#4377FD"
                         ></rect>
                     </svg>
-                    <div className="stepsContent">
-                        <div className="step">
+                    <div className={homeStyle.stepsContent}>
+                        <div className={homeStyle.step}>
                             <svg
                                 width="28"
                                 height="32"
@@ -56,7 +58,7 @@ export function Steps() {
                             </svg>
                             <span> Create your account</span>
                         </div>
-                        <div className="step">
+                        <div className={homeStyle.step}>
                             <svg
                                 width="32"
                                 height="29"
@@ -79,7 +81,7 @@ export function Steps() {
 
                             <span> Search your dream job</span>
                         </div>
-                        <div className="step">
+                        <div className={homeStyle.step}>
                             <svg
                                 width="32"
                                 height="32"

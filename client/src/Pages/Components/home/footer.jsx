@@ -1,34 +1,36 @@
-export function Footer(){
-    return(<section className="footer">
-            <div className="navbar">
-                <div className="footnav">
+import homeStyle from '../../../Assets/styles/style.module.css';
+
+export function Footer() {
+    return (<section className={homeStyle.footer}>
+            <div>
+                <div className={homeStyle.footnav}>
                     ROZGAR
                 </div>
-                <ul className="navsContainer">
-                    <li className="navs">Home</li>
-                    <li className="navs">Category</li>
-                    <li className="navs">Explore</li>
-                    <li className="navs">Post a job</li>
+                <ul className={homeStyle.navsContainer}>
+                    <li className={homeStyle.navs}>Home</li>
+                    <li className={homeStyle.navs}>Category</li>
+                    <li className={homeStyle.navs}>Explore</li>
+                    <li className={homeStyle.navs}>Post a job</li>
                 </ul>
             </div>
-            <div className="footerContainer">
-                <div className="footerHeading">
+            <div className={homeStyle.footerContainer}>
+                <div className={homeStyle.footerHeading}>
                     Find your dream
                     <br/>
                     job here
                 </div>
-                <div className="footerJob">
+                <div>
                     <ul>
-                        <li className="jobNav jobHead">
+                        <li className={`${homeStyle.jobNav}  ${homeStyle.jobHead}`}>
                             Get a job
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Create account
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Search job
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Make a deal
                         </li>
 
@@ -36,22 +38,21 @@ export function Footer(){
                 </div>
                 <div className="footerJob">
                     <ul>
-                        <li className="jobNav jobHead">
+                        <li className={`${homeStyle.jobNav} ${homeStyle.jobHead}`}>
                             Support
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Customer services
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Email us
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Privacy policy
                         </li>
-                        <li className="jobNav">
+                        <li className={homeStyle.jobNav}>
                             Terms and conditions
                         </li>
-
                     </ul>
                 </div>
 
