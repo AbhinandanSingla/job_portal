@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import loginModule from "../Assets/styles/login.module.css";
-import loginPic from "../Assets/Images/login/objects.png";
-import ellipse from "../Assets/Images/login/Ellipse14.png";
 import { useState } from "react";
 
 export function Login() {
