@@ -108,7 +108,7 @@ export function Login() {
 
             <div className={loginModule.register}>
               <p>Don't have an account?</p>
-              <NavLink to="/register" className={loginModule.register_link}>
+              <NavLink to={"/register"} className={loginModule.register_link}>
                 Register here
               </NavLink>
             </div>
