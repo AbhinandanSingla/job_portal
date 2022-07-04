@@ -97,8 +97,6 @@ section .contentBox .formBox .inputBox input {
   font-size: 16px;
   letter-spacing: 1px;
   background: transparent;
-
-  /* border-radius: 2rem; */
 }
 section .contentBox .formBox .inputBox input[type="submit"] {
   background: #023aae;
