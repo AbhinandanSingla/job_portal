@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Open+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Padauk:wght@400;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -13,7 +13,6 @@
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -29,4 +28,5 @@
     font-size: 62.4%;
     --Inter: "Inter", sans-serif;
     --OpenSans: "Open Sans", sans-serif;
+    --Padauk: 'Padauk', sans-serif;
 }

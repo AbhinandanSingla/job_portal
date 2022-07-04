@@ -48,7 +48,7 @@ export function Login() {
     );
 
   const renderForm = (
-    <section>
+    <section className={loginModule.LoginSection}>
       <div className={loginModule.contentBox}>
         <div className={loginModule.formBox}>
           <h2>Sign In</h2>
