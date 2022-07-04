@@ -1,9 +1,5 @@
 import compareStyle from '../Assets/styles/compare.module.css';
 import {Swiper, SwiperSlide} from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-
 export function BookContainer() {
     return (<div className={compareStyle.bookmarkContainer} style="display: none">
             <div className={compareStyle.matchSection}>
