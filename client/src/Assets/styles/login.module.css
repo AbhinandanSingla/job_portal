@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Poppins:wght@200;300;400&family=Smooch+Sans:wght@500&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.LoginSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/* section .login_image {
+  position: relative;
+  height: 100%;
+  background: #023bae;
+  
+} */
+
+section .login_right_side {
+  position: relative;
+  height: 100%;
+  background: #023bae;
+  width: 60%;
+}
+
+.login_right_heading {
+  margin-top: 15%;
+  text-align: center;
+  font-size: 48px;
+  color: #fff;
+}
+
+.login_right_text {
+  text-align: left;
+  padding: 0px 5px;
+  font-size: 16px;
+  width: 30%;
+  align-items: center;
+  margin-left: 27%;
+  color: rgba(255, 255, 255, 0.863);
+}
+
+/* section .login_image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #023bae73);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+section .login_image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+} */
+
+.LoginSection .contentBox {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginSection .contentBox .formBox {
+  width: 50%;
+}
+.LoginSection .contentBox .formBox h2 {
+  font-weight: 600;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border-bottom: 4px;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+.LoginSection .contentBox .formBox .inputBox {
+  margin-bottom: 20px;
+}
+.LoginSection .contentBox .formBox .inputBox input {
+  width: 90%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid black;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: transparent;
+
+  /* border-radius: 2rem; */
+}
+.LoginSection .contentBox .formBox .inputBox input[type="submit"] {
+  background: #023aae;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.LoginSection .contentBox .formBox .inputBox input[type="submit"]:hover {
+  background: #023bae72;
+
+  color: rgb(0, 0, 0);
+}
+
+.LoginSection .contentBox .formBox .remember {
+  margin-bottom: 10px;
+  margin-top: 60px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+}
+.LoginSection p {
+  margin-bottom: 20px;
+}
+.LoginSection .contentBox .formBox .inputBox i {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.register {
+  border: 5px;
+}
+.register p {
+  display: inline-block;
+  opacity: 0.7;
+}
+
+.register_link {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .LoginSection .contentBox .formBox h2 {
+    font-size: 50px;
+  }
+  .LoginSection .contentBox .formBox {
+    position: absolute;
+    width: 50%;
+    height: 1%;
+    margin-left: 65%;
+    font-size: 18px;
+  }
+  .LoginSection .login_right_side {
+    position: absolute;
+    height: 40%;
+    background: #023bae;
+    width: 100%;
+  }
+  .login_right_text {
+    text-align: center;
+    font-size: 26px;
+    width: 100%;
+    display: inline;
+    color: rgba(255, 255, 255, 0.863);
+  }
+  .login_right_heading {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+  }
+  .LoginSection {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contentBox {
+    width: 100%;
+  }
+  .LoginSection .login_right_side {
+    display: none;
+    width: 0;
+  }
+  .LoginSection .contentBox .formBox {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
