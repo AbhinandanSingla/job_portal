@@ -13,9 +13,9 @@ export function LandingPage() {
                         data-aos="fade-up"
                         data-aos-duration="800"
                     >
-                        Find your
+                        Find your&nbsp;
                         <span className={homeStyle.break}>
-                            &nbsp;dream job&nbsp;
+                            dream job&nbsp;
                         </span>
                         here
                     </div>

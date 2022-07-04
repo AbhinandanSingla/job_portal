@@ -6,7 +6,6 @@ import { useState } from "react";
 export function Login() {
   const { errorMessages, setErrorMessages } = useState({});
   const { isSubmitted, setIsSubmitted } = useState(false);
-
   const database = [
     {
       username: "user1",
