@@ -1,5 +1,5 @@
 .navbar .max_width {
-    position: relative;
+    position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.5px;
-    color: #000;
+    color: #171414;
 }
 
 .navs .active {
@@ -111,7 +111,7 @@
     align-items: center;
     justify-content: space-around;
     background: #FFFFFF;
-    padding: 1.5rem;
+    padding: 1rem;
     border: 1px solid #000000;
     box-shadow: 10px 20px 24px rgba(237, 111, 60, 0.1);
     border-radius: 8px;
@@ -217,7 +217,7 @@
     line-height: 25px;
     letter-spacing: 0.5px;
     margin: 0 0.5rem;
-    padding: 1rem 3.5rem;
+    padding: 1rem 3rem;
     color: #ffffff !important;
     background: #6083fe;
     border-radius: 10px;
@@ -247,7 +247,12 @@
     display: none;
 }
 
+.exporeCategory {
+    overflow: hidden;
+}
+
 .ec_contents {
+
     padding: 0 8rem;
     display: flex;
     align-items: center;
@@ -935,7 +940,7 @@
     }
 
     .home .max_width {
-        height: 50vh;
+        height: 70vh;
     }
 
     .news {
@@ -951,6 +956,10 @@
 @media (max-width: 780px) {
     .navsContainer {
         display: none;
+    }
+
+    .navbar .max_width {
+        position: relative;
     }
 
     .mobileBar {
@@ -1156,7 +1165,8 @@
         line-height: 45px;
         margin-bottom: 2rem;
     }
-    .pj_sub{
+
+    .pj_sub {
         font-size: 16px;
     }
 }
