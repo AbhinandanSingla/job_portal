@@ -5,6 +5,8 @@ import React from "react";
 import { Compare } from "./Pages/compare";
 import { Login } from "./Pages/login";
 
+import { Register } from "./Pages/register";
+
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

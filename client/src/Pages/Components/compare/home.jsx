@@ -1,12 +1,30 @@
 import compareStyle from '../../../Assets/styles/compare.module.css';
 
-export function Home() {
+export function Home({route}) {
+    let heading = '';
+    switch (route) {
+        case 0:
+            heading = 'Explore the Categories';
+            break;
+        case 1:
+            heading = 'Find Job';
+            break;
+        case 2:
+            heading = 'Bookmark section ';
+            break;
+        case 3:
+            heading = 'Upcoming Exams this month !';
+            break;
+        case 4:
+            heading = "Notifications ";
+            break;
+    }
     return (<div className={compareStyle.home}>
         <div className={compareStyle.max_width}>
             <div className={compareStyle.exContainer}>
                 <div className={compareStyle.exLeft}>
                     <div className={compareStyle.h_heading}>
-                        Explore the Categories
+                        {heading}
                     </div>
                     <div className={compareStyle.searchBarContainer}>
                         <div className={compareStyle.searchBar}>
