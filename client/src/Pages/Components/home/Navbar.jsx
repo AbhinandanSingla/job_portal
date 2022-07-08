@@ -1,4 +1,4 @@
-import logo from "../../../Assets/Images/landingPage/logo.svg";
+import logo from "../../../Assets/Images/common/logo.svg";
 import homeStyle from "../../../Assets/styles/style.module.css";
 import { Link, NavLink } from "react-router-dom";
 
