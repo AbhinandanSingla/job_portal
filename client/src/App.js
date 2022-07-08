@@ -14,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/login" element={<Login />} />
-
         <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
