@@ -10,9 +10,24 @@ export function BookContainer() {
                 </div>
             </div>
             <Swiper
-                spaceBetween={35}
+                breakpoints={{
+                    // when window width is >= 640px
+                    0: {
+                        slidesPerView: 1,
+                        width: 400
+                    },
+                    1024: {
+                        // width: 640,
+                        slidesPerView: 2,
+                    },
+                    // when window width is >= 768px
+                    1200: {
+                        width: 768,
+                        slidesPerView: 2,
+                    },
+                }}
                 slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
+                spaceBetween={30}
                 onSwiper={(swiper) => console.log(swiper)} style={{padding: '2rem'}}
             >
                 <SwiperSlide className={compareStyle.findWorkCard}>
@@ -361,6 +376,22 @@ export function BookContainer() {
             </div>
             <Swiper className={compareStyle.swiper} spaceBetween={35}
                     slidesPerView={3}
+                    breakpoints={{
+                        // when window width is >= 640px
+                        0: {
+                            slidesPerView: 1,
+                            width: 400
+                        },
+                        1024: {
+                            // width: 640,
+                            slidesPerView: 2,
+                        },
+                        // when window width is >= 768px
+                        1200: {
+                            width: 768,
+                            slidesPerView: 2,
+                        },
+                    }}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)} style={{padding: '2rem'}}
             >
@@ -697,6 +728,22 @@ export function BookContainer() {
             </div>
             <Swiper spaceBetween={50}
                     slidesPerView={3}
+                    breakpoints={{
+                        // when window width is >= 640px
+                        0: {
+                            slidesPerView: 1,
+                            width: 400
+                        },
+                        1024: {
+                            // width: 640,
+                            slidesPerView: 2,
+                        },
+                        // when window width is >= 768px
+                        1200: {
+                            width: 768,
+                            slidesPerView: 2,
+                        },
+                    }}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     className={compareStyle.swiper}>

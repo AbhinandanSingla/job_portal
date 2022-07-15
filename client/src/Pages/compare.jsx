@@ -6,8 +6,10 @@ import {useState} from "react";
 import {FindWorkContainer} from "./Components/compare/findWorkContainer";
 import {BookContainer} from "./Components/compare/bookContainer";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
+import {Guideline} from "./Components/compare/guideline"; // You can also use <link> for styles
 AOS.init();
+
 export function Compare() {
     const [navRoute, setRoute] = useState(0);
 
@@ -19,6 +21,8 @@ export function Compare() {
                 return <FindWorkContainer/>;
             case 2:
                 return <BookContainer/>;
+            case 3:
+                return <Guideline/>;
         }
     }
 
@@ -27,7 +31,6 @@ export function Compare() {
             <Navbar changeRoute={setRoute} navRoute={navRoute}/>
             <Home route={navRoute}/>
             {switchComponent()}
-            {/*<BookContainer/>*/}
         </section>
     );
 }
