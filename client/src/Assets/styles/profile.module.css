@@ -1,0 +1,175 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 18%;
+}
+
+.main {
+  background-color: rgba(224, 228, 240, 0.8);
+  margin-left: 10px;
+  width: 82%;
+}
+
+.logo {
+  background-color: #ffffff;
+}
+.logo {
+  padding-left: 15px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.Navbar h2 {
+  margin-top: 5px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+.bellicon {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.bellicon img {
+  height: 40px;
+  width: 40px;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+.formmain {
+  margin-left: 60px;
+  margin-right: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgba(19, 19, 19, 0.08);
+  align-items: center;
+  justify-items: center;
+}
+
+.form label {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.leftside {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-left: 10px;
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.inputbox {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 50px;
+  margin-left: 5px;
+  border: 1px solid rgba(19, 19, 19, 0.25);
+  border-radius: 50px;
+}
+
+.mainhead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 70px;
+  margin-bottom: 25px;
+}
+
+.profilepicdetail {
+  display: flex;
+  flex-direction: row;
+}
+.profilepic img {
+  border-radius: 100%;
+  background-color: #ffffff;
+  height: 90px;
+  width: 90px;
+}
+
+.profiledetail {
+  margin-top: 40px;
+  margin-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.profiledetail h5 {
+  opacity: 50%;
+}
+
+.profiles {
+  margin-top: 20px;
+}
+.profile button {
+  width: 150px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #2c7fe0;
+  border-radius: 50px;
+  color: #2c7fe0;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .download button {
+  width: 150px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #2c7fe0;
+  border-radius: 50px;
+  color: #2c7fe0;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+
+.button button {
+  width: 450px;
+  height: 50px;
+  background: #2c7fe0;
+  border: 1px solid rgba(19, 19, 19, 0.25);
+  border-radius: 50px;
+  color: #ffffff;
+  margin-left: 180px;
+  cursor: pointer;
+}

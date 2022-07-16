@@ -5,6 +5,7 @@ import illustration from "../../../Assets/Images/register/illustration.png";
 function information() {
   return (
     <div className={registerstyle.infomain}>
+    
       <h2>Benefits of Registration</h2>
       <div>
         <div className={registerstyle.point}>

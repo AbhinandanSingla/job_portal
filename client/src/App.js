@@ -6,6 +6,7 @@ import { Compare } from "./Pages/compare";
 import { Login } from "./Pages/login";
 
 import { Register } from "./Pages/register";
+import { Profilesection } from "./Pages/profilesection";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/compare" element={<Compare />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profilesection />} />
       </Routes>
     </BrowserRouter>
   );
