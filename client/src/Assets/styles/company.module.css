@@ -144,10 +144,24 @@
   font-family: var(--Inter);
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 15px;
   color: #a3a3a3;
-  padding: 0;
+  padding: 1.5rem 4.2rem;
+  border-radius: 3rem;
+  width: 92%;
+  margin-left: 0;
+  transform: translate(2rem, -4rem);
+}
+
+.nav_logout i {
+  transform: rotate(180deg);
+  margin-right: 1rem;
+}
+.nav_logout:hover {
+  color: #ff0202;
+  background: #ff020227;
+  cursor: pointer;
 }
 
 .searchBar {

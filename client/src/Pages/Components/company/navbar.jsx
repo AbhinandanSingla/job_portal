@@ -1,4 +1,4 @@
-import adminModule from "../../../Assets/styles/admin.module.css";
+import adminModule from "../../../Assets/styles/company.module.css";
 import logo from "../../../Assets/Images/common/logo.svg";
 import { Link } from "react-router-dom";
 
@@ -48,8 +48,8 @@ export function Navbar({ navRoute, changeRoute }) {
         </div>
 
         <div className={adminModule.nav_logout}>
-          <i className="far fa-sign-out"></i>
-          <span>Log out</span>
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Log out </span>
         </div>
       </div>
     </div>

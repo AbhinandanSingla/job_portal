@@ -1,7 +1,7 @@
 import React from "react";
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
-import adminModule from "../../../Assets/styles/admin.module.css";
+import adminModule from "../../../Assets/styles/company.module.css";
 
 export function Dashboard() {
   const [show, setShow] = useState(false);
@@ -189,6 +189,104 @@ export function Dashboard() {
           <div className={adminModule.job}>
             <div className={adminModule.dropdownBtnDiv}>
               <i class="zmdi zmdi-chevron-down" onClick={on_Click}></i>{" "}
+              {show ? results() : null}
+            </div>
+
+            <div className={adminModule.jobImgDiv}>
+              <img
+                src="client\src\Assets\Images\admin\pngtree.jpg"
+                alt=""
+                className={adminModule.jobImg1}
+              />
+            </div>
+
+            <div>
+              <div className={adminModule.jobNameDiv}>
+                <p>Job Name</p>
+              </div>
+              <div className={adminModule.jobCategoryDiv}>
+                <p>Category</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={adminModule.datePostedDiv}>
+            <p>19 June 2022</p>
+          </div>
+
+          <div className={adminModule.appliedNumberDiv}>
+            <p>300 people</p>
+          </div>
+
+          <div className={adminModule.downloadBtnDiv}>
+            <button className={adminModule.downloadBtn}>Download</button>
+          </div>
+        </div>
+        <div className={adminModule.line3}></div>
+
+        <div
+          className={
+            hiddenClass
+              ? `${adminModule.categoryCardHidden} categoryCard`
+              : `${adminModule.categoryCard} categoryCard`
+          }
+        >
+          <div className={adminModule.job}>
+            <div className={adminModule.dropdownBtnDiv}>
+              <i
+                class="zmdi zmdi-chevron-down"
+                className={adminModule.dropdownBtn}
+                onClick={on_Click}
+              ></i>{" "}
+              {show ? results() : null}
+            </div>
+
+            <div className={adminModule.jobImgDiv}>
+              <img
+                src="client\src\Assets\Images\admin\pngtree.jpg"
+                alt=""
+                className={adminModule.jobImg1}
+              />
+            </div>
+
+            <div>
+              <div className={adminModule.jobNameDiv}>
+                <p>Job Name</p>
+              </div>
+              <div className={adminModule.jobCategoryDiv}>
+                <p>Category</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={adminModule.datePostedDiv}>
+            <p>19 June 2022</p>
+          </div>
+
+          <div className={adminModule.appliedNumberDiv}>
+            <p>300 people</p>
+          </div>
+
+          <div className={adminModule.downloadBtnDiv}>
+            <button className={adminModule.downloadBtn}>Download</button>
+          </div>
+        </div>
+        <div className={adminModule.line3}></div>
+
+        <div
+          className={
+            hiddenClass
+              ? `${adminModule.categoryCardHidden} categoryCard`
+              : `${adminModule.categoryCard} categoryCard`
+          }
+        >
+          <div className={adminModule.job}>
+            <div className={adminModule.dropdownBtnDiv}>
+              <i
+                class="zmdi zmdi-chevron-down"
+                className={adminModule.dropdownBtn}
+                onClick={on_Click}
+              ></i>{" "}
               {show ? results() : null}
             </div>
 
