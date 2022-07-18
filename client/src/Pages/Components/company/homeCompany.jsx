@@ -1,4 +1,4 @@
-import adminModule from "../../../Assets/styles/admin.module.css";
+import adminModule from "../../../Assets/styles/company.module.css";
 
 export function Home({ route }) {
   let heading = "";
