@@ -97,8 +97,6 @@ section .login_image img {
   font-size: 16px;
   letter-spacing: 1px;
   background: transparent;
-
-  /* border-radius: 2rem; */
 }
 .LoginSection .contentBox .formBox .inputBox input[type="submit"] {
   background: #023aae;

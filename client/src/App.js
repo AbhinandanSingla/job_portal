@@ -6,7 +6,11 @@ import { Compare } from "./Pages/compare";
 import { Login } from "./Pages/login";
 
 import { Register } from "./Pages/register";
+
+import { Company } from "./Pages/company";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Profilesection } from "./Pages/profilesection";
+
 
 function App() {
   return (
@@ -15,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/company" element={<Company />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profilesection />} />
       </Routes>
