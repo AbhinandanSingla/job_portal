@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 50px;
+  /* padding-right: 50px; */
 }
 
 .logo {
@@ -17,8 +17,13 @@
 }
 
 .signin {
+  margin-left: 700px;
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
   display: flex;
   font-size: 14px;
+  justify-content: flex-end;
 }
 
 .signin img {
@@ -96,6 +101,13 @@
   padding: 10px;
 }
 
+.structure select {
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 14px;
+}
 .dob input #dob {
   width: 70;
 }
@@ -158,16 +170,16 @@
 }
 
 .infomain {
-  margin-top: 170px;
+  margin-top: 120px;
 }
 .infomain h2 {
   font-size: 27px;
-  margin-left: 85px;
+  margin-left: 70px;
   margin-bottom: 20px;
   color: #42505c;
 }
 .infomain .point {
-  margin-left: 97px;
+  margin-left: 85px;
   margin-bottom: 10px;
 }
 
@@ -198,7 +210,7 @@
 }
 
 .illus img {
-  margin-top: 300px;
-  margin-left: 55px;
+  margin-top: 175px;
+  margin-left: 40px;
   width: 400px;
 }
