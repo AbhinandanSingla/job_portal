@@ -1,7 +1,6 @@
 import logo from "../../../Assets/Images/common/logo.svg";
 import homeStyle from "../../../Assets/styles/style.module.css";
 import { Link, NavLink } from "react-router-dom";
-
 export function Navbar() {
   return (
     <section className={homeStyle.navbar}>
@@ -57,6 +56,14 @@ export function Navbar() {
               to={"/register"}
             >
               Create Account
+            </Link>
+          </li>
+          <li className={homeStyle.btn}>
+            <Link
+              style={{ color: "white", textDecoration: "none" }}
+              to={"/company"}
+            >
+              Company(temp Btn)
             </Link>
           </li>
         </ul>
