@@ -8,9 +8,7 @@ import { Login } from "./Pages/login";
 import { Register } from "./Pages/register";
 
 import { Company } from "./Pages/company";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Profilesection } from "./Pages/profilesection";
-
 
 function App() {
   return (
