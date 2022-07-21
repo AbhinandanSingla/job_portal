@@ -553,59 +553,6 @@ body {
   height: 20px;
 }
 
-@media (max-width: 740px) {
-  .navbar {
-    display: none;
-  }
-
-  .categoryContainer {
-    grid-area: 2 / 1 / 2 / 7;
-    padding: 6rem 0;
-    justify-content: center;
-    row-gap: 70px;
-  }
-
-  .home {
-    display: flex;
-    padding-left: 0;
-    grid-area: 1 / 1 / 2 / 7;
-    justify-content: center;
-    float: right;
-    padding: 0 2rem;
-    width: 89%;
-  }
-
-  .max_width {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  .exLeftContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .mobileBar {
-    display: block;
-  }
-
-  .bookmarkContainer {
-    grid-area: 2 / 1 / 3 / 7;
-    padding: 5rem 0;
-    row-gap: 30px;
-  }
-
-  .bookmarkContainer .m_line {
-    width: 100vw;
-  }
-
-  .matchContainer {
-    font-size: 20px;
-    left: 10%;
-  }
-}
-
 /* Add Job css */
 .addJobContainer {
   width: 84%;
