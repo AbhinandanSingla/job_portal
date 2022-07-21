@@ -2,7 +2,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import companyModule from "../../../Assets/styles/company.module.css";
-
+import jobImg from "../../../Assets/Images/company/apple.png";
 export function Dashboard() {
   const [show, setShow] = useState(false);
   const [hiddenClass, sethiddenClass] = useState(false);
@@ -34,6 +34,7 @@ export function Dashboard() {
     </div>
   );
 
+  const handleDeleteAll = () => {};
   const boxRef = useRef();
   const q = gsap.utils.selector(boxRef);
   const tl = useRef();
@@ -77,6 +78,9 @@ export function Dashboard() {
             }
           >
             <button
+              onClick={() => {
+                handleDeleteAll();
+              }}
               className={
                 edit ? companyModule.deleteBtnActive : companyModule.deleteBtn
               }
@@ -140,7 +144,7 @@ export function Dashboard() {
           <div className={companyModule.job}>
             <div className={companyModule.dropdownBtnDiv}>
               <i
-                class="zmdi zmdi-chevron-down"
+                class="zmdi zmdi-chevron-down "
                 className={companyModule.dropdownBtn}
                 onClick={on_Click}
                 style={{ display: edit ? "none" : "" }}
@@ -149,11 +153,7 @@ export function Dashboard() {
             </div>
 
             <div className={companyModule.jobImgDiv}>
-              <img
-                src="client\src\Assets\Images\admin\pngtree.jpg"
-                alt=""
-                className={companyModule.jobImg1}
-              />
+              <img src={jobImg} alt="" className={companyModule.jobImg1} />
             </div>
 
             <div>
@@ -208,11 +208,7 @@ export function Dashboard() {
             </div>
 
             <div className={companyModule.jobImgDiv}>
-              <img
-                src="client\src\Assets\Images\admin\pngtree.jpg"
-                alt=""
-                className={companyModule.jobImg1}
-              />
+              <img src={jobImg} alt="" className={companyModule.jobImg1} />
             </div>
 
             <div>
@@ -267,11 +263,7 @@ export function Dashboard() {
             </div>
 
             <div className={companyModule.jobImgDiv}>
-              <img
-                src="client\src\Assets\Images\admin\pngtree.jpg"
-                alt=""
-                className={companyModule.jobImg1}
-              />
+              <img src={jobImg} alt="" className={companyModule.jobImg1} />
             </div>
 
             <div>
@@ -322,11 +314,7 @@ export function Dashboard() {
             </div>
 
             <div className={companyModule.jobImgDiv}>
-              <img
-                src="client\src\Assets\Images\admin\pngtree.jpg"
-                alt=""
-                className={companyModule.jobImg1}
-              />
+              <img src={jobImg} alt="" className={companyModule.jobImg1} />
             </div>
 
             <div>
@@ -377,11 +365,7 @@ export function Dashboard() {
             </div>
 
             <div className={companyModule.jobImgDiv}>
-              <img
-                src="client\src\Assets\Images\admin\pngtree.jpg"
-                alt=""
-                className={companyModule.jobImg1}
-              />
+              <img src={jobImg} alt="" className={companyModule.jobImg1} />
             </div>
 
             <div>

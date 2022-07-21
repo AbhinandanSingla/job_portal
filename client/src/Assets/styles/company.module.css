@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 .h_heading {
   font-family: var(--Inter);
   font-style: normal;
@@ -336,24 +339,27 @@
   display: inline-block;
   background: #e0e4f0;
   transform: translate(-1rem, -1rem);
+  box-shadow: 1px 1px 5px #4377fd;
   border: none;
 }
 .editBtn:hover {
   color: white;
   background: #4377fd;
+
   cursor: pointer;
 }
 .editBtnWithDelete {
   padding: 1.1rem 3rem;
   border-radius: 1rem;
-  color: #4377fd;
+  color: white;
   font-size: 18px;
   font-weight: 500;
   margin-right: 1rem;
   display: inline-block;
-  background: #e0e4f0;
+  background: #4377fd;
   transform: translate(98.5rem, 2rem);
   border: none;
+  box-shadow: 0.8px 0.8px 1px black;
 }
 .editBtnWithDelete:hover {
   cursor: pointer;
@@ -414,6 +420,7 @@
   font-size: 12px;
   font-weight: 500;
   margin-left: 6.5rem;
+  box-shadow: 1px 1px 3px #47fd43;
 }
 
 .downloadBtn:hover {
@@ -449,6 +456,7 @@
   width: 100px;
   height: 100px;
   border-radius: 2rem;
+  box-shadow: 1px 1px 3px black;
 }
 .job {
   display: flex;
@@ -459,14 +467,15 @@
 .dropdownBtnDiv {
   width: 10px;
   height: 10px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   cursor: pointer;
+  transform: translate(-1rem, 3rem);
 }
 
 .hiddenElement {
   display: flex;
   flex-direction: row;
-  transform: translate(25rem, 11rem);
+  transform: translate(25rem, 7rem);
   gap: 22rem;
 }
 
@@ -527,6 +536,7 @@
   background: #e0e4f0;
   transform: translate(100rem, 2rem);
   border: none;
+  box-shadow: 1px 1px 4px #ff0202;
 }
 .deleteBtnActive:hover {
   background: #ff0202;
@@ -542,6 +552,7 @@
   width: 20px;
   height: 20px;
 }
+
 @media (max-width: 740px) {
   .navbar {
     display: none;
@@ -593,4 +604,131 @@
     font-size: 20px;
     left: 10%;
   }
+}
+
+/* Add Job css */
+.addJobContainer {
+  width: 84%;
+  float: right;
+  background: #e0e4f0cc;
+}
+.addJobSubContainer {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 95%;
+  margin: 2rem 3rem;
+  border-radius: 2rem;
+}
+.profileSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 3rem 3rem;
+}
+.profilePic {
+  float: right;
+  transform: translate(-3rem, -6.2rem);
+  height: 5rem;
+  width: 5rem;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 1.4rem;
+}
+
+.profilePic:hover {
+  cursor: pointer;
+}
+.photoRightSide {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 1rem;
+  font-size: 24px;
+  font-weight: 500;
+}
+.photoDiv {
+  width: 14rem;
+  height: 14rem;
+  background: #e0e4f0;
+
+  border-radius: 1rem;
+}
+
+.browseBtn {
+  padding: 1.5rem 4rem;
+  margin: 1.8rem 0;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  background: #4377fd;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 1px 1px 10px #4377fd;
+}
+.browseBtn:hover {
+  background: #e0e4f0;
+  color: #4377fd;
+  cursor: pointer;
+}
+
+.jobInputDiv1,
+.jobInputDiv2,
+.jobInputDiv3,
+.jobInputDiv4,
+.jobInputDiv5,
+.jobInputDiv6,
+.jobInputDiv7 {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  margin: 2rem 3rem;
+}
+
+.jobInputHeading {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.jobInputSmall {
+  padding: 1rem 1rem;
+  /* padding-right: 35.2rem; */
+  width: 53rem;
+  border-radius: 2rem;
+  border: solid rgba(0, 0, 0, 0.248) 1px;
+}
+
+.jobInputBig {
+  padding: 1rem 1rem;
+  /* padding-right: 98rem; */
+  width: 116rem;
+  border-radius: 2rem;
+  border: solid rgba(0, 0, 0, 0.248) 1px;
+}
+
+.jobInputBigger {
+  padding: 1rem 1rem;
+  /* padding-right: 98rem; */
+  width: 116rem;
+  border-radius: 2rem;
+  height: 20rem;
+  border: solid rgba(0, 0, 0, 0.248) 1px;
+  resize: none;
+}
+
+.postJobBtn {
+  float: right;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  margin: 2rem 3rem;
+  background: #4377fd;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 1px 1px 10px #4377fd;
+}
+
+.postJobBtn:hover {
+  color: #4377fd;
+  background: #e0e4f0;
+  cursor: pointer;
 }
