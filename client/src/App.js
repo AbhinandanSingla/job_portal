@@ -8,9 +8,9 @@ import { Login } from "./Pages/login";
 import { Register } from "./Pages/register";
 
 import { Company } from "./Pages/company";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Profilesection } from "./Pages/profilesection";
 
+import { Profilesection } from "./Pages/profilesection";
+import {Admin} from "./Pages/admin";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profilesection />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
