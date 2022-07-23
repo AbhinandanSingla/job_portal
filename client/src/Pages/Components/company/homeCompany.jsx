@@ -1,5 +1,5 @@
-import adminModule from "../../../Assets/styles/company.module.css";
-
+import companyModule from "../../../Assets/styles/company.module.css";
+import profile from "../../../Assets/Images/company/profile.png";
 export function Home({ route }) {
   let heading = "";
   switch (route) {
@@ -13,12 +13,17 @@ export function Home({ route }) {
       heading = "";
   }
   return (
-    <div className={adminModule.home}>
-      <div className={adminModule.exContainer}>
-        <div className={adminModule.exLeft}>
-          <div className={adminModule.exLeftContainer}>
-            <div className={adminModule.h_heading}>{heading}</div>
-            <div className={adminModule.hc_heading}>
+    <div className={companyModule.home}>
+      <div className={companyModule.exContainer}>
+        <div className={companyModule.exLeft}>
+          <div className={companyModule.exLeftContainer}>
+            <div className={companyModule.h_heading}>{heading}</div>
+            <img
+              src={profile}
+              alt="profile"
+              className={companyModule.profilePic}
+            />
+            <div className={companyModule.hc_heading}>
               Here, we <span>found</span> your posted jobs!
             </div>
           </div>

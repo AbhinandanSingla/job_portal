@@ -10,7 +10,9 @@ import { Register } from "./Pages/register";
 import { Company } from "./Pages/company";
 
 import { Profilesection } from "./Pages/profilesection";
+import { Profilesection } from "./Pages/profilesection";
 import {Admin} from "./Pages/admin";
+
 
 function App() {
   return (
