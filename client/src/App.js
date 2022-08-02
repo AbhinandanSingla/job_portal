@@ -10,9 +10,8 @@ import { Register } from "./Pages/register";
 import { Company } from "./Pages/company";
 
 import { Profilesection } from "./Pages/profilesection";
-import { Profilesection } from "./Pages/profilesection";
-import {Admin} from "./Pages/admin";
-
+import { Admin_aaditya } from "./Pages/admin_aaditya";
+// import {Admin} from "./Pages/admin";
 
 function App() {
   return (
@@ -24,7 +23,8 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profilesection />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin_aaditya" element={<Admin_aaditya />} />
+        {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </BrowserRouter>
   );
