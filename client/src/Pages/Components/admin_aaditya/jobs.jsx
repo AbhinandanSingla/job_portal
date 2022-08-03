@@ -24,9 +24,13 @@ export const Jobs = () => {
       <div className={aadityaModule.searchDivContainer}>
         <h2>Job search</h2>
         <div className={aadityaModule.searchDiv}>
-          <div>
+          <div className={aadityaModule.searchBar}>
             <i className="fas fa-search" />
-            <input type="text" placeholder="Search: Design, Developer" />
+            <input
+              type="text"
+              placeholder="Search: Design, Developer"
+              // className={aadityaModule.searchBar}
+            />
           </div>
           <span>sort by</span>
           <button>category</button>
