@@ -4,7 +4,7 @@ import userRoutes from "./routes/user.js";
 import adminRoutes from "./routes/admin.js";
 import connectDB from "./database/config.js";
 import passport from "passport";
-
+import session from 'express-session'
 const port = process.env.PORT || 8080
 const app = express();
 
@@ -22,7 +22,7 @@ app.use(passport.session());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use("/", userRoutes);
-app.use("/admin", adminRoutes);
+app.use("/", adminRoutes);
 
 
 connectDB

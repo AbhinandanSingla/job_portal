@@ -23,6 +23,7 @@ export const addUser = (req, res) => {
             password: d
         })
         user.save(user).then(data => {
+            res.send(data);
             console.log(data)
         }).catch(err => {
             console.log(err)

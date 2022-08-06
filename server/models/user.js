@@ -1,8 +1,4 @@
 import mongoose from "mongoose";
-import bcrypt from 'bcrypt';
-import passport from 'passport'
-import {Strategy} from 'passport-local'
-
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
