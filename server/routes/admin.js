@@ -1,9 +1,10 @@
 import express from "express";
-
-import { getAdmin } from "../controllers/admin.js";
+import {addCompany, addJob} from "../controllers/admin.js";
 
 const router = express.Router();
 
-router.get("/", getAdmin);
+router.post('/api/addCompany', addCompany);
+router.post('/api/addJob', addJob);
+// router.get('/api/getJobsCategorical', getJobCategorial);
 
 export default router;

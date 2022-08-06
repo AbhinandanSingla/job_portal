@@ -149,7 +149,12 @@
 
 .h_sub_heading {
   font-size: 36px;
-  background-color: #6083fe;
+  background: linear-gradient(
+    90deg,
+    rgba(67, 119, 253, 1) 0%,
+    rgba(67, 119, 253, 1) 30%,
+    rgba(128, 163, 254, 1) 100%
+  );
   margin: 3rem 6rem;
   color: white;
   padding: 2rem 3rem;
@@ -166,13 +171,25 @@
   flex-direction: row;
   margin-left: 4rem;
 }
+.jobCat svg {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  float: left;
+  transform: translate(-3rem, 1rem);
+  background: #e0e4f0cc;
+  border-radius: 1rem;
+}
+
+.jobCat p {
+  transform: translate(2rem, -1.5rem);
+}
 .jobCat div {
   background-color: white;
   margin: 1rem 1.7rem;
-  padding: 1.5rem 5.1rem;
+  padding: 0.5rem 5.1rem;
   border-radius: 1rem;
   font-size: 14px;
-  /* float: right; */
 }
 
 .searchDivContainer h2 {
@@ -192,23 +209,31 @@
   border-radius: 1rem;
   gap: 2rem;
 }
-/* .searchDiv div {
-  width: 50%;
-} */
+
+.searchDiv {
+  width: 90.4%;
+}
 .searchDiv div i {
   font-size: 16px;
   background-color: #e0e4f0cc;
-  padding: 0;
+  padding: 0rem 2rem;
   margin: 0;
-  width: 3%;
+  /* width: 3%; */
 }
-.searchDiv div input {
-  width: 45%;
-  border: none;
-  background-color: #e0e4f0cc;
+.searchBar {
+  background: #e0e4f0cc;
   border-radius: 1rem;
-  padding: 1rem 0;
+  padding: 0rem 0rem;
+  width: 50%;
+}
+.searchBar input {
+  width: 86%;
+  border: none;
+  background: #e0e4f0cc;
+  border-radius: 1rem;
   padding: 1.5rem 1.5rem;
+  outline: none;
+  border: none;
 }
 .searchDiv span {
   padding: 1rem 1rem;
@@ -227,7 +252,17 @@
 }
 .searchDiv button:hover {
   cursor: pointer;
+  /* background: #4377fd; */
+  background: linear-gradient(
+    90deg,
+    rgba(67, 119, 253, 1) 40%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  /* color: white; */
+  color: white;
 }
+
 .jobListDiv {
   background-color: white;
   width: 90.5%;
@@ -282,15 +317,25 @@
   padding-left: 3.5rem;
 }
 #spanActive {
-  color: whitesmoke;
-  background-color: #6fcf97;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 241, 34, 1) 0%,
+    rgba(66, 228, 87, 1) 58%,
+    rgba(175, 250, 86, 1) 100%
+  );
   padding: 1rem 4rem;
   border-radius: 1rem;
 }
 #spanInactive {
-  color: whitesmoke;
-  background-color: #fa976c;
-  padding: 1rem 4rem;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 64, 121, 1) 0%,
+    rgba(244, 70, 118, 1) 58%,
+    rgba(250, 122, 86, 1) 100%
+  );
+  padding: 1rem 3rem;
   border-radius: 1rem;
 }
 
