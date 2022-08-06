@@ -11,6 +11,9 @@ const adminSchema = mongoose.Schema({
     },
 });
 const companySchema = mongoose.Schema({
+    companyProfilePicture: {
+        type: String
+    },
     companyName: {
         type: String,
         required: true
@@ -34,6 +37,16 @@ const companySchema = mongoose.Schema({
     password: {type: String, require: true}
 })
 const jobSchema = mongoose.Schema({
+    companyID: {
+        type:
+        mongoose.Schema.Types.ObjectId, ref: 'Companies',
+        pid: String,
+        oFile: String
+    },
+    companyName: {
+        type: String,
+        require: true
+    },
     jobTitle: {
         type: String,
         require: true
@@ -55,9 +68,9 @@ const jobSchema = mongoose.Schema({
         type: Date,
         require: true
     },
-    Qualifications: [], Experience: {
+    Qualifications: []
+    , Experience: {
         type: String,
-        require: true
     },
     SalaryRange: {
         type: String,

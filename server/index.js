@@ -5,6 +5,9 @@ import adminRoutes from "./routes/admin.js";
 import connectDB from "./database/config.js";
 import passport from "passport";
 import session from 'express-session'
+import {graphqlHTTP} from 'express-graphql'
+import schema from './models/Schema.js';
+
 const port = process.env.PORT || 8080
 const app = express();
 
@@ -21,6 +24,11 @@ app.use(passport.session());
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use('/graphsql', graphqlHTTP({
+    schema,
+    graphiql: true
+}))
+
 app.use("/", userRoutes);
 app.use("/", adminRoutes);
 
