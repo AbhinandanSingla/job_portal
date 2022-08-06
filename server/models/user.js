@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
@@ -65,7 +66,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    jobApplied: []
+    jobApplied: [],
+    Notifications: []
 });
+
 const User = mongoose.model("Users", userSchema);
 export default User;

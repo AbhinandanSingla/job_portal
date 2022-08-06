@@ -42,3 +42,8 @@ export const addJob = (req, res) => {
         });
     })
 }
+export const getJobs = () => {
+    let data = job.find();
+    console.log(data)
+    return data;
+}
