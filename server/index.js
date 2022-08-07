@@ -7,10 +7,11 @@ import passport from "passport";
 import session from 'express-session'
 import {graphqlHTTP} from 'express-graphql'
 import schema from './models/Schema.js';
+import cors from 'cors';
 
 const port = process.env.PORT || 8080
 const app = express();
-
+app.use(cors())
 app.use(session({
     secret: "verygoodsecret",
     resave: false,

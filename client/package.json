@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^3.0.0-beta.6",
     "formik": "^2.2.9",
+    "graphsql": "^0.0.0",
     "gsap": "^3.10.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

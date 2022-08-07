@@ -67,7 +67,9 @@ const userSchema = mongoose.Schema({
         required: true,
     },
     jobApplied: [],
-    Notifications: []
+    Notifications: [],
+    bookmarks:[],
+
 });
 
 const User = mongoose.model("Users", userSchema);

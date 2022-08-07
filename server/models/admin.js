@@ -75,7 +75,8 @@ const jobSchema = mongoose.Schema({
     SalaryRange: {
         type: String,
         require: true
-    }
+    },
+    applications: []
 })
 const admin = mongoose.model("Admins", adminSchema);
 export const company = mongoose.model('Companies', companySchema);
