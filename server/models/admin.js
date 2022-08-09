@@ -89,6 +89,7 @@ const jobSchema = mongoose.Schema({
   },
   applications: [],
 });
+
 const admin = mongoose.model("Admins", adminSchema);
 export const company = mongoose.model("Companies", companySchema);
 export const job = mongoose.model("jobs", jobSchema);
