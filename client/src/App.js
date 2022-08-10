@@ -4,14 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { Compare } from "./Pages/compare";
 import { Login } from "./Pages/login";
-
 import { Register } from "./Pages/register";
-
 import { Company } from "./Pages/company";
-
 import { Profilesection } from "./Pages/profilesection";
 import { Admin_aaditya } from "./Pages/admin_aaditya";
-// import {Admin} from "./Pages/admin";
+import { Login_company } from "./Pages/Components/company/login";
 
 function App() {
   return (
@@ -24,7 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profilesection />} />
         <Route path="/admin_aaditya" element={<Admin_aaditya />} />
-        {/* <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/login_company" element={<Login_company />} />
       </Routes>
     </BrowserRouter>
   );

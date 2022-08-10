@@ -28,7 +28,7 @@ export function Navbar() {
           </li>
           <li className={homeStyle.navs}>
             <NavLink
-              to={"/compare"}
+              to={"/login_company"}
               className={({ isActive }) => (isActive ? homeStyle.active : "")}
             >
               Post a job
