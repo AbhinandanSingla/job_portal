@@ -30,21 +30,26 @@ export function Compare() {
     }
 
     const profileRef = useRef();
+    const [offset, setOffset] = useState(0);
 
-    useEffect(() => {
-        if (navRoute === 1) {
-            gsap.to(profileRef.current, {
-                    minHeight: "100vh"
-                },
-            )
-        } else {
-            gsap.to(profileRef.current, {
-                minHeight: "75%",
-            })
-        }
-
-
-    })
+    // useEffect(() => {
+    //     if (navRoute === 1) {
+    //         gsap.to(profileRef.current, {
+    //                 minHeight: "100vh"
+    //             },
+    //         )
+    //     } else {
+    //         gsap.to(profileRef.current, {
+    //             minHeight: "75%",
+    //         })
+    //     }
+    //     const onScroll = () => setOffset(window.pageYOffset);
+    //     // clean up code
+    //     window.removeEventListener('scroll', onScroll);
+    //     window.addEventListener('scroll', onScroll, {passive: true});
+    //     console.log(offset)
+    //     return () => window.removeEventListener('scroll', onScroll);
+    // })
     return (
         <section className={compareStyle.root}>
             <Navbar changeRoute={setRoute} navRoute={navRoute}/>
@@ -97,7 +102,7 @@ export function Compare() {
                     <div className={compareStyle.profile_line}>
                     </div>
                     <div className={compareStyle.fwc}
-                         style={(navRoute === 1 ? {display: "block"} : {display: "none"})}>
+                         style={(navRoute === 1 ? {display: "block", height: "75vh"} : {display: "none"})}>
                         <div className={compareStyle.j_heading}>Detail job</div>
                         <svg width="273" height="216" viewBox="0 0 273 216" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -125,8 +130,44 @@ export function Compare() {
                             Description
                         </div>
                         <div className={compareStyle.j_desc}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet architecto consequatur eius itaque natus perferendis provident sapiente velit voluptate. Aperiam assumenda aut, dolore doloremque error eum ipsa nisi perspiciatis, quibusdam quos saepe, veniam?
                             At MieKocoft Inc, we follow a simple but promise focus on the user and all else we follow.
                         </div>
+                        <div className={compareStyle.fieldContainer}>
+                            <div className={compareStyle.j_field}>
+                                <div className={compareStyle.j_label}>
+                                    Sallary
+                                </div>
+                                <div className={compareStyle.j_value}>
+                                    ₹10,000/a month
+                                </div>
+                            </div>
+                            <div className={compareStyle.j_field}>
+                                <div className={compareStyle.j_label}>
+                                    Sallary
+                                </div>
+                                <div className={compareStyle.j_value}>
+                                    ₹10,000/a month
+                                </div>
+                            </div>
+                            <div className={compareStyle.j_field}>
+                                <div className={compareStyle.j_label}>
+                                    Sallary
+                                </div>
+                                <div className={compareStyle.j_value}>
+                                    ₹10,000/a month
+                                </div>
+                            </div>
+                            <div className={compareStyle.j_field}>
+                                <div className={compareStyle.j_label}>
+                                    Sallary
+                                </div>
+                                <div className={compareStyle.j_value}>
+                                    ₹10,000/a month
+                                </div>
+                            </div>
+                        </div>
+
                         <div className={compareStyle.j_btn}>
                             <div className={compareStyle.j_apply_btn}>
                                 Apply Now
