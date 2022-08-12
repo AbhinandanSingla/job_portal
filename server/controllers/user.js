@@ -33,6 +33,3 @@ export const addUser = (req, res) => {
         })
     })
 }
-export const fetchUser = (req, res) => {
-    res.send("hmmm");
-}

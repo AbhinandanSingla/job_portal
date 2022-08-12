@@ -169,12 +169,24 @@
 }
 
 .jobDescription {
+    width: 30rem;
     background: #e0e4f0cc;
     grid-area: 1 / 6 / 2 / 7;
 }
 
-.fwcf {
-    grid-area: 1 / 5 / 3 / 6;
+.login {
+    grid-area: 1 / 6 / 2 / 6;
+}
+
+.openContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 30rem;
+    background: #ffffff;
 }
 
 .exRight {
@@ -218,9 +230,9 @@
 
 .profile_line {
     display: flex;
-    width: calc(100% - 4rem);
+    width: calc(100%);
     background: #cbcbe0;
-    height: 1px;
+    height: .5px;
 }
 
 .profileContainer {
