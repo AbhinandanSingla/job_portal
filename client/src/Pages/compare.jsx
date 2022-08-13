@@ -9,9 +9,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import {Guideline} from "./Components/compare/guideline";
 import {UserContext} from "../hooks/userContext";
-import {gsap} from "gsap";
-import {useQuery} from "@apollo/client";
-import {getJob, getJobDescription} from "../graphql/queries";
 import {JobDescription} from "./Components/compare/jobDescription"; // You can also use <link> for styles
 AOS.init();
 
