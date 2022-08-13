@@ -23,7 +23,7 @@ const corsOptions = {
     optionSuccessStatus: 200,
 };
 
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(cookieParser(COOKIE_SECRET));
 
 app.use(
@@ -33,13 +33,6 @@ app.use(
         saveUninitialized: true,
     })
 );
-const root = {
-    req: function (args, request) {
-        console.log(request);
-        console.log(args)
-        return request;
-    }
-};
 app.use(passport.initialize());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -50,7 +43,6 @@ app.use(
     graphqlHTTP({
         schema,
         graphiql: true,
-        rootValue: root
     })
 );
 

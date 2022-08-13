@@ -177,8 +177,11 @@
 .login {
     grid-area: 1 / 6 / 2 / 6;
 }
-
+.openContainer::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
 .openContainer {
+    overflow-x: hidden;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -596,6 +599,8 @@
 }
 
 .j_btn {
+    position: fixed;
+    bottom: 0;
     display: flex;
     align-items: center;
 }
@@ -615,6 +620,29 @@
 
 .matchSection {
     position: relative;
+}
+
+.fieldContainer {
+    margin-top: 6rem;
+}
+
+.j_value {
+    font-size: 1.5rem;
+}
+
+.j_field {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.j_label {
+    font-size: 1.6rem;
+    font-family: var(--Inter);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
 }
 
 .matchContainer {
