@@ -4,7 +4,7 @@ const JwtStrategy = Strategy;
 import User from "../../models/user.js";
 import {JWT_SECRET} from "./config.js";
 
-const opts = {};
+  const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = JWT_SECRET;
 

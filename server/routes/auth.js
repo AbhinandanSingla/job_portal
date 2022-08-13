@@ -39,8 +39,8 @@ router.post("/signup", (req, res, next) => {
                         res.statusCode = 500;
                         res.send(err);
                     } else {
-                        res.cookie("refreshToken", refreshToken, COOKIE_OPTIONS);
-                        res.send({success: true, token});
+                        res.cookie("refreshToken", refreshToken);
+                        res.send({success: true, token, id: user._id});
                     }
                 });
             }
@@ -53,6 +53,7 @@ router.get("/me", verifyUser, (req, res, next) => {
 });
 
 router.post("/login", passport.authenticate("local"), (req, res, next) => {
+    console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});
     User.findById(req.user._id).then(
@@ -64,7 +65,7 @@ router.post("/login", passport.authenticate("local"), (req, res, next) => {
                     res.send(err);
                 } else {
                     res.cookie("refreshToken", refreshToken);
-                    res.send({success: true, token});
+                    res.send({success: true, token, id: user._id});
                 }
             });
         },
@@ -74,8 +75,8 @@ router.post("/login", passport.authenticate("local"), (req, res, next) => {
 
 router.post("/refreshToken", (req, res, next) => {
     const {cookies = {}} = req;
+    console.log(cookies)
     const {refreshToken} = cookies;
-    console.log(refreshToken)
     if (refreshToken) {
         try {
             const payload = jwt.verify(
@@ -93,7 +94,6 @@ router.post("/refreshToken", (req, res, next) => {
                         );
 
                         if (tokenIndex === -1) {
-                            console.log(tokenIndex)
                             res.statusCode = 401;
                             res.send("Unauthorized");
                         } else {
@@ -145,7 +145,7 @@ router.get("/logout", verifyUser, (req, res, next) => {
                     res.statusCode = 500;
                     res.send(err);
                 } else {
-                    res.clearCookie("refreshToken", COOKIE_OPTIONS);
+                    res.clearCookie("refreshToken");
                     res.send({success: true});
                 }
             });

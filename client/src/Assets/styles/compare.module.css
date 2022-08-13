@@ -177,9 +177,11 @@
 .login {
     grid-area: 1 / 6 / 2 / 6;
 }
+
 .openContainer::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none; /* Safari and Chrome */
 }
+
 .openContainer {
     overflow-x: hidden;
     position: fixed;
@@ -457,6 +459,7 @@
 }
 
 .findWorkCard {
+    cursor: pointer;
     width: 40rem !important;
     height: 20rem !important;
     display: flex;
@@ -464,6 +467,12 @@
     background: #ffffff;
     border-radius: 14px;
     padding: 1rem 2rem;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.findWorkCard:hover {
+    transform: scale(1.05);
 }
 
 .fwc_description {
@@ -536,6 +545,8 @@
     line-height: 27px;
     text-align: center;
     color: #000000;
+    text-transform: capitalize;
+
 }
 
 .j_type {
@@ -547,9 +558,11 @@
     line-height: 17px;
     text-align: center;
     color: #000000;
+    text-transform: capitalize;
 }
 
 .miniQual {
+    text-transform: capitalize;
     font-family: var(--Inter);
     font-style: normal;
     font-weight: 600;
@@ -622,11 +635,26 @@
     position: relative;
 }
 
+.jobDescImg {
+    width: 273px;
+    height: 216px;
+    border-radius: 20px;
+}
+
 .fieldContainer {
     margin-top: 6rem;
 }
 
+.fwc_profile img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    backdrop-filter: blur(0.2);
+}
+
 .j_value {
+    text-transform: capitalize;
+
     font-size: 1.5rem;
 }
 

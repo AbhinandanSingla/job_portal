@@ -1,7 +1,6 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 import loginModule from "../Assets/styles/login.module.css";
-import {useState} from "react";
 import {UserContext} from "../hooks/userContext";
 
 export function Login() {
@@ -39,7 +38,7 @@ export function Login() {
                         return {...oldValues, token: data.token}
                     });
                     setIsSubmitted(true);
-                    // navigate('/');
+                    navigate('/');
                 }
             })
             .catch(error => {
@@ -48,7 +47,7 @@ export function Login() {
             })
     }
 
-    const renderForm = (
+    return (
         <section className={loginModule.LoginSection}>
             <div className={loginModule.contentBox}>
                 <div className={loginModule.formBox}>
@@ -141,5 +140,4 @@ export function Login() {
             </div>
         </section>
     );
-    return <div>{isSubmitted ? <div>Logged In</div> : renderForm}</div>;
 }

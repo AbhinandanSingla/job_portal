@@ -4,6 +4,7 @@ export const getJob = gql`
     query{
         jobList{
             _id,
+            jobProfile,
             jobTitle,
             SalaryRange,
             jobLocation,
@@ -26,6 +27,7 @@ export const getJobDescription = gql`
             Experience,
             SalaryRange,
             jobProfile,
+            jobType
         }
     }
 `

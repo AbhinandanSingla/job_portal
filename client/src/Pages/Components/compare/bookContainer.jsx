@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 export function BookContainer() {
     return (<div className={compareStyle.bookmarkContainer}>
             <div className={compareStyle.matchSection}>
-                <div className={compareStyle.m_line}></div>
+                <div className={compareStyle.m_line}/>
                 <div className={compareStyle.matchContainer}>
                     <span>100%</span> match!
                 </div>
@@ -53,10 +53,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -109,10 +109,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -165,10 +165,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -221,10 +221,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -277,10 +277,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -333,10 +333,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -418,10 +418,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -472,10 +472,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -526,10 +526,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -580,10 +580,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -634,10 +634,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -688,10 +688,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -721,7 +721,7 @@ export function BookContainer() {
                 </SwiperSlide>
             </Swiper>
             <div className={compareStyle.matchSection}>
-                <div className={compareStyle.m_line}></div>
+                <div className={compareStyle.m_line}/>
                 <div className={compareStyle.matchContainer}>
                     <span>50%</span> match!
                 </div>
@@ -770,10 +770,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -825,10 +825,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -880,10 +880,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -935,10 +935,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>
@@ -990,10 +990,10 @@ export function BookContainer() {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
-                                        stroke="#BDBABA" stroke-linecap="round" stroke-linejoin="round"/>
+                                        stroke="#BDBABA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 Patiala
                             </div>

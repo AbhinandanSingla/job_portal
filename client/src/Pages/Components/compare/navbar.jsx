@@ -28,7 +28,7 @@ export function Navbar({navRoute, changeRoute}) {
                             <span>Categories</span></li>
                         <li className={`${compareStyle.navs} ${highlightRoute(1)}`} onClick={() => changeRoute(1)}
                             id="findWork">
-                            <i className="fas fa-search"></i>
+                            <i className="fas fa-search"/>
                             <span>Find Work</span>
                         </li>
                         <li className={`${compareStyle.navs} ${highlightRoute(2)}`} id="bookmark"
@@ -61,10 +61,10 @@ export function Navbar({navRoute, changeRoute}) {
                                  xmlns="http://www.w3.org/2000/svg" className={compareStyle.guidanceSvg}>
                                 <path
                                     d="M15.5417 4.94165H4.45003C3.29944 4.94165 2.3667 5.87439 2.3667 7.02498V13.9083C2.3667 15.0589 3.29944 15.9917 4.45003 15.9917H15.5417C16.6923 15.9917 17.625 15.0589 17.625 13.9083V7.02498C17.625 5.87439 16.6923 4.94165 15.5417 4.94165Z"
-                                    stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 <path
                                     d="M5.3916 7.5L9.35827 10C9.54988 10.1224 9.77254 10.1875 9.99993 10.1875C10.2273 10.1875 10.45 10.1224 10.6416 10L14.6083 7.5"
-                                    stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
 
                             <span>Guidance</span>
@@ -73,7 +73,7 @@ export function Navbar({navRoute, changeRoute}) {
                 </div>
 
                 <div className={compareStyle.nav_logout}>
-                    <i className="far fa-sign-out"></i>
+                    <i className="far fa-sign-out"/>
                     <span>Log out</span></div>
             </div>
         </div>

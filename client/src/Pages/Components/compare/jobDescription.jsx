@@ -9,16 +9,20 @@ export function JobDescription({jobID}) {
             id: jobID
         }
     });
-    useEffect(() => {
-        console.log(data)
-    })
+
+    function getDate(x) {
+        console.log(x)
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let d = Date(x);
+        let a = new Date(d);
+        let month = months[a.getMonth()];
+        return `${a.getDate()} ${month} ${a.getFullYear()}`
+    }
+
     return ((data) ? <div className={compareStyle.fwc}
                           style={{display: "block", height: "75vh"}}>
             <div className={compareStyle.j_heading}>Detail job</div>
-            <svg width="273" height="216" viewBox="0 0 273 216" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-                <rect width="273" height="216" rx="16" fill="#E0E4F0"/>
-            </svg>
+            <img src={data.jobDesc.jobProfile} alt="" className={compareStyle.jobDescImg}/>
             <div className={compareStyle.j_company}>
                 {data.jobDesc.companyName}
             </div>
@@ -32,7 +36,7 @@ export function JobDescription({jobID}) {
             <div className={compareStyle.miniQualContainer}>
                 <ul>
                     {
-                        data.jobDesc.Qualifications.map((value => <li>
+                        data.jobDesc.Qualifications.map(((value, index) => <li key={index}>
                             {value}
                         </li>))
                     }
@@ -47,34 +51,37 @@ export function JobDescription({jobID}) {
             <div className={compareStyle.fieldContainer}>
                 <div className={compareStyle.j_field}>
                     <div className={compareStyle.j_label}>
-                        Sallary
+                        Salary
                     </div>
                     <div className={compareStyle.j_value}>
-                        ₹10,000/a month
+                        ₹{data.jobDesc.SalaryRange}/a month
                     </div>
                 </div>
                 <div className={compareStyle.j_field}>
                     <div className={compareStyle.j_label}>
-                        Sallary
+                        Deadline
                     </div>
                     <div className={compareStyle.j_value}>
-                        ₹10,000/a month
+                        {
+                            getDate(data.jobDesc.ApplicationDeadline)
+                        }
                     </div>
                 </div>
                 <div className={compareStyle.j_field}>
                     <div className={compareStyle.j_label}>
-                        Sallary
+                        Location
                     </div>
                     <div className={compareStyle.j_value}>
-                        ₹10,000/a month
+                        {data.jobDesc.jobLocation}
+
                     </div>
                 </div>
                 <div className={compareStyle.j_field}>
                     <div className={compareStyle.j_label}>
-                        Sallary
+                        Job type
                     </div>
                     <div className={compareStyle.j_value}>
-                        ₹10,000/a month
+                        {data.jobDesc.jobType}
                     </div>
                 </div>
             </div>
