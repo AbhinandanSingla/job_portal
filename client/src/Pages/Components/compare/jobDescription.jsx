@@ -12,18 +12,18 @@ export function JobDescription({jobID}) {
     useEffect(() => {
         console.log(data)
     })
-    return (<div className={compareStyle.fwc}
-                 style={{display: "block", height: "75vh"}}>
+    return ((data) ? <div className={compareStyle.fwc}
+                          style={{display: "block", height: "75vh"}}>
             <div className={compareStyle.j_heading}>Detail job</div>
             <svg width="273" height="216" viewBox="0 0 273 216" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <rect width="273" height="216" rx="16" fill="#E0E4F0"/>
             </svg>
             <div className={compareStyle.j_company}>
-                MieKcoft Inc
+                {data.jobDesc.companyName}
             </div>
             <div className={compareStyle.j_type}>
-                UX Desginer
+                {data.jobDesc.jobTitle}
             </div>
             <div className={compareStyle.profile_line}>
             </div>
@@ -31,22 +31,18 @@ export function JobDescription({jobID}) {
             <div className={compareStyle.miniQual}>Minimum qualification</div>
             <div className={compareStyle.miniQualContainer}>
                 <ul>
-                    <li>
-                        Bachelor in Design, related field and can use app develop.
-                    </li>
-                    <li>5 years of experience as a UX or interaction Designer.</li>
+                    {
+                        data.jobDesc.Qualifications.map((value => <li>
+                            {value}
+                        </li>))
+                    }
                 </ul>
             </div>
             <div className={compareStyle.j_desc_heading}>
                 Description
             </div>
             <div className={compareStyle.j_desc}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet architecto
-                consequatur eius itaque natus perferendis provident sapiente velit voluptate. Aperiam
-                assumenda aut, dolore doloremque error eum ipsa nisi perspiciatis, quibusdam quos saepe,
-                veniam?
-                At MieKocoft Inc, we follow a simple but promise focus on the user and all else we
-                follow.
+                {data.jobDesc.jobDescription}
             </div>
             <div className={compareStyle.fieldContainer}>
                 <div className={compareStyle.j_field}>
@@ -98,6 +94,6 @@ export function JobDescription({jobID}) {
 
                 </div>
             </div>
-        </div>
+        </div> : ''
     );
 }
