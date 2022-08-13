@@ -42,6 +42,10 @@ export const addJob = (req, res) => {
         });
     })
 }
-export const getJobs = () => {
+
+export const getJobs = (id) => {
+    if (id !== "") {
+        return job.findOne({_id: id});
+    }
     return job.find();
 }
