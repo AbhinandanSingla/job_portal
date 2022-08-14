@@ -29,6 +29,7 @@ export function Compare() {
         }).then(async response => {
             if (response.ok) {
                 const data = await response.json()
+                console.log(data)
                 setUserContext(oldValues => {
                     return {...oldValues, details: data}
                 })
@@ -50,7 +51,6 @@ export function Compare() {
     useEffect(() => {
         if (!userContext.details) {
             fetchUserDetails()
-            console.log(userContext.details)
         }
     }, [userContext.details, fetchUserDetails])
 

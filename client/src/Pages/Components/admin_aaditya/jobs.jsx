@@ -1,5 +1,5 @@
 import React from "react";
-import aadityaModule from "./aaditya.module.css";
+import aadityaModule from "../../../Assets/styles/aaditya.module.css";
 export const Jobs = () => {
   return (
     <div className={aadityaModule.jobs}>
