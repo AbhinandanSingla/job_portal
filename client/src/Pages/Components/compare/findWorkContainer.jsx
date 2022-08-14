@@ -3,22 +3,14 @@ import {getJob} from "../../../graphql/queries";
 import {useEffect} from "react";
 import {useQuery} from "@apollo/client";
 
-export function FindWorkContainer() {
+export function FindWorkContainer({setJob}) {
     const {data} = useQuery(getJob);
     return (
         <div className={compareStyle.findWorkContainer}>
             {(data) ? data.jobList.map((value, index) =>
-                <div className={compareStyle.findWorkCard} key={index}>
-                    <div className="fwc-profile">
-                        <svg
-                            width="64"
-                            height="64"
-                            viewBox="0 0 64 64"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <rect width="64" height="64" rx="10" fill="#E0E4F0"/>
-                        </svg>
+                <div className={compareStyle.findWorkCard} onClick={() => setJob(value._id)} key={index}>
+                    <div className={compareStyle.fwc_profile}>
+                        <img src={value.jobProfile} alt=""/>
                     </div>
                     <div className={compareStyle.fwc_description}>
                         <div className={compareStyle.fwc_heading}>{value.companyName}</div>
@@ -38,14 +30,14 @@ export function FindWorkContainer() {
                                     <path
                                         d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z"
                                         stroke="#BDBABA"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                     <path
                                         d="M5 1C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5C1 5.946 1.201 6.565 1.75 7.25L5 11L8.25 7.25C8.799 6.565 9 5.946 9 5C9 3.93913 8.57857 2.92172 7.82843 2.17157C7.07828 1.42143 6.06087 1 5 1V1Z"
                                         stroke="#BDBABA"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                 </svg>
                                 {value.jobLocation}

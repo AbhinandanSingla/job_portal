@@ -1,6 +1,6 @@
 import "./App.css";
 import {Home} from "./Pages/home";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import React, {useCallback, useContext, useEffect} from "react";
 import {Compare} from "./Pages/compare";
 import {Login} from "./Pages/login";
@@ -16,6 +16,12 @@ import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 
 // import {Admin} from "./Pages/admin";
+const ProtectedRoute = ({user, children}) => {
+    if (!user.token) {
+        return <Navigate to="/login" replace/>;
+    }
+    return children;
+}
 
 function App() {
     const [userContext, setUserContext] = useContext(UserContext)
@@ -49,12 +55,20 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/compare" element={<Compare/>}/>
+                {/*<Route path="/compare" element={<Compare/>}/>*/}
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/company" element={<Company/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
+                <Route
+                    path="/compare"
+                    element={
+                        <ProtectedRoute user={userContext}>
+                            <Compare/>
+                        </ProtectedRoute>
+                    }
+                />
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
                 <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
                 {/* <Route path="/admin" element={<Admin />} /> */}

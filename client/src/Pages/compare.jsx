@@ -2,26 +2,64 @@ import compareStyle from "../Assets/styles/compare.module.css";
 import {Navbar} from "./Components/compare/navbar";
 import {Home} from "./Components/compare/home";
 import {CompareContainer} from "./Components/compare/compareContainer";
-import {useContext, useEffect, useRef, useState} from "react";
+import {useCallback, useContext, useEffect, useState} from "react";
 import {FindWorkContainer} from "./Components/compare/findWorkContainer";
 import {BookContainer} from "./Components/compare/bookContainer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {Guideline} from "./Components/compare/guideline";
 import {UserContext} from "../hooks/userContext";
-import {JobDescription} from "./Components/compare/jobDescription"; // You can also use <link> for styles
+import {JobDescription} from "./Components/compare/jobDescription";
+
 AOS.init();
 
 export function Compare() {
     const [navRoute, setRoute] = useState(0);
     const [userContext, setUserContext] = useContext(UserContext)
     const [selectedJob, setJob] = useState('62f6a5509de4e961ab4a6189');
+    const fetchUserDetails = useCallback(() => {
+        fetch("http://127.0.0.1:8080/me", {
+            method: "GET",
+            credentials: "include",
+            // Pass authentication token as bearer token in header
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${userContext.token}`,
+            },
+        }).then(async response => {
+            if (response.ok) {
+                const data = await response.json()
+                setUserContext(oldValues => {
+                    return {...oldValues, details: data}
+                })
+            } else {
+                if (response.status === 401) {
+                    // Edge case: when the token has expired.
+                    // This could happen if the refreshToken calls have failed due to network error or
+                    // User has had the tab open from previous day and tries to click on the Fetch button
+                    window.location.reload()
+                } else {
+                    setUserContext(oldValues => {
+                        return {...oldValues, details: null}
+                    })
+                }
+            }
+        })
+    }, [setUserContext, userContext.token])
+
+    useEffect(() => {
+        if (!userContext.details) {
+            fetchUserDetails()
+            console.log(userContext.details)
+        }
+    }, [userContext.details, fetchUserDetails])
+
     function switchComponent() {
         switch (navRoute) {
             case 0:
                 return <CompareContainer/>;
             case 1:
-                return <FindWorkContainer/>;
+                return <FindWorkContainer setJob={setJob}/>;
             case 2:
                 return <BookContainer/>;
             case 3:
@@ -55,7 +93,7 @@ export function Compare() {
                             <div className={compareStyle.profile_icon}>
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_52_119" style={{"mask-type": "alpha"}}
+                                    <mask id="mask0_52_119" style={{"maskType": "alpha"}}
                                           maskUnits="userSpaceOnUse"
                                           x="0"
                                           y="0" width="42" height="42">

@@ -53,7 +53,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -86,7 +86,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -119,7 +119,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -152,7 +152,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -185,7 +185,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -218,7 +218,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -251,7 +251,7 @@ export function CompareContainer() {
             <path
               d="M0 9.30249H20M20 9.30249L13.3333 1.30249M20 9.30249L13.3333 17.3025"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
