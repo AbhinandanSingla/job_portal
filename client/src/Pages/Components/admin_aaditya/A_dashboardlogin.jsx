@@ -1,7 +1,7 @@
 
 import React from 'react'
 import logo from "../../../Assets/Images/common/logo.svg";
-import aadityaModule from "./aaditya.module.css";
+import aadityaModule from "../../../Assets/styles/aaditya.module.css";
 
 export const Dashboardlogin = () => {
   return (

@@ -14,6 +14,7 @@ import {Admin_aaditya} from "./Pages/admin_aaditya";
 import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
+import {Registrations} from "./Pages/registrations_aaditya";
 
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
+                <Route path="/registrations_aaditya" element={<Registrations/>}/>
                 <Route
                     path="/compare"
                     element={
