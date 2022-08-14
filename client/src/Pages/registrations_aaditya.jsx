@@ -14,7 +14,6 @@ export const Registrations = () => {
                 <p>Filter</p>
             </div>
         </div>
-
         <div className={aadityaModule.lt}>
 
             <p1>Full Name</p1>
@@ -22,7 +21,6 @@ export const Registrations = () => {
             <p3>Applied Date</p3>
             <p4>Email</p4>
             <p5>Action</p5>
-
         </div>
 
         <div className={aadityaModule.ll}>
