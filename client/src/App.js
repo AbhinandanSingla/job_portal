@@ -15,6 +15,7 @@ import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 import {Registrations} from "./Pages/registrations_aaditya";
+import { A_Dashboard } from "./Pages/A_dashboard";
 
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
@@ -73,6 +74,7 @@ function App() {
                 />
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
                 <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
+                <Route path="/A_dashboard" element={<A_Dashboard/>}/>
                 {/* <Route path="/admin" element={<Admin />} /> */}
             </Routes>
         </BrowserRouter>
