@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {UserProvider} from "./hooks/userContext";
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import {ResumeProvider} from "./hooks/ResumeData";
 
 const client = new ApolloClient({
     uri: 'http://127.0.0.1:8080/graphsql',
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ApolloProvider client={client}>
         <UserProvider>
-            <App/>
+            <ResumeProvider>
+                <App/>
+            </ResumeProvider>
         </UserProvider>
     </ApolloProvider>
 );

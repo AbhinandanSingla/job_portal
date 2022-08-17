@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Open+Sans:wght@300;400;500&family=Padauk&family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+    --inter: 'Inter', sans-serif;
+    --opensans: 'Open Sans', sans-serif;
+    --padauk: 'Padauk', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.4%;
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+}
+
+.resumeBody {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    max-width: 960px;
+    padding: 4rem 0;
+}
+
+.leftBody {
+    width: 300px;
+}
+
+.navHeading {
+    font-size: 1.5rem;
+    font-family: var(--opensans);
+    font-weight: bold;
+    color: #58585f;
+
+}
+
+.line_separator {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.5rem 0;
+    border-top: 1px solid grey;
+}
+
+.nav {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-family: var(--inter);
+    color: #58585f;
+}
+
+
+.resumeTemplate {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0 4rem;
+}
+
+.rh_heading {
+    padding-top: 4rem;
+    font-size: 4rem;
+    color: blue;
+    font-weight: bold;
+    font-family: var(--roboto);
+}
+
+.rh_profession {
+    color: blue;
+    padding: 0.5rem 0 1.5rem 0;
+    font-size: 1.4rem;
+    font-family: var(--inter);
+}
+
+.rh_address {
+    font-family: var(--opensans);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.rh_address li {
+    list-style: none;
+    padding: 0.4rem 0;
+}
+
+.rh_address span {
+    font-weight: normal;
+}
+
+.professionalSummary {
+    padding: 1rem 0 3rem 0;
+    font-size: 1.4rem;
+    font-family: var(--inter);
+}
+
+.sectionTitle {
+    border-bottom: 1px solid grey;
+    font-size: 2rem;
+    font-family: var(--padauk);
+    color: blue;
+    font-weight: bold;
+}
+
+.mainColumn {
+    margin-left: 18rem;
+    padding: 1rem;
+}
+
+.skl {
+    padding: 0.4rem;
+    font-family: var(--opensans);
+    font-size: 1.4rem;
+}
+
+.workContainer {
+    padding: 2rem 0;
+}
+
+.date_wrapper {
+    font-family: var(--padauk);
+    font-size: 1.5rem;
+    width: 12rem;
+    float: left;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.companyName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--opensans);
+    padding: 0.5rem 0;
+}
+
+.workList ul li {
+    padding-bottom: 0.3rem;
+    font-size: 1.4rem;
+    font-family: var(--opensans);
+}
+
+.university, .cg {
+    font-size: 1.4rem;
+    font-family: var(--opensans);
+    font-style: italic;
+}
+
+.educationContainer {
+    padding: 1rem 0;
+}

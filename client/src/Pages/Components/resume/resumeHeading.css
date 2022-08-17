@@ -1,0 +1,254 @@
+
+.headContainer {
+    padding: 2rem;
+}
+
+.heading {
+    line-height: 3rem;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-family: var(--inter);
+    color: blue;
+    font-weight: 300;
+}
+
+.subheading {
+    line-height: 3rem;
+    font-size: 2rem;
+    font-family: var(--opensans);
+    font-weight: 550;
+    color: #58585f;
+}
+
+.resumeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.resumeContainer .max_width {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.uploadphoto {
+    width: 45%;
+    font-family: var(--inter);
+    margin-top: 2rem;
+    border: 1px solid blue;
+    background: transparent;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+.buttonContainer {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formRow {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.resumeContainer .formRow {
+    padding: 1rem 0;
+}
+
+.back {
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+    color: dodgerblue;
+    background: transparent;
+    border: 1px solid blue;
+}
+
+.next {
+    float: right;
+    background: red;
+    border: 1px solid #DE4940;
+    padding: 1.5rem 6rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--inter);
+}
+
+.input {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4rem;
+}
+
+.workDesc {
+    height: 10rem;
+}
+
+.formCol {
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.formCol span {
+    display: block;
+    font-size: 1.3rem;
+    font-family: var(--inter);
+    color: #58585f;
+}
+
+.width {
+    width: 50%;
+}
+
+.currentLabel input[type="checkbox"] {
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+
+.currentLabel {
+    display: flex;
+    align-content: center;
+    font-size: 1.5rem;
+    font-family: var(--opensans);
+    margin-top: 1.7rem;
+}
+
+.currentLabel span {
+    margin-left: 1rem;
+}
+
+.headingProfile {
+    height: 20rem;
+    width: 20rem;
+}
+
+.max_width {
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    line-height: 3rem;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-family: var(--inter);
+    color: blue;
+    font-weight: 300;
+}
+
+.educationContainer {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.educationLi {
+    position: relative;
+    margin: 1rem 0;
+    width: 60%;
+    padding: 2rem 4rem;
+    border: 1px solid #2c7fe0;
+}
+
+.ed_degree {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.ed_schoolName {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.ed_period {
+    margin-left: 1rem;
+}
+
+.workHistoryList .ed_period {
+    font-size: 1.2rem;
+}
+
+.addDegree {
+    cursor: pointer;
+    width: 60%;
+    margin-top: 2rem;
+    padding: 1.8rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px dashed #2c7fe0;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--OpenSans);
+    background: #f6f8fa;
+}
+
+.addDegree:hover {
+    color: #fff;
+    background: #2c7fe0;
+    border: 1px solid #2c7fe0;
+}
+
+.optionContainer {
+    display: inline;
+    float: right;
+}
+
+.paraTag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2rem;
+    text-indent: 12px;
+    color: #fff;
+}
+
+.paraTag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0;
+    border-color: #007bff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.educationbuttons {
+    width: 80%;
+    margin-top: 3rem;
+}
+
+.resumeSummary {
+    height: 10rem;
+}
