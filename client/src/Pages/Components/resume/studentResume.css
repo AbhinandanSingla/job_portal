@@ -1,0 +1,101 @@
+.studentResume .max-width {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.leftPage {
+    grid-area: 1 / 1 / 2 / 2;
+    background: #035faf;
+    filter: brightness(0.8);
+}
+
+
+.resumeHead {
+    padding: 3rem 1rem;
+    color: #fff;
+}
+
+.resumeHeading {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--inter);
+}
+
+.resumeTitle {
+    padding: .5rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: var(--opensans);
+}
+
+.headTitle {
+    font-size: 2rem;
+    background: #003D73;
+    color: #fff;
+    font-family: var(--padauk);
+    padding: 0 1rem;
+}
+
+
+.contactDetail {
+    padding: 2rem 0rem;
+}
+
+.navHead {
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: var(--inter);
+}
+
+.navValue {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    font-family: var(--opensans);
+}
+
+.singleCol {
+    font-size: 1.5rem;
+    font-family: var(--opensans);
+    padding: 1rem;
+    color: #fff;
+}
+
+.skillsDetail ul {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.skill_item {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    font-family: var(--inter);
+    color: #ffff;
+}
+
+.rightPage {
+    grid-area: 1 / 2 / 2 / 3;
+    height: 100vh;
+}
+
+.professionalSummary {
+    font-size: 1.9rem;
+    font-family: var(--opensans);
+    padding: 1rem;
+    color: #4f4747;
+    line-height: 4rem;
+}
+
+.sectionHeading {
+    padding: 1rem 0;
+    border-top: 1px solid #58585f;
+    border-bottom: 1px solid #58585f;
+    font-size: 2rem;
+    font-family: var(--opensans);
+    font-weight: 600;
+    color: #003D73;
+    margin-left: 1rem;
+
+}
