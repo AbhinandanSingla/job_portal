@@ -21,7 +21,7 @@ import WorkHistory from "./Pages/Components/resume/workHistory";
 import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
-
+import { A_Dashboard } from "./Pages/A_dashboard";
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
     if (!user.token) {
