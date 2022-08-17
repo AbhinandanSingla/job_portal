@@ -15,6 +15,7 @@ import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 import {Registrations} from "./Pages/registrations_aaditya";
+
 import StudentResume from "./Pages/Components/resume/studentResume";
 import ResumeHeading from "./Pages/Components/resume/ResumeHeading";
 import WorkHistory from "./Pages/Components/resume/workHistory";
@@ -86,6 +87,7 @@ function App() {
                 {/*<Route path={'resume/skills'} element={}/>*/}
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
                 <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
+                <Route path="/A_dashboard" element={<A_Dashboard/>}/>
                 {/* <Route path="/admin" element={<Admin />} /> */}
             </Routes>
         </BrowserRouter>
