@@ -15,6 +15,7 @@ import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 import {Registrations} from "./Pages/registrations_aaditya";
+import {Guidance} from "./Pages/Components/compare/guidance";
 
 import StudentResume from "./Pages/Components/resume/studentResume";
 import ResumeHeading from "./Pages/Components/resume/ResumeHeading";
@@ -22,7 +23,8 @@ import WorkHistory from "./Pages/Components/resume/workHistory";
 import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
-import {A_Dashboard} from "./Pages/A_dashboard";
+
+//import {A_Dashboard} from "./Pages/A_dashboard";
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
     if (!user.token) {
@@ -84,10 +86,12 @@ function App() {
                 <Route path={'resume/education'} element={<Education/>}/>
                 <Route path={'resume/educationList'} element={<EducationList/>}/>
                 <Route path={'resume/workHistoryList'} element={<WorkHistoryList/>}/>
+                <Route path={'guidance'} element={<Guidance/>}/>
                 {/*<Route path={'resume/skills'} element={}/>*/}
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
                 <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
-                <Route path="/A_dashboard" element={<A_Dashboard/>}/>
+                {/* <Route path="/A_dashboard" element={<A_Dashboard/>}/> */}
+
                 {/* <Route path="/admin" element={<Admin />} /> */}
             </Routes>
         </BrowserRouter>

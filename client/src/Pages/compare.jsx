@@ -7,7 +7,7 @@ import {FindWorkContainer} from "./Components/compare/findWorkContainer";
 import {BookContainer} from "./Components/compare/bookContainer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {Guideline} from "./Components/compare/guideline";
+import {Guidance} from "./Components/compare/guidance";
 import {UserContext} from "../hooks/userContext";
 import {JobDescription} from "./Components/compare/jobDescription";
 
@@ -63,7 +63,7 @@ export function Compare() {
             case 2:
                 return <BookContainer/>;
             case 3:
-                return <Guideline/>;
+                return <Guidance/>;
         }
     }
 

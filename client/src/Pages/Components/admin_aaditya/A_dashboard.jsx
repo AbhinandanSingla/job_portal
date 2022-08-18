@@ -1,6 +1,6 @@
 import React from "react";
-import aadityaModule from "../Assets/styles/aaditya.module.css";
-import {Navbar} from "./Components/admin_aaditya/navbar_aaditya";
+import aadityaModule from "../../../Assets/styles/aaditya.module.css";
+import {Navbar} from "./navbar_aaditya";
 import { BsCalendarMonth } from "react-icons/bs";
 
 
