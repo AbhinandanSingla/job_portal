@@ -7,7 +7,6 @@ import {Dashboard} from "./Components/company/dashboard";
 
 export function Admin_aaditya() {
     const [navRoute, setRoute] = useState(0);
-
     function changeRoute() {
         switch (navRoute) {
             case 0:
