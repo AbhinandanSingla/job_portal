@@ -14,7 +14,7 @@ import {Admin_aaditya} from "./Pages/admin_aaditya";
 import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
-import {Registrations} from "./Pages/registrations_aaditya";
+
 import {Guidance} from "./Pages/Components/compare/guidance";
 
 import StudentResume from "./Pages/Components/resume/studentResume";
@@ -23,7 +23,7 @@ import WorkHistory from "./Pages/Components/resume/workHistory";
 import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
-import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
+
 import {Login_company} from "./Pages/Components/company/login";
 
 
@@ -73,7 +73,7 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
-                <Route path="/registrations_aaditya" element={<Registrations/>}/>
+               
                 <Route
                     path="/compare"
                     element={
@@ -92,13 +92,13 @@ function App() {
                 <Route path={'guidance'} element={<Guidance/>}/>
                 {/*<Route path={'resume/skills'} element={}/>*/}
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
-                <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
+                <Route path="/A_dashboardlogin" element={<Dashboardlogin/>}/>
                 {/* <Route path="/A_dashboard" element={<A_Dashboard/>}/> */}
 
                 {/* <Route path="/admin" element={<Admin />} /> */}
                 <Route/>
                 <Route path="/admin/login" element={<Dashboardlogin/>}/>
-                <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
+                
             </Routes>
         </BrowserRouter>
     );

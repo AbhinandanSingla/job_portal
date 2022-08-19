@@ -1,13 +1,13 @@
 import React from "react";
 import aadityaModule from "../../../Assets/styles/aaditya.module.css";
-import {Navbar} from "./navbar_aaditya";
+
 import { BsCalendarMonth } from "react-icons/bs";
 
 
 export const A_Dashboard = () => {
   return (
     <div className={aadityaModule.mt}>
- <Navbar/>
+ 
       <div className={aadityaModule.heading}>
     
         <h1 className={aadityaModule.heading1}>Welcome to the Dashboard</h1>
