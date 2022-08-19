@@ -680,6 +680,7 @@ body {
   cursor: pointer;
 }
 
+/* Company login */
 .loginContainer {
   display: flex;
   flex-direction: row;
