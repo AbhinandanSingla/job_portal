@@ -1216,112 +1216,6 @@
 }
 
 
-.jobListDiv {
-
-    background-color: white;
-    position: absolute;
-    width: 704px;
-    height: 50px;
-
-    right: -130px;
-    bottom: 230px;
-    border-radius: 4px;
-    margin-left: 740px;
-}
-
-.jobListDiv h1 {
-
-    background-color: white;
-
-    padding: 1rem 1rem;
-    font-weight: 500;
-    font-size: 24px;
-
-}
-
-.jobListHead {
-    background-color: #e0e4f0cc;
-    width: 704px;
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    font-size: 16px;
-    margin-left: 3rem;
-    border-radius: 1rem;
-    padding: 1rem 1rem;
-    background-color: white;
-}
-
-.jobList {
-    display: flex;
-    flex-direction: column;
-    background-color: #d2d2d220;
-    border-radius: 1rem;
-    width: 100%;
-    margin-left: 3rem;
-    gap: 0.4rem;
-
-}
-
-.jobListSub {
-    display: flex;
-    flex-direction: row;
-    gap: 10rem;
-    font-size: 16px;
-    padding: 3rem 3rem;
-    background-color: white;
-}
-
-.jobListSub span {
-    padding-top: 1rem;
-}
-
-#spanCategory {
-    padding-left: 5rem;
-}
-
-#spanOpenings {
-    padding-left: 2rem;
-}
-
-#spanStatus {
-    padding-left: 3.5rem;
-}
-
-#spanActive {
-    color: white;
-    background: linear-gradient(
-            90deg,
-            rgba(3, 241, 34, 1) 0%,
-            rgba(66, 228, 87, 1) 58%,
-            rgba(175, 250, 86, 1) 100%
-    );
-    padding: 1rem 4rem;
-    border-radius: 1rem;
-}
-
-#spanInactive {
-    color: white;
-    background: linear-gradient(
-            90deg,
-            rgba(243, 64, 121, 1) 0%,
-            rgba(244, 70, 118, 1) 58%,
-            rgba(250, 122, 86, 1) 100%
-    );
-    padding: 1rem 3rem;
-    border-radius: 1rem;
-}
-
-.line {
-    content: "";
-    width: 94%;
-    background: black;
-    height: 0.1rem;
-    margin-left: 3rem;
-    opacity: 0.3;
-    font-size: 12px;
-}
-
 .last {
     position: absolute;
     width: 956px;
@@ -1509,6 +1403,7 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     border: 1px solid black;
+    transform: translate(6rem,0rem);
 
 }
 

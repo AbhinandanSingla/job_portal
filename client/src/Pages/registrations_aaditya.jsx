@@ -1,10 +1,10 @@
 import React from "react";
-import {Navbar} from "./Components/admin_aaditya/navbar_aaditya";
+
 import aadityaModule from "../Assets/styles/aaditya.module.css";
 
 export const Registrations = () => {
     return <div className={aadityaModule.cl}>
-        <Navbar/>
+      
         <div className={aadityaModule.ot}>
             <h1> Total Applicants:19</h1>
             <div className={aadityaModule.sb}>
