@@ -7,4 +7,10 @@ router.post('/api/addCompany', addCompany);
 router.post('/api/addJob', addJob);
 // router.get('/api/getJobsCategorical', getJobCategorial);
 
+
+
+
+
+
+
 export default router;

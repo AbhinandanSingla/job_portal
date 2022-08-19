@@ -10,6 +10,7 @@ import {graphqlHTTP} from "express-graphql";
 import schema from "./models/Schema.js";
 import cors from "cors";
 import User from "./models/user.js";
+import {admin, company} from './models/admin.js'
 import cookieParser from "cookie-parser";
 import "./routes/strategies/JwtStrategy.js";
 import LocalStrategy from "passport-local";
@@ -35,7 +36,12 @@ app.use(
 );
 app.use(passport.initialize());
 passport.use(new LocalStrategy(User.authenticate()));
+passport.use(new LocalStrategy(admin.authenticate()));
+passport.use(new LocalStrategy(company.authenticate()));
+
 passport.serializeUser(User.serializeUser());
+passport.serializeUser(admin.serializeUser());
+passport.serializeUser(company.serializeUser());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(
