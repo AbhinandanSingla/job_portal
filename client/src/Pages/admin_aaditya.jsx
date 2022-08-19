@@ -2,8 +2,8 @@ import React from "react";
 import {useState} from "react";
 import {Navbar} from "./Components/admin_aaditya/navbar_aaditya";
 import {Registrations} from "./registrations_aaditya";
-import {Dashboard} from "./Components/admin_aaditya/dashboard_aaditya";
 import {Jobs} from "./Components/admin_aaditya/jobs";
+import {Dashboard} from "./Components/company/dashboard";
 
 export function Admin_aaditya() {
     const [navRoute, setRoute] = useState(0);

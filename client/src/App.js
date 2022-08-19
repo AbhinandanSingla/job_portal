@@ -4,14 +4,10 @@ import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import React, {useCallback, useContext, useEffect} from "react";
 import {Compare} from "./Pages/compare";
 import {Login} from "./Pages/login";
-
 import {Register} from "./Pages/register";
-
 import {Company} from "./Pages/company";
-
 import {Profilesection} from "./Pages/profilesection";
 import {Admin_aaditya} from "./Pages/admin_aaditya";
-import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 import {Registrations} from "./Pages/registrations_aaditya";
@@ -23,7 +19,8 @@ import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
 import {A_Dashboard} from "./Pages/A_dashboard";
-// import {Admin} from "./Pages/admin";
+import {Login_company} from "./Pages/Components/company/login";
+
 const ProtectedRoute = ({user, children}) => {
     if (!user.token) {
         return <Navigate to="/login" replace/>;
@@ -77,18 +74,16 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-
+                <Route path={'/Login_company'} element={<Login_company/>}/>
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>
                 <Route path={'resume/workHistory'} element={<WorkHistory/>}/>
                 <Route path={'resume/education'} element={<Education/>}/>
                 <Route path={'resume/educationList'} element={<EducationList/>}/>
                 <Route path={'resume/workHistoryList'} element={<WorkHistoryList/>}/>
-                {/*<Route path={'resume/skills'} element={}/>*/}
-                {/*<Route path="/admin" element={<Dashboard />} />*/}
-                <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
-                <Route path="/A_dashboard" element={<A_Dashboard/>}/>
-                {/* <Route path="/admin" element={<Admin />} /> */}
+
+                <Route path="/admin/login" element={<Dashboardlogin/>}/>
+                <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
             </Routes>
         </BrowserRouter>
     );

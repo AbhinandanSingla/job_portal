@@ -679,3 +679,120 @@ body {
   background: #e0e4f0;
   cursor: pointer;
 }
+
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+
+.loginLeft img {
+  z-index: -1;
+}
+.loginLeft h1 {
+  font-size: 56px;
+  margin: 0;
+  padding: 0;
+}
+.loginLeft h2 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.loginLeft h1,
+.loginLeft h2,
+.loginLeft p {
+  transform: translate(16rem, 14rem);
+  color: white;
+  width: 37%;
+}
+.loginLeft p {
+  margin-top: 4rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+.RozgarLink {
+  display: flex;
+  flex-direction: row;
+  transform: translate(2rem, 3rem);
+  text-decoration: none;
+}
+.RozgarLink img {
+  width: 7rem;
+  height: 7rem;
+}
+.RozgarLink h3 {
+  padding: 1.2rem 0rem;
+  font-size: 20px;
+  color: #000;
+}
+#imageleft {
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+.loginRight {
+  /* display: flex;
+  flex-direction: column;
+  transform: translate(2rem, 3rem); */
+  transform: translate(-20rem, 15rem);
+  width: 30%;
+}
+.loginRight h1 {
+  font-size: 48px;
+}
+.loginInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.loginbtnDiv {
+  display: flex;
+  flex-direction: row;
+  transform: translate(-2rem, 6rem);
+  gap: 10rem;
+  margin: 2rem 2rem;
+  font-weight: 300;
+}
+.loginInputs i {
+  width: 20px;
+  height: 20px;
+}
+.loginInputs input {
+  /* border: none; */
+  margin: 0rem 1rem;
+  padding: 1rem;
+  width: 80%;
+}
+
+.loginInputs a {
+  font-size: 12px;
+}
+
+.loginbtnDiv button {
+  padding: 1rem 3rem;
+  background: #4377fd;
+  border: none;
+  align-items: center;
+}
+.loginbtnDiv button:hover {
+  cursor: pointer;
+  background: #4378fd74;
+  color: #000;
+}
+.loginbtnDiv div {
+  width: 10rem;
+  transform: translate(0, 1rem);
+}
+.registerLinkDiv {
+  transform: translate(11rem, 12rem);
+  display: flex;
+  flex-direction: column;
+}
+.registerLinkDiv a {
+  transform: translate(3rem, 1rem);
+}
