@@ -23,7 +23,7 @@ import WorkHistory from "./Pages/Components/resume/workHistory";
 import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
-import {A_Dashboard} from "./Pages/A_dashboard";
+import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Login_company} from "./Pages/Components/company/login";
 
 
@@ -96,7 +96,7 @@ function App() {
                 {/* <Route path="/A_dashboard" element={<A_Dashboard/>}/> */}
 
                 {/* <Route path="/admin" element={<Admin />} /> */}
-
+                <Route/>
                 <Route path="/admin/login" element={<Dashboardlogin/>}/>
                 <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
             </Routes>
