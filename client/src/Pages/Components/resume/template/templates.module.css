@@ -1,0 +1,179 @@
+/* Resume-1 Styles  */
+.resumeContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 0rem 36rem;
+    font-size: 16px;
+    background-color: white;
+    padding: 3rem 6rem;
+}
+.resumeMain{
+    background-color:#86929D;
+   
+}
+.boxText{
+    border: solid black;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    padding: 0.5rem 3rem;
+    margin: 1.5rem 0rem;
+    margin-top: 5rem;
+}
+.resume1Left{
+    width: 100%;
+}
+.resume1Right{
+    width: 30%;
+}
+.resume1Left h1{
+    font-size: 48px;
+    margin: 4rem 0rem;
+    line-height:6rem;
+}
+
+.lineMid{
+    content: "";
+    width: 1rem;
+    color: black;
+    height: 10rem;
+}
+
+.resume1Left h3{
+    font-size: 24px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+.leftDivs{
+    display: flex;
+    flex-direction: row;
+}
+.leftDivsContent{
+    margin-left: 0;
+    padding-left: 0;
+    transform: translate(-5rem);
+}
+.verticalText{
+    transform: rotate(-90deg);
+    font-size: 12px;
+    padding: 0rem 0rem;
+    margin-top: 5rem ;
+    width: fit-content;
+    display: inline-flex;
+    height:11rem;
+}
+.leftDivs h5{
+    margin-top: 2.5rem;
+    font-size:20px;
+}
+.leftDivs h6{
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.leftDivs p{
+    font-size: 14px;
+    width: 120%;
+}
+.resume1Right p{
+    font-size: 14px;
+    margin-top: 0.4rem;
+}
+.lineMid{
+    content: '';
+    width: 0.4rem;
+    transform: translate(0rem,5rem);
+    height: 97rem;
+    background: black;
+}
+.lineLeft{
+    content: '';
+    background-color: black;
+    width: 42rem;
+    margin-top:3rem;
+    height: 0.25rem;
+}
+
+/* resume-2 styles */
+.resume2container{
+    background: #86929D;
+}
+.resume2SubContainer{
+    background: white;
+    margin: 0rem 36rem;
+    padding: 3rem 0rem;
+}
+
+.detailsDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+.resume2Left svg{
+    width: 15px;
+    height: 15px;
+}
+.head{
+    margin-bottom: 1rem;
+    padding: 2rem 4rem;
+}
+.head h1{
+    font-size: 48px;
+}
+.head h5{
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: 400;
+}
+.resume2Left{
+    margin: 0rem 4rem;
+    width: 50%;
+    background: rgba(128, 128, 128, 0.079);
+    padding: 0rem 3rem;
+}
+.resume2Left h3{
+    font-size: 24px;
+    margin: 0.5rem 0rem;
+    margin-top: 2rem;
+}
+.resume2Left div{
+    margin-top: 1rem;
+}
+.year{
+    color: blueviolet;
+    font-size: 12px;
+    font-weight: 500;
+}
+.year svg{
+    margin-right: 1rem;
+    transform: translate(0rem,0.35rem);
+}
+.year svg::after{
+    content: '';
+    width: 1rem;
+    height: 2rem;
+}
+.resume2Left h5{ 
+    font-size: 16px;
+    width: 100%;
+    transform: translate(2.4rem,0rem);
+}
+.description{
+    transform: translate(2.4rem,0rem);
+    font-size: 12px;
+}
+
+.resume2Right{
+    width: 50%;
+    margin: 0rem 4rem;
+}
+.resume2Right h5{
+    font-size: 24px;
+    margin-top: 2rem;
+
+}
+.resume2Right p{
+    font-size: 12px;
+}

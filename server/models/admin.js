@@ -1,21 +1,26 @@
 import mongoose from "mongoose";
+import passportLocalMongoose from "passport-local-mongoose";
 
-const adminSchema = mongoose.Schema({
-    email: {
+const Session = mongoose.Schema({
+    refreshToken: {
         type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
+        default: "",
     },
 });
 
+const comp = mongoose.Schema({
+    _id: {
+        type: String,
+    }
+})
 const companySchema = mongoose.Schema({
     companyProfilePicture: {
         type: String,
     },
     companyName: {
+        type: String,
+    },
+    username: {
         type: String,
     },
     email: {
@@ -38,8 +43,35 @@ const companySchema = mongoose.Schema({
     },
     Jobs: [],
     JobsHistory: [],
+    purposals: [],
+    refreshToken: {
+        type: [Session]
+    },
+});
+``
+
+const adminSchema = mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+    },
+    companies: {
+        type: [companySchema]
+    },
+    rejectedCompanies: {
+        type: [companySchema]
+    },
+    refreshToken: {
+        type: [Session]
+    },
 });
 
+adminSchema.set("toJSON", {
+    transform: function (doc, ret, options) {
+        delete ret.refreshToken;
+        return ret;
+    },
+});
 const jobSchema = mongoose.Schema({
     companyID: {
         type: mongoose.Schema.Types.ObjectId,
@@ -89,8 +121,10 @@ const jobSchema = mongoose.Schema({
     },
     applications: [],
 });
+adminSchema.plugin(passportLocalMongoose);
+companySchema.plugin(passportLocalMongoose);
+export const admin = mongoose.model("Admins", adminSchema);
 
-const admin = mongoose.model("Admins", adminSchema);
 export const company = mongoose.model("Companies", companySchema);
+export const tempCompany = mongoose.model('TempCompanies', companySchema);
 export const job = mongoose.model("jobs", jobSchema);
-export default admin;

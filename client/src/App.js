@@ -11,12 +11,27 @@ import {Company} from "./Pages/company";
 
 import {Profilesection} from "./Pages/profilesection";
 import {Admin_aaditya} from "./Pages/admin_aaditya";
-import {Dashboard} from "./Pages/Components/admin_aaditya/dashboard_aaditya"
 import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
+
+import {Guidance} from "./Pages/Components/compare/guidance";
+
+import StudentResume from "./Pages/Components/resume/studentResume";
+import ResumeHeading from "./Pages/Components/resume/ResumeHeading";
+import WorkHistory from "./Pages/Components/resume/workHistory";
+import Education from "./Pages/Components/resume/Education";
+import {EducationList} from "./Pages/Components/resume/educationList";
+import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
+
+import {Login_company} from "./Pages/Components/company/login";
+import {Companyprofile} from "./Pages/companyprofile";
+import {Resume} from "./Pages/Components/resume/template/resume1";
+import {Resume2} from "./Pages/Components/resume/template/resume2";
+import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
 import {Registerc}from "./Pages/Components/company/register"
 import {Logincompany} from "./Pages/Components/company/login"
+
 
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
@@ -58,7 +73,6 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                {/*<Route path="/compare" element={<Compare/>}/>*/}
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/company" element={<Company/>}/>
                 <Route path="/register" element={<Register/>}/>
@@ -72,9 +86,23 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
+
+                <Route path={'/resume'} element={<StudentResume/>}/>
+                <Route path={'resume/heading'} element={<ResumeHeading/>}/>
+                <Route path={'resume/workHistory'} element={<WorkHistory/>}/>
+                <Route path={'resume/education'} element={<Education/>}/>
+                <Route path={'resume/educationList'} element={<EducationList/>}/>
+                <Route path={'resume/workHistoryList'} element={<WorkHistoryList/>}/>
+                <Route path={'guidance'} element={<Guidance/>}/>
+                {/*<Route path={'resume/skills'} element={}/>*/}
                 {/*<Route path="/admin" element={<Dashboard />} />*/}
                 <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
+                {/* <Route path="/A_dashboard" element={<A_Dashboard/>}/> */}
+
                 {/* <Route path="/admin" element={<Admin />} /> */}
+                <Route/>
+                <Route path="/admin/login" element={<Dashboardlogin/>}/>
+                <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
             </Routes>
         </BrowserRouter>
     );
