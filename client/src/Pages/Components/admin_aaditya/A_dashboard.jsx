@@ -100,9 +100,9 @@ export const A_Dashboard = () => {
 
       <div className={aadityaModule.cll}>
         <p>UI/UX Designer</p>
-        <p>Full Time</p>
-        <p>12</p>
-        <p>125</p>
+        <p className={aadityaModule.setting}>Full Time</p>
+        <p className={aadityaModule.setting}>12</p>
+        <p className={aadityaModule.setting} style={{left:"-28px"}}>125</p>
         <button > Active</button>
 
        <hr />
@@ -110,9 +110,9 @@ export const A_Dashboard = () => {
       <br />
       <div className={aadityaModule.cll}>
         <p>UI/UX Designer</p>
-        <p>Full Time</p>
-        <p>12</p>
-        <p>125</p>
+        <p className={aadityaModule.setting}>Full Time</p>
+        <p className={aadityaModule.setting}>12</p>
+        <p className={aadityaModule.setting} style={{left:"-28px"}}>125</p>
         <button > Active</button>
 
        <hr />
@@ -120,9 +120,9 @@ export const A_Dashboard = () => {
       <br />
       <div className={aadityaModule.cll}>
         <p>UI/UX Designer</p>
-        <p>Full Time</p>
-        <p>12</p>
-        <p>125</p>
+        <p className={aadityaModule.setting}>Full Time</p>
+        <p className={aadityaModule.setting}>12</p>
+        <p className={aadityaModule.setting} style={{left:"-28px"}}>125</p>
         <button> Active</button>
 
        <hr />
@@ -130,9 +130,9 @@ export const A_Dashboard = () => {
 <br />
 <div className={aadityaModule.cll}>
         <p>UI/UX Designer</p>
-        <p>Full Time</p>
-        <p>12</p>
-        <p>125</p>
+        <p className={aadityaModule.setting}>Full Time</p>
+        <p className={aadityaModule.setting}>12</p>
+        <p className={aadityaModule.setting} style={{left:"-28px"}}>125</p>
         <button> Active</button>
 
        <hr />
@@ -140,9 +140,9 @@ export const A_Dashboard = () => {
 <br />
 <div className={aadityaModule.cll}>
         <p>UI/UX Designer</p>
-        <p>Full Time</p>
-        <p>12</p>
-        <p>125</p>
+        <p className={aadityaModule.setting}>Full Time</p>
+        <p className={aadityaModule.setting}>12</p>
+        <p className={aadityaModule.setting} style={{left:"-28px"}}>125</p>
         <button> Active</button>
 
        <hr />
