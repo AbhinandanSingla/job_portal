@@ -1,5 +1,5 @@
 import React from "react";
-import templateStyles from '../templates/templates.module.css';
+import templateStyles from './templates.module.css';
 export const Resume2 = () => {
   return (
     <div className={templateStyles.resume2container}>

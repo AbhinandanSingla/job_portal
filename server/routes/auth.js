@@ -53,7 +53,7 @@ router.get("/me", verifyUser, (req, res, next) => {
     res.send(req.user);
 });
 
-router.post("/login", passport.authenticate("local"), (req, res, next) => {
+router.post("/login", passport.authenticate("user"), (req, res, next) => {
     console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});
@@ -188,24 +188,27 @@ router.post("/admin/signup", (req, res, next) => {
 });
 
 
-router.post("/admin/login", passport.authenticate("local"), (req, res, next) => {
+router.post("/admin/login", passport.authenticate("admin"), (req, res, next) => {
     console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});
     admin.findById(req.user._id).then(
-        (user) => {
-            user.refreshToken.push({refreshToken});
-            user.save((err, user) => {
+        (admin) => {
+            admin.refreshToken.push({refreshToken});
+            admin.save((err, admin) => {
                 if (err) {
                     res.statusCode = 500;
                     res.send(err);
                 } else {
                     res.cookie("refreshToken", refreshToken);
-                    res.send({success: true, token, id: user._id});
+                    res.send({success: true, token, id: admin._id});
                 }
             });
         },
-        (err) => next(err)
+        (err) => {
+            console.log(err)
+            next(err);
+        }
     );
 });
 
@@ -327,7 +330,7 @@ router.post("/company/signup", (req, res, next) => {
 });
 
 
-router.post("/company/login", passport.authenticate("local"), (req, res, next) => {
+router.post("/company/login", passport.authenticate("company"), (req, res, next) => {
     console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});

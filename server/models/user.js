@@ -7,7 +7,6 @@ const Session = mongoose.Schema({
         default: "",
     },
 });
-
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
