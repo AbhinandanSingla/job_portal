@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-import userRoutes from "./routes/user.js";
 import adminRoutes from "./routes/admin.js";
 import authRoutes from "./routes/auth.js";
 import connectDB from "./database/config.js";
@@ -35,9 +34,10 @@ app.use(
     })
 );
 app.use(passport.initialize());
-passport.use(new LocalStrategy(User.authenticate()));
-passport.use(new LocalStrategy(admin.authenticate()));
-passport.use(new LocalStrategy(company.authenticate()));
+passport.use('admin', new LocalStrategy(admin.authenticate()));
+passport.use('user', new LocalStrategy(User.authenticate()));
+passport.use('company', new LocalStrategy(company.authenticate()));
+
 
 passport.serializeUser(User.serializeUser());
 passport.serializeUser(admin.serializeUser());
@@ -52,7 +52,6 @@ app.use(
     })
 );
 
-app.use("/", userRoutes);
 app.use("/", adminRoutes);
 app.use("/", authRoutes);
 

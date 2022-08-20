@@ -509,34 +509,10 @@
     height: 50px;
     left: 490px;
     top: 227px;
-
+    cursor: pointer;
     background: #3A86FF;
     border-radius: 12px;
     color: white;
-}
-
-.bte p {
-    position: relative;
-    justify-content: center;
-    text-align: center;
-
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 19px;
-    /* identical to box height */
-
-    text-align: center;
-    letter-spacing: 1.54286px;
-    text-transform: uppercase;
-
-    color: #FFFFFF;
-
-    mix-blend-mode: normal;
-    opacity: 0.87;
-    top: 15px;
 }
 
 .rr1 {

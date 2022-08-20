@@ -7,6 +7,12 @@ const Session = mongoose.Schema({
         default: "",
     },
 });
+
+const comp = mongoose.Schema({
+    _id: {
+        type: String,
+    }
+})
 const companySchema = mongoose.Schema({
     companyProfilePicture: {
         type: String,
@@ -37,6 +43,7 @@ const companySchema = mongoose.Schema({
     },
     Jobs: [],
     JobsHistory: [],
+    purposals: [],
     refreshToken: {
         type: [Session]
     },
@@ -119,4 +126,5 @@ companySchema.plugin(passportLocalMongoose);
 export const admin = mongoose.model("Admins", adminSchema);
 
 export const company = mongoose.model("Companies", companySchema);
+export const tempCompany = mongoose.model('TempCompanies', companySchema);
 export const job = mongoose.model("jobs", jobSchema);
