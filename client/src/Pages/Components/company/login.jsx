@@ -4,7 +4,7 @@ import imageRight from "../../../Assets/Images/company/loginLeft.png";
 import { NavLink } from "react-router-dom";
 import logo from "../../../Assets/Images/common/logo.svg";
 
-export const Login_company = () => {
+export const Logincompany = () => {
   return (
     <div className={companyModule.loginContainer}>
       <div className={companyModule.loginLeft}>

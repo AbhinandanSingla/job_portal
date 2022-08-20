@@ -49,6 +49,9 @@ export function Form() {
         if (!values.Work) {
             errors.Work = "Required";
         }
+        if (!values.Skills) {
+            errors.Skills = "Required";
+        }
 
         if (!values.dob) {
             errors.dob = "Required";
@@ -60,6 +63,7 @@ export function Form() {
         if (!values.Education) {
             errors.Education = "Required";
         }
+       
         return errors;
     };
     const navigate = useNavigate();
@@ -73,6 +77,7 @@ export function Form() {
             password: "",
             repassword: "",
             Work: "",
+            Skills:"",
             dob: "",
             Country: "",
             Education: "",
@@ -195,7 +200,7 @@ export function Form() {
                             value={formik.values.password}
                         />
                         {formik.touched.password && formik.errors.password ? (
-                            <div className="error">{formik.errors.password}</div>
+                            <div className={loginstyle.error}>{formik.errors.password}</div>
                         ) : null}
 
                         <label htmlFor="Work">Previous work Experience</label>
@@ -210,8 +215,47 @@ export function Form() {
                             value={formik.values.Work}
                         />
                         {formik.touched.Work && formik.errors.Work ? (
-                            <div className="error">{formik.errors.Work}</div>
+                            <div className={loginstyle.error}>{formik.errors.Work}</div>
                         ) : null}
+
+                        <label htmlFor="Skills">Skills</label>
+                        <div className="skillscss">
+                        <input
+                            className={loginstyle.skill}
+                            id="Skills"
+                            name="Skills"
+                            type="Skills"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.Skills}
+                        />
+                        {formik.touched.Skills && formik.errors.Skills ? (
+                            <div className={loginstyle.error}>{formik.errors.Skills}</div>
+                        ) : null}
+                          <input
+                            className={loginstyle.skill}
+                            id="Skills"
+                            name="Skills"
+                            type="Skills"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.Skills}
+                        />
+                       
+
+                          <input
+                            className={loginstyle.skill}
+                            id="Skills"
+                            name="Skills"
+                            type="Skills"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.Skills}
+                        />
+                       
+
+                        </div>
+                      
                     </div>
 
                     <div className={loginstyle.rightside}>
@@ -227,7 +271,7 @@ export function Form() {
                             value={formik.values.LastName}
                         />
                         {formik.touched.LastName && formik.errors.LastName ? (
-                            <div className="error">{formik.errors.LastName}</div>
+                            <div className={loginstyle.error}>{formik.errors.LastName}</div>
                         ) : null}
 
                         <label htmlFor="Country">Country </label>
@@ -242,7 +286,7 @@ export function Form() {
                             value={formik.values.Country}
                         />
                         {formik.touched.Country && formik.errors.Country ? (
-                            <div className="error">{formik.errors.Country}</div>
+                            <div className={loginstyle.error}>{formik.errors.Country}</div>
                         ) : null}
 
                         <label htmlFor="Phonenum">Phone number</label>
@@ -257,7 +301,7 @@ export function Form() {
                             value={formik.values.Phonenum}
                         />
                         {formik.touched.Phonenum && formik.errors.Phonenum ? (
-                            <div className="error">{formik.errors.Phonenum}</div>
+                            <div className={loginstyle.error}>{formik.errors.Phonenum}</div>
                         ) : null}
 
                         <label htmlFor="">Educational qualification</label>
@@ -272,7 +316,7 @@ export function Form() {
                             value={formik.values.Education}
                         />
                         {formik.touched.Education && formik.errors.Education ? (
-                            <div className="error">{formik.errors.Education}</div>
+                            <div className={loginstyle.error}>{formik.errors.Education}</div>
                         ) : null}
 
                         <label htmlFor="repassword">Confirm Password </label>
