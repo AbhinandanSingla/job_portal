@@ -20,11 +20,11 @@ export const Dashboardlogin = () => {
       </div>
       <div >
         <div className={aadityaModule.ob} >
-          <p>admin@company.com</p>
+          <input></input>
         </div>
 
         <div className={aadityaModule.ob1}>
-          <p>* * * * * * *</p>
+          <input type="password"></input>
         </div>
 
       </div>

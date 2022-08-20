@@ -25,9 +25,10 @@ import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
 
 import {Login_company} from "./Pages/Components/company/login";
+import { Companyprofile } from "./Pages/companyprofile";
 
 
-//import {A_Dashboard} from "./Pages/A_dashboard";
+
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
     if (!user.token) {
@@ -72,6 +73,7 @@ function App() {
                 <Route path="/company" element={<Company/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
+                <Route path="/companyprofile" element={<Companyprofile/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
                
                 <Route
