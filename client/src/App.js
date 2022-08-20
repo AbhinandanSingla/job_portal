@@ -29,6 +29,8 @@ import {Resume} from "./Pages/Components/resume/template/resume1";
 import {Resume2} from "./Pages/Components/resume/template/resume2";
 import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
+import {Registerc}from "./Pages/Components/company/register"
+import {Logincompany} from "./Pages/Components/company/login"
 
 
 // import {Admin} from "./Pages/admin";
@@ -77,10 +79,9 @@ function App() {
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
                 <Route path="/registrations_aaditya" element={<Registrations/>}/>
-                <Route
-                    path="/compare"
-                    element={
-                        <ProtectedRoute user={userContext}>
+                <Route path="/registerc" element={<Registerc/>} /> 
+                <Route path="/loginc" element={<Logincompany/>}></Route>              
+                <Route path="/compare"  element={<ProtectedRoute user={userContext}>
                             <Compare/>
                         </ProtectedRoute>
                     }

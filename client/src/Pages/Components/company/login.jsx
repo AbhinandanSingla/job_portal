@@ -5,11 +5,37 @@ import {NavLink, useNavigate} from "react-router-dom";
 import logo from "../../../Assets/Images/common/logo.svg";
 import {UserContext} from "../../../hooks/userContext";
 
+<<<<<<< HEAD
+export const Logincompany = () => {
+  return (
+    <div className={companyModule.loginContainer}>
+      <div className={companyModule.loginLeft}>
+        <img src={imageRight} alt="image-right" id={companyModule.imageleft} />
+        <div>
+          <NavLink to="/" className={companyModule.RozgarLink}>
+            <img src={logo} alt="" />
+            <h3>Rozgar.com</h3>
+          </NavLink>
+        </div>
+        {/* <div> */}
+        <h2>Welcome to</h2>
+        <h1>Rozgar.com</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo hic et
+          qui tempore? Commodi accusamus molestiae consectetur autem. Vero alias
+          earum aliquam optio quos nemo molestias cumque ullam provident natus!
+        </p>
+        {/* </div> */}
+      </div>
+      <div className={companyModule.loginRight}>
+        <h1>Log in</h1>
+=======
 export const Login_company = () => {
     const [errorMessages, setErrorMessages] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [userContext, setUserContext] = useContext(UserContext)
     const navigate = useNavigate();
+>>>>>>> 7f70d19aafa4207aadbdd19ca322e012a8eadbd7
 
     const [data, setData] = useState({
         'username': '',
