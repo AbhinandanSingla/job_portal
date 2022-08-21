@@ -29,9 +29,9 @@ import {Resume} from "./Pages/Components/resume/template/resume1";
 import {Resume2} from "./Pages/Components/resume/template/resume2";
 import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
-import {Registerc}from "./Pages/Components/company/register"
-import {Logincompany} from "./Pages/Components/company/login"
-
+import {Registerc}from "./Pages/Components/company/register";
+import {Logincompany} from "./Pages/Components/company/login";
+import {Notifications} from "./Pages/Notifications";
 
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
@@ -86,7 +86,7 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-
+                <Route path={'/notifications'} element={<Notifications/>}/>
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>
                 <Route path={'resume/workHistory'} element={<WorkHistory/>}/>
