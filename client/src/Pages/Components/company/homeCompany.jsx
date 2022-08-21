@@ -1,5 +1,6 @@
 import companyModule from "../../../Assets/styles/company.module.css";
 import profile from "../../../Assets/Images/company/profile.png";
+import { useNavigate } from "react-router-dom";
 export function Home({ route }) {
   let heading = "";
   switch (route) {
@@ -12,6 +13,8 @@ export function Home({ route }) {
     default:
       heading = "";
   }
+  const navigate =useNavigate();
+
   return (
     <div className={companyModule.home}>
       <div className={companyModule.exContainer}>
@@ -22,7 +25,10 @@ export function Home({ route }) {
               src={profile}
               alt="profile"
               className={companyModule.profilePic}
-            />
+              onClick={()=>{
+                navigate('/company_profile')
+              }}            
+              />
             <div className={companyModule.hc_heading}>
               Here, we <span>found</span> your posted jobs!
             </div>
