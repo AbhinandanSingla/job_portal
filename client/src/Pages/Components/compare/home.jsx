@@ -7,7 +7,7 @@ export function Home({route}) {
             heading = 'Explore the Categories';
             break;
         case 1:
-            heading = 'Find Job';
+            heading = 'Find Jobs';
             break;
         case 2:
             heading = 'Bookmark section ';
@@ -16,7 +16,7 @@ export function Home({route}) {
             heading = 'Upcoming Exams this month !';
             break;
         case 4:
-            heading = "Notifications ";
+            heading = "Applied Jobs ";
             break;
     }
     return (<div className={compareStyle.home}>

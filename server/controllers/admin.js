@@ -76,8 +76,13 @@ export const addJob = (req, res) => {
     }
     const Job = new job(req.body)
     Job.save(Job).then(data => {
-        res.send(data);
-        console.log(data)
+        company.findById(req.body.companyID).then(val => {
+            val.Jobs.push(data._id)
+            val.save((err, value) => {
+                res.send(data);
+                console.log(data)
+            })
+        })
     }).catch(err => {
         console.log(err)
         console.log(req.statusCode)
@@ -95,13 +100,11 @@ export const getJobs = (id) => {
 }
 
 export const applyJob = (req, res) => {
-    company.findById(req.body.companyID).then(comp => {
-        comp.purposals.push({
-            id: req.body.userId,
-        });
-        comp.save((err, company) => {
-            User.findById(req.body.userId).then(val => {
-                val.jobApplied.push(req.body.jobId)
+    User.findById(req.body.userId).then(val => {
+        val.jobApplied.push(req.body.jobId);
+        val.save((err, value) => {
+            job.findById(req.body.jobId).then(val => {
+                val.applications.push(req.body.userId);
                 val.save((err, value) => {
                     if (err) {
                         res.statusCode = 500;
@@ -111,8 +114,8 @@ export const applyJob = (req, res) => {
                     }
                 })
             })
-        })
 
+        })
     })
 
 }

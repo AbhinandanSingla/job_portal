@@ -337,27 +337,34 @@
 /*}*/
 
 .bookmarkContainer, .guidelineContainer, .categoryContainer {
+    min-height: 72vh;
     background: #e0e4f0cc;
     grid-area: 2 / 2 / 3 / 7;
     display: flex;
     padding: 2rem;
     flex-wrap: wrap;
-    row-gap: 30px;
-    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.bookmarkContainer, .categoryContainer {
+    column-gap: 30px;
 }
 
 .guideCard {
     display: flex;
-    width: 30rem;
+    width: 40rem;
+    height: 20rem;
     padding: 1rem;
     background: #fff;
     border-radius: 10px;
     justify-content: space-around;
+
+    align-items: center;
     margin-left: 1rem;
 }
 
 .guideCard svg {
-    width: 9rem;
+    width: 25rem;
 }
 
 .guideTime {
@@ -372,22 +379,23 @@
 }
 
 .guide_position {
-    font-family: var(--Padauk);
+    font-family: var(--Inter);
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 2rem;
     line-height: 16px;
-    color: #86898C;
+    color: #8489F9;
 }
 
-.guideExam {
-    font-family: 'Roboto';
+.guideExam li {
+    margin-left: 1rem;
+    font-family: var(--OpenSans);
     font-style: normal;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 10px;
     line-height: 20px;
-    color: #8489F9;
-    padding: 1rem 0;
+    color: #58585f;
 
 }
 
@@ -397,13 +405,14 @@
     align-items: center;
     background: #4377FD;
     border-radius: 10px;
-    padding: 0.5rem;
+    padding: 1rem 2rem;
     font-family: var(--OpenSans);
     font-style: normal;
     font-weight: 600;
     font-size: 8px;
     letter-spacing: 0.5px;
     color: #FFFFFF;
+    margin-top: 1rem;
     margin-left: .5rem;
 }
 
@@ -426,6 +435,7 @@
     flex-wrap: wrap;
     row-gap: 40px;
     column-gap: 20px;
+    min-height: 72vh;
 }
 
 .fwc_heading {

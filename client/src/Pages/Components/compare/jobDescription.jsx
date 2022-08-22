@@ -37,10 +37,9 @@ export function JobDescription({jobID}) {
                         console.log(response)
                         const data = await response.json()
                     } else {
-                        setAppliedJob((val) => [...val, jobId])
                     }
                 } else {
-
+                    setAppliedJob((val) => [...val, jobId])
                 }
             })
             .catch(error => {

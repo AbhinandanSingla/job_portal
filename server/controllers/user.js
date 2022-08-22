@@ -1,5 +1,6 @@
 import User from "../models/user.js";
 import bcrypt from "bcrypt";
+import {job} from "../models/admin.js";
 
 async function hashMe(password) {
     const salt = await bcrypt.genSalt(10);
@@ -47,5 +48,13 @@ export const bookmark = (req, res) => {
                 res.send({success: true});
             }
         })
+    })
+}
+
+export const getAppliedJobs = (ids) => {
+    return job.find({
+        '_id': {
+            $in: ids
+        }
     })
 }

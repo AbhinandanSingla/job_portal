@@ -61,7 +61,30 @@ export const getcompanyJob = gql`
             jobDescription,
             ApplicationDeadline,
             jobProfile,
+            applications,
+            postDate
 
+        }
+    }
+`
+
+export const userAppliedJobs = gql`
+
+    query getappliedJobs($ids:[String]!){
+        appliedJobs(ids:$ids){
+            _id,
+            jobTitle,
+            companyName,
+            companyID,
+            jobCategory,
+            jobLocation,
+            jobDescription,
+            ApplicationDeadline,
+            Qualifications,
+            Experience,
+            SalaryRange,
+            jobProfile,
+            jobType
         }
     }
 `
