@@ -9,7 +9,7 @@ router.post('/api/addJob', addJob);
 router.post('/api/acceptCompany', acceptCompany);
 router.post('/api/rejectCompany', rejectCompany);
 router.post('/api/applyJob', applyJob);
-router.post('/api/bookmark', bookmark);
+router.post('/user/bookmark', bookmark);
 // router.get('/api/getJobsCategorical', getJobCategorial);
 
 

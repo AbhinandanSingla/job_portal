@@ -1,11 +1,37 @@
 import compareStyle from "../../../Assets/styles/compare.module.css";
 import {getJob} from "../../../graphql/queries";
-import {useEffect} from "react";
+import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
+import {UserContext} from "../../../hooks/userContext";
 
 export function FindWorkContainer({setJob}) {
     const {data} = useQuery(getJob);
+    const [userContext, setUserContext] = useContext(UserContext)
+    const [bookmarkList, setBookmark] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"]);
 
+    function bookmark(id) {
+        fetch("http://127.0.0.1:8080/user/bookmark", {
+            method: "POST",
+            credentials: "include",
+            headers: {"Content-Type": "application/json", 'Origin': 'http://localhost:3000'},
+            body: JSON.stringify({
+                id: userContext.id,
+                jobId: id
+            }),
+        })
+            .then(async response => {
+                if (!response.ok) {
+                    if (response.status === 400) {
+                    } else if (response.status === 401) {
+                    } else {
+                    }
+                } else {
+                    setBookmark((val) => [...val, id])
+                }
+            })
+            .catch(error => {
+            })
+    }
 
     return (
         <div className={compareStyle.findWorkContainer}>
@@ -70,18 +96,25 @@ export function FindWorkContainer({setJob}) {
                     </div>
                     <div className={"fwc_bookmark"}>
           <span>
-            <svg
-                width="49"
-                height="56"
-                viewBox="0 0 49 56"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                  d="M35.1711 5.59998H13.8289C13.0206 5.60102 12.2456 5.96951 11.674 6.62461C11.1025 7.27971 10.7809 8.16792 10.78 9.09438V47.5328C10.78 47.8447 10.8529 48.1509 10.991 48.4196C11.1291 48.6883 11.3275 48.9098 11.5655 49.061C11.8035 49.2121 12.0725 49.2876 12.3445 49.2794C12.6165 49.2712 12.8817 49.1797 13.1124 49.0144L24.4987 40.8572L35.8876 49.0144C36.1184 49.1797 36.3835 49.2712 36.6556 49.2794C36.9276 49.2876 37.1966 49.2121 37.4346 49.061C37.6726 48.9098 37.871 48.6883 38.0091 48.4196C38.1472 48.1509 38.22 47.8447 38.22 47.5328V9.09438C38.2191 8.16792 37.8976 7.27971 37.326 6.62461C36.7544 5.96951 35.9795 5.60102 35.1711 5.59998ZM35.1711 44.3806L25.3065 37.3151C25.0642 37.1416 24.7842 37.0496 24.4985 37.0496C24.2128 37.0496 23.9328 37.1416 23.6905 37.3151L13.8289 44.3804V9.09438H35.1711V44.3806Z"
-                  fill="#6083FE"
-              />
-            </svg>
+              {
+                  bookmarkList.includes(value._id) ?
+                      <svg width="23" height="38" viewBox="0 0 23 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22 1H1V37L11.5 29.3944L22 37V1Z" fill="#6083FE" stroke="#6083FE"/>
+                      </svg>
+                      : <svg onClick={() => bookmark(value._id)}
+                             width="49"
+                             height="56"
+                             viewBox="0 0 49 56"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                      >
+                          <path
+                              d="M35.1711 5.59998H13.8289C13.0206 5.60102 12.2456 5.96951 11.674 6.62461C11.1025 7.27971 10.7809 8.16792 10.78 9.09438V47.5328C10.78 47.8447 10.8529 48.1509 10.991 48.4196C11.1291 48.6883 11.3275 48.9098 11.5655 49.061C11.8035 49.2121 12.0725 49.2876 12.3445 49.2794C12.6165 49.2712 12.8817 49.1797 13.1124 49.0144L24.4987 40.8572L35.8876 49.0144C36.1184 49.1797 36.3835 49.2712 36.6556 49.2794C36.9276 49.2876 37.1966 49.2121 37.4346 49.061C37.6726 48.9098 37.871 48.6883 38.0091 48.4196C38.1472 48.1509 38.22 47.8447 38.22 47.5328V9.09438C38.2191 8.16792 37.8976 7.27971 37.326 6.62461C36.7544 5.96951 35.9795 5.60102 35.1711 5.59998ZM35.1711 44.3806L25.3065 37.3151C25.0642 37.1416 24.7842 37.0496 24.4985 37.0496C24.2128 37.0496 23.9328 37.1416 23.6905 37.3151L13.8289 44.3804V9.09438H35.1711V44.3806Z"
+                              fill="#6083FE"
+                          />
+                      </svg>
+              }
+
           </span>
                     </div>
                 </div>) : ''}

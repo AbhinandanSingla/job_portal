@@ -34,7 +34,6 @@ export function Dashboard() {
             <div className={companyModule.hidden2}>
                 <h3 className={companyModule.hidden2Heading}>Deadline</h3>
                 <p className={companyModule.hidden2Para}>{Date(data.ApplicationDeadline)}</p>
-                >>>>>>> a3b661f48c4993a98f7c0431fc2c03c1a639617e
             </div>
         </div>
     );
