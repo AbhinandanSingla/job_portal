@@ -8,11 +8,6 @@ const Session = mongoose.Schema({
     },
 });
 
-const comp = mongoose.Schema({
-    _id: {
-        type: String,
-    }
-})
 const companySchema = mongoose.Schema({
     password: {
         type: String

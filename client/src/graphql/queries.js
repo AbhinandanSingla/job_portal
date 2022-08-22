@@ -49,7 +49,9 @@ export const getcompanyJob = gql`
             jobTitle,
             jobCategory,
             jobDescription,
-            ApplicationDeadline,jobProfile
+            ApplicationDeadline,
+            jobProfile,
+            
         }
     }
 `
