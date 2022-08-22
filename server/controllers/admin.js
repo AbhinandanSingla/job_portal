@@ -1,5 +1,6 @@
 import {company, job, admin, companyPurposals} from "../models/admin.js";
 import bcrypt from "bcrypt";
+import User from "../models/user.js";
 
 
 export const addCompany = async (req, res) => {
@@ -95,8 +96,25 @@ export const getJobs = (id) => {
 
 export const applyJob = (req, res) => {
     company.findById(req.body.companyID).then(comp => {
-        comp.purposals.push(req.body.userID);
+        comp.purposals.push({
+            id: req.body.userId,
+        });
+        comp.save((err, company) => {
+            User.findById(req.body.userId).then(val => {
+                val.jobApplied.push(req.body.jobId)
+                val.save((err, value) => {
+                    if (err) {
+                        res.statusCode = 500;
+                        res.send(err);
+                    } else {
+                        res.send({success: true});
+                    }
+                })
+            })
+        })
+
     })
+
 }
 
 

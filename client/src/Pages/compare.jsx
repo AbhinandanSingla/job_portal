@@ -16,7 +16,7 @@ AOS.init();
 export function Compare() {
     const [navRoute, setRoute] = useState(0);
     const [userContext, setUserContext] = useContext(UserContext)
-    const [selectedJob, setJob] = useState('62f6a5509de4e961ab4a6189');
+    const [selectedJob, setJob] = useState('6303d09701f05df8e6f6b2bc');
     const fetchUserDetails = useCallback(() => {
         fetch("http://127.0.0.1:8080/me", {
             method: "GET",

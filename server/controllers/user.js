@@ -33,3 +33,19 @@ export const addUser = (req, res) => {
         })
     })
 }
+export const getUser = (id) => {
+    return User.findOne({_id: id})
+}
+export const bookmark = (req, res) => {
+    User.findById(req.body.id).then(val => {
+        val.bookmarks.push(req.body.jobId);
+        val.save((err, value) => {
+            if (err) {
+                res.statusCode = 500;
+                res.send(err);
+            } else {
+                res.send({success: true});
+            }
+        })
+    })
+}

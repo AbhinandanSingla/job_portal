@@ -29,8 +29,6 @@ import {Resume} from "./Pages/Components/resume/template/resume1";
 import {Resume2} from "./Pages/Components/resume/template/resume2";
 import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
-import {Registerc}from "./Pages/Components/company/register";
-import {Logincompany} from "./Pages/Components/company/login";
 import {Notifications} from "./Pages/Notifications";
 import {Registerc} from "./Pages/Components/company/register"
 import {Logincompany} from "./Pages/Components/company/login"
@@ -82,13 +80,14 @@ function App() {
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
                 <Route path="/registrations_aaditya" element={<Registrations/>}/>
-                <Route path="/registerc" element={<Registerc/>} /> 
-                <Route path="/loginc" element={<Logincompany/>}></Route>              
-                <Route path="/compare"  element={<ProtectedRoute user={userContext}>
-                            <Compare/>
-                        </ProtectedRoute>
-                    }
-                />
+                <Route path="/company/register" element={<Registerc/>}/>
+                <Route path="/company/login" element={<Logincompany/>}/>
+                <Route path="/compare" element={<Compare/>}/>
+                {/*<Route path="/compare"  element={<ProtectedRoute user={userContext}>*/}
+                {/*            <Compare/>*/}
+                {/*        </ProtectedRoute>*/}
+                {/*    }*/}
+                {/*/>*/}
 
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>
@@ -97,13 +96,6 @@ function App() {
                 <Route path={'resume/educationList'} element={<EducationList/>}/>
                 <Route path={'resume/workHistoryList'} element={<WorkHistoryList/>}/>
                 <Route path={'guidance'} element={<Guidance/>}/>
-                {/*<Route path={'resume/skills'} element={}/>*/}
-                {/*<Route path="/admin" element={<Dashboard />} />*/}
-                <Route path="/A_dashboarddlogin" element={<Dashboardlogin/>}/>
-                {/* <Route path="/A_dashboard" element={<A_Dashboard/>}/> */}
-
-                {/* <Route path="/admin" element={<Admin />} /> */}
-                <Route/>
                 <Route path="/admin/login" element={<Dashboardlogin/>}/>
                 <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
             </Routes>

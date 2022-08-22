@@ -3,6 +3,8 @@ import '../../../Assets/styles/style.module.css';
 import homeImg from "../../../Assets/Images/landingPage/home.jpg";
 import img1 from "../../../Assets/Images/landingPage/img1.png";
 import img2 from "../../../Assets/Images/landingPage/img2.png";
+import {Link} from "react-router-dom";
+
 
 export function LandingPage() {
     return (<section className={homeStyle.home}>
@@ -24,8 +26,8 @@ export function LandingPage() {
                         find your dream job here
                     </div>
                     <div className={homeStyle.h_btns}>
-                        <div className={homeStyle.btn}>Find a job</div>
-                        <div className={homeStyle.h_postJob}>Post job</div>
+                        <Link to={'/compare'} className={homeStyle.btn}>Find a job</Link>
+                        <Link to={'/company/register'} className={homeStyle.h_postJob}>Post job</Link>
                     </div>
                 </div>
                 <div className={homeStyle.h_side}>

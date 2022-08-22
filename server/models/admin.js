@@ -8,6 +8,13 @@ const Session = mongoose.Schema({
     },
 });
 
+const purposal = mongoose.Schema({
+    id: {
+        type: String,
+        default: "",
+    },
+});
+
 const companySchema = mongoose.Schema({
     password: {
         type: String
@@ -41,7 +48,7 @@ const companySchema = mongoose.Schema({
     },
     Jobs: [],
     JobsHistory: [],
-    purposals: [],
+    purposals: [purposal],
     refreshToken: {
         type: [Session]
     }, appliedDate: {

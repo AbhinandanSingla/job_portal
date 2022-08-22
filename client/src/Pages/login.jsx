@@ -8,9 +8,6 @@ export function Login() {
     const [errorMessages, setErrorMessages] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [userContext, setUserContext] = useContext(UserContext)
-    useEffect(() => {
-
-    }, [navigate])
 
     function formSubmitHandler(e) {
         const [uname, pass] = [document.forms[0].name.value, document.forms[0].password.value];
@@ -35,7 +32,7 @@ export function Login() {
                 } else {
                     const data = await response.json()
                     setUserContext(oldValues => {
-                        return {...oldValues, token: data.token}
+                        return {...oldValues, token: data.token, userLogin: true, id: data.id}
                     });
                     setIsSubmitted(true);
                     navigate('/');
