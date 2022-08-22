@@ -32,6 +32,9 @@ import {Registrations} from "./Pages/registrations_aaditya";
 import {Registerc}from "./Pages/Components/company/register";
 import {Logincompany} from "./Pages/Components/company/login";
 import {Notifications} from "./Pages/Notifications";
+import {Registerc} from "./Pages/Components/company/register"
+import {Logincompany} from "./Pages/Components/company/login"
+
 
 // import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
@@ -86,7 +89,7 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                <Route path={'/notifications'} element={<Notifications/>}/>
+
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>
                 <Route path={'resume/workHistory'} element={<WorkHistory/>}/>

@@ -5,7 +5,8 @@ import { Form } from "../register/formc";
 import Info from "../register/information";
 import registerstyle from "../../../Assets/styles/register.module.css";
 export function Registerc() {
-  return (
+
+return (
     <>
       <div className={registerstyle.style}>
         <div className={registerstyle.infostyle}>

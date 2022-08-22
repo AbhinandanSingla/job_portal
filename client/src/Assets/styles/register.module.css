@@ -1,77 +1,79 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding-right: 50px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-right: 50px; */
 }
 
 .logo {
-  padding-left: 30px;
-  padding-top: 10px;
-  display: flex;
-  align-items: center;
+    padding-left: 30px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  width: 8rem;
+    width: 8rem;
 }
 
 .signin {
-  margin-left: 700px;
-  padding-top: 35px;
-  display: flex;
-  align-items: center;
-  display: flex;
-  font-size: 14px;
-  justify-content: flex-end;
+    margin-left: 700px;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-end;
 }
 
-.signinc {  
-  padding-top: 10px;
-  display: flex;
-  align-items: center;
-  display: flex;
-  font-size: 14px;
-  margin-left: 400px;
+.signinc {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    margin-left: 400px;
 }
 
 .signin img {
-  width: 2rem;
+    width: 2rem;
 }
 
 .style {
-  display: flex;
+    display: flex;
 }
+
 .style .formstyle {
-  width: 66%;
+    width: 66%;
 }
+
 .style .infostyle {
-  width: 34%;
-  background-color: #e0e4f0;
+    width: 34%;
+    background-color: #e0e4f0;
 }
 
 .formcolor {
-  justify-content: center;
-  background-color: #ffffff;
-  align-items: center;
-  padding: 20px;
+    justify-content: center;
+    background-color: #ffffff;
+    align-items: center;
+    padding: 20px;
 }
 
 .line {
-  margin: 30px;
-  border-bottom: 0.7px dashed #000000;
-  margin-right: 75px;
-  /* width: 645px; */
-  /* opacity: 0.2; */
+    margin: 30px;
+    border-bottom: 0.7px dashed #000000;
+    margin-right: 75px;
+    /* width: 645px; */
+    /* opacity: 0.2; */
 }
 
 .formcolor h1 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-items: center;
-  font-size: 40px;
-  color: #42505c;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-items: center;
+    font-size: 40px;
+    color: #42505c;
 }
 
 /* .formcolor form {
@@ -81,101 +83,101 @@
 } */
 
 .structure {
-  display: flex;
-  flex-direction: row;
-  font-size: 13px;
-  /* width: fit-content; */
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    /* width: fit-content; */
 }
 
 .structure .inputbox {
-  width: 350px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
 
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .structure .inputboxc {
-  width: 800px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
-  border-radius: 8px;
+    width: 800px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
+    border-radius: 8px;
 }
 
 .structure .inputboxt {
-  width: 800px;
-  height: 50px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
-  border-radius: 8px;
-  margin-right: 10px;
+    width: 800px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    margin-right: 10px;
 }
 
 .structure .inputboxp {
-  width: 350px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
-  border-radius: 8px;
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
+    border-radius: 8px;
 }
 
 
-
-
 .structure .rightside {
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    padding: 10px;
 }
 
 
 .structure .leftside {
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  margin-left: 20px;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 20px;
+    padding: 10px;
 }
 
 .structure .passcss {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.structure  .skill {
-  width: 110px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
-  border-radius: 8px;
-  margin-right: 8px;
+.structure .skill {
+    width: 110px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    margin-right: 8px;
 }
 
 .structure .skillscss {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
+
 .structure select {
-  width: 350px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #d1d1d1;
-  margin-bottom: 14px;
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 14px;
 }
+
 .dob input #dob {
-  width: 70;
+    width: 70;
 }
 
 /* .button {
@@ -183,117 +185,123 @@
   flex-direction: column;
 } */
 .button button {
-  bottom: 0;
-  height: 46px;
-  width: 150px;
-  padding: 10px;
-  color: #e5e5e5;
-  background-color: #4743e0;
-  border-radius: 8px;
-  border: 1px solid rgb(8, 68, 6);
-  box-shadow: 1px 2px 3px #252525aa;
-  font-size: 15px;
+    bottom: 0;
+    height: 46px;
+    width: 150px;
+    padding: 10px;
+    color: #e5e5e5;
+    background-color: #4743e0;
+    border-radius: 8px;
+    border: 1px solid rgb(8, 68, 6);
+    box-shadow: 1px 2px 3px #252525aa;
+    font-size: 15px;
 }
 
 .buttonc button {
-  bottom: 0;
-  height: 46px;
-  width: 600px;
-  padding: 10px;
-  color: #e5e5e5;
-  background-color: #4743e0;
-  border-radius: 8px;
-  border: 1px solid rgb(8, 68, 6);
-  box-shadow: 1px 2px 3px #252525aa;
-  font-size: 15px;
+    cursor: pointer;
+    bottom: 0;
+    height: 46px;
+    width: 600px;
+    padding: 10px;
+    color: #e5e5e5;
+    background-color: #4743e0;
+    border-radius: 8px;
+    border: 1px solid rgb(8, 68, 6);
+    box-shadow: 1px 2px 3px #252525aa;
+    font-size: 15px;
 }
 
-.buttonc{
-margin-left: 180px;
+.buttonc {
+    margin-left: 180px;
 }
 
 .button a {
-  /* margin-top: 20px; */
-  font-size: 14px;
-  margin-right: 12px;
+    /* margin-top: 20px; */
+    font-size: 14px;
+    margin-right: 12px;
 }
+
 .error {
-  font-size: 12px;
-  color: rgb(122, 12, 22);
-  margin-top: -10px;
-  margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(122, 12, 22);
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 .termsandconditions {
-  margin: 30px;
-  margin-right: 75px;
-  border-top: 0.7px dashed #000000;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
+    margin: 30px;
+    margin-right: 75px;
+    border-top: 0.7px dashed #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
 }
 
 .footer {
-  align-items: center;
-  display: flex;
+    align-items: center;
+    display: flex;
 }
+
 .footer p {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 .termsandconditions input {
-  display: flex;
-  flex-direction: row;
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
-  border: 1px solid #d1d1d1;
-  /*   */
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    /*   */
 }
 
 .infomain {
-  margin-top: 120px;
+    margin-top: 120px;
 }
+
 .infomain h2 {
-  font-size: 27px;
-  margin-left: 70px;
-  margin-bottom: 20px;
-  color: #42505c;
+    font-size: 27px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    color: #42505c;
 }
+
 .infomain .point {
-  margin-left: 85px;
-  margin-bottom: 10px;
+    margin-left: 85px;
+    margin-bottom: 10px;
 }
 
 .point {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  gap: 24px;
-  width: 300px;
-  height: 40px;
-  background: #f6fbf8;
-  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+    width: 300px;
+    height: 40px;
+    background: #f6fbf8;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
 }
 
 .tickbutton img {
-  height: 35px;
-  width: 35px;
+    height: 35px;
+    width: 35px;
 }
 
 .para p {
-  height: 40px;
-  width: 200px;
-  padding: 5px;
+    height: 40px;
+    width: 200px;
+    padding: 5px;
 }
 
 .illus img {
-  margin-top: 175px;
-  margin-left: 40px;
-  width: 400px;
+    margin-top: 175px;
+    margin-left: 40px;
+    width: 400px;
 }

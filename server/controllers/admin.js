@@ -1,29 +1,44 @@
-import {company, job, admin, tempCompany} from "../models/admin.js";
+import {company, job, admin, companyPurposals} from "../models/admin.js";
+import bcrypt from "bcrypt";
 
 
-export const addCompany = (req, res) => {
+export const addCompany = async (req, res) => {
     if (!req.body) {
         res.send("Bad Request")
     }
-    const company1 = new company(req.body);
-    admin.findById(req.body.id).then((admin) => {
-        admin.companies.push(company1);
-        admin.save((err, admin) => {
-            if (err) {
-                res.statusCode = 500;
-                res.send(err);
-            } else {
-                res.send({success: true, id: admin._id});
-            }
-        }).catch(e => {
-            console.log(e)
-            res.send(e);
-
-        })
+    const salt = await bcrypt.genSalt(10);
+    req.body.password = await bcrypt.hash(req.body.password, salt);
+    const company1 = new companyPurposals(req.body);
+    company1.save((err, val) => {
+        if (err) {
+            res.statusCode = 500;
+            res.send({status: false});
+            console.log(err)
+        } else {
+            res.send({success: true});
+        }
     })
 }
 
 export const acceptCompany = (req, res) => {
+    companyPurposals.findById(req.body.id).then(val => {
+        console.log(val)
+        const company1 = new company(val.toObject());
+        console.log(company1)
+        company1.save(company1).then(data => {
+            companyPurposals.findByIdAndDelete(req.body.id).then(val => {
+                res.send({status: true})
+            }).catch(e => {
+                res.send({status: false})
+            })
+        }).catch(e => {
+            console.log(e)
+            res.statusCode = 500;
+            res.send({status: false})
+        })
+    })
+}
+export const rejectCompany = (req, res) => {
     admin.findById(req.body.id).then((admin) => {
         const companyIndex = admin.companies.findIndex(
             (item) => item._id == req.body.companyID);
@@ -34,17 +49,15 @@ export const acceptCompany = (req, res) => {
         } else {
             let comp = admin.companies[companyIndex];
             let a = comp.toObject();
-            const company1 = new company(a);
-            company1.save(company1).then(data => {
-                admin.companies.id(admin.companies[companyIndex]._id).remove();
-                admin.save((err, user) => {
-                    if (err) {
-                        res.statusCode = 500;
-                        res.send(err);
-                    } else {
-                        res.send({success: true});
-                    }
-                });
+            admin.rejectedCompanies.push(a);
+            admin.companies.id(admin.companies[companyIndex]._id).remove();
+            admin.save((err, user) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.send(err);
+                } else {
+                    res.send({status: true});
+                }
             }).catch(e => {
                 res.statusCode = 500;
                 res.send(e);
@@ -54,8 +67,8 @@ export const acceptCompany = (req, res) => {
 
 
     })
-}
 
+}
 export const addJob = (req, res) => {
     if (!req.body) {
         res.send("Bad Request")
@@ -84,4 +97,13 @@ export const applyJob = (req, res) => {
     company.findById(req.body.companyID).then(comp => {
         comp.purposals.push(req.body.userID);
     })
+}
+
+
+export const getCompanyJobs = async (id) => {
+    console.log(id)
+    return job.find({companyID: id});
+}
+export const unregisteredCompanies = async () => {
+    return companyPurposals.find();
 }
