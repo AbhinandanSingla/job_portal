@@ -51,3 +51,33 @@ export const jobType = new GraphQLObjectType({
         }
     }),
 });
+export const companyType = new GraphQLObjectType({
+    name: "companies",
+    fields: () => ({
+        _id: {
+            type: GraphQLID
+        },
+
+        companyName: {
+            type: GraphQLString
+        },
+        phoneNumber: {
+            type: GraphQLInt,
+        },
+        jobs: {
+            type: new GraphQLList(jobType)
+
+        },
+        GSTIN: {
+            type: GraphQLInt
+        },
+        companyType: {
+            type: GraphQLString
+        },
+        appliedDate: {
+            type: GraphQLString
+        }, username: {
+            type: GraphQLString
+        }
+    })
+})

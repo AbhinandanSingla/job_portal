@@ -22,18 +22,11 @@ import WorkHistory from "./Pages/Components/resume/workHistory";
 import Education from "./Pages/Components/resume/Education";
 import {EducationList} from "./Pages/Components/resume/educationList";
 import {WorkHistoryList} from "./Pages/Components/resume/workHistoryList";
-
-import {Login_company} from "./Pages/Components/company/login";
-import {Companyprofile} from "./Pages/companyprofile";
-import {Resume} from "./Pages/Components/resume/template/resume1";
-import {Resume2} from "./Pages/Components/resume/template/resume2";
-import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
-import {Registerc}from "./Pages/Components/company/register"
+import {Registerc} from "./Pages/Components/company/register"
 import {Logincompany} from "./Pages/Components/company/login"
 
 
-// import {Admin} from "./Pages/admin";
 const ProtectedRoute = ({user, children}) => {
     if (!user.token) {
         return <Navigate to="/login" replace/>;
@@ -65,7 +58,7 @@ function App() {
         })
     }, [setUserContext])
     useEffect(() => {
-        verifyUser()
+        // verifyUser()
     }, [verifyUser])
 
 
@@ -77,14 +70,16 @@ function App() {
                 <Route path="/company" element={<Company/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
-                <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
                 <Route path="/registrations_aaditya" element={<Registrations/>}/>
-                <Route path="/registerc" element={<Registerc/>} /> 
-                <Route path="/loginc" element={<Logincompany/>}></Route>              
-                <Route path="/compare"  element={<ProtectedRoute user={userContext}>
-                            <Compare/>
-                        </ProtectedRoute>
-                    }
+                <Route path="/company/register" element={<Registerc/>}/>
+                <Route path="/company/login" element={<Logincompany/>}/>
+                <Route path={"/compare"} element={<Compare/>}/>
+
+                {/*<Route path="/compare" element={<ProtectedRoute user={userContext}>*/}
+                {/*    <Compare/>*/}
+                {/*</ProtectedRoute>*/}
+
+                }
                 />
 
                 <Route path={'/resume'} element={<StudentResume/>}/>
@@ -102,7 +97,7 @@ function App() {
                 {/* <Route path="/admin" element={<Admin />} /> */}
                 <Route/>
                 <Route path="/admin/login" element={<Dashboardlogin/>}/>
-                <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
+                <Route path="/admin/dashboard" element={<Admin_aaditya/>}/>
             </Routes>
         </BrowserRouter>
     );

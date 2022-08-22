@@ -500,7 +500,7 @@
     width: 264px;
     height: 50px;
     border: 1px none;
-    
+
 }
 
 .bte {
@@ -849,7 +849,7 @@
 }
 
 .gb {
-
+    cursor: pointer;
     position: relative;
     box-sizing: border-box;
 
@@ -1384,10 +1384,10 @@
     /* Shades of Black/White */
 
     background: white;
-    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
-   
-    transform: translate(1rem,0rem);
+
+    transform: translate(1rem, 0rem);
 
 }
 
@@ -1488,7 +1488,7 @@
     background-color: #EDF4FB;
 }
 
-.setting{
+.setting {
     position: relative;
     right: 50px;
 }

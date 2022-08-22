@@ -3,7 +3,11 @@ import React, {createContext, useState} from "react"
 const UserContext = createContext([{}, p => {
 }])
 
-let initialState = {}
+let initialState = {
+    companyLogin: false,
+    userLogin: false,
+    adminLogin: false
+}
 
 const UserProvider = props => {
     const [state, setState] = useState(initialState)

@@ -1170,3 +1170,8 @@
         font-size: 16px;
     }
 }
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+}

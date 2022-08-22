@@ -47,7 +47,7 @@ export const Dashboardlogin = () => {
                         return {...oldValues, token: data.token}
                     });
                     setIsSubmitted(true);
-                    navigate('/');
+                    navigate('/admin/dashboard');
                 }
             })
             .catch(error => {

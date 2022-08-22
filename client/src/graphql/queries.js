@@ -31,3 +31,25 @@ export const getJobDescription = gql`
         }
     }
 `
+export const getUnregisterCompanies = gql`
+    query{
+        unregistercompanies{
+            _id,
+            companyName,
+            companyType,
+            appliedDate,
+            username
+        }}
+`
+
+export const getcompanyJob = gql`
+    query jobCompany($id:String!){
+        companyJobs(id: $id){
+            _id,
+            jobTitle,
+            jobCategory,
+            jobDescription,
+            ApplicationDeadline,jobProfile
+        }
+    }
+`
