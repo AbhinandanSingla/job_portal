@@ -358,9 +358,9 @@ export function Form() {
                         </div>
                     </div>
                     <div className={loginstyle.button}>
-                        <a href="https://www.figma.com/file/9DXTPZBJdeOi0SaZ4EEy6k/Smart-India-Hackathon?node-id=503%3A67">
-                            Download your Cv
-                        </a>
+                        <button href="https://www.figma.com/file/9DXTPZBJdeOi0SaZ4EEy6k/Smart-India-Hackathon?node-id=503%3A67">
+                            Make your resume
+                        </button>
                         <button type="submit">Register</button>
                     </div>
                 </div>
