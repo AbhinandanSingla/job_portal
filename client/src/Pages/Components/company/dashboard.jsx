@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import companyModule from "../../../Assets/styles/company.module.css";
 import jobImg from "../../../Assets/Images/company/apple.png";
+import flowerPic from '../../../Assets/Images/company/70.png';
 export function Dashboard() {
   const [show, setShow] = useState(false);
   const [hiddenClass, sethiddenClass] = useState(false);
@@ -58,6 +59,7 @@ export function Dashboard() {
   return (
     <div className={companyModule.categoryContainer} ref={boxRef}>
       <div className={companyModule.h_sub_heading}>
+        <img src={flowerPic} alt="" />
         <div className={companyModule.h_sub_heading1}>
           Number of jobs posted
         </div>

@@ -120,13 +120,19 @@
   bottom: 0;
   height: 46px;
   width: 150px;
-  padding: 10px;
+  padding: 1rem 0.5rem;
   color: #e5e5e5;
   background-color: #4743e0;
   border-radius: 8px;
   border: 1px solid rgb(8, 68, 6);
   box-shadow: 1px 2px 3px #252525aa;
-  font-size: 15px;
+  font-size: 14px;
+  margin: 0rem 1rem;
+}
+.button button:hover{
+  background: white;
+  color:#4743e0;
+  cursor: pointer;
 }
 
 .button a {
@@ -204,9 +210,13 @@
 }
 
 .para p {
+  position: relative;
   height: 40px;
   width: 200px;
   padding: 5px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .illus img {

@@ -14,7 +14,7 @@ function information() {
           </div>
           <div className={registerstyle.para}>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. pe .
+            India's Leading Portal for Emerging Careers
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ function information() {
           </div>
           <div className={registerstyle.para}>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. pe .
+            Resume Builders for students and many additional benefits
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ function information() {
           </div>
           <div className={registerstyle.para}>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. pe .
+            Explore your City for Better Job Opportunities Near your Home Area
             </p>
           </div>
         </div>
@@ -50,8 +50,7 @@ function information() {
           </div>
           <div className={registerstyle.para}>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. pe .
-            </p>
+            5,00,000+ Jobs & Career Opportunities            </p>
           </div>
         </div>
       </div>

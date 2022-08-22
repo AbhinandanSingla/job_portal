@@ -26,6 +26,14 @@ body {
   border-radius: 2rem;
   margin-top: 2rem;
 }
+.h_sub_heading img{
+  position: absolute;
+  top:-13.7rem;
+  right: 2rem;
+  width: 100rem;
+  height: 100rem;
+
+}
 .h_sub_heading1 {
   font-weight: bold;
   padding-bottom: 2rem;
