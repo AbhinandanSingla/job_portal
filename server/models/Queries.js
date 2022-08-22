@@ -49,6 +49,10 @@ export const jobType = new GraphQLObjectType({
         },
         jobProfile: {
             type: GraphQLString
+        }, applications: {
+            type: new GraphQLList(GraphQLString)
+        }, postDate: {
+            type:  GraphQLString
         }
     }),
 });

@@ -10,13 +10,15 @@ import "aos/dist/aos.css";
 import {Guidance} from "./Components/compare/guidance";
 import {UserContext} from "../hooks/userContext";
 import {JobDescription} from "./Components/compare/jobDescription";
+import {Guideline} from "./Components/compare/guideline";
+import {AppliedJobs} from "./Components/compare/appliedJobs";
 
 AOS.init();
 
 export function Compare() {
     const [navRoute, setRoute] = useState(0);
     const [userContext, setUserContext] = useContext(UserContext)
-    const [selectedJob, setJob] = useState('6303d09701f05df8e6f6b2bc');
+    const [selectedJob, setJob] = useState('630402e6708f17b9e4b05d84');
     const fetchUserDetails = useCallback(() => {
         fetch("http://127.0.0.1:8080/me", {
             method: "GET",
@@ -67,7 +69,9 @@ export function Compare() {
             case 2:
                 return <BookContainer/>;
             case 3:
-                return <Guidance/>;
+                return <Guideline/>;
+            case 4:
+                return <AppliedJobs setJob={setJob}/>
         }
     }
 
@@ -77,7 +81,7 @@ export function Compare() {
             <Home route={navRoute}/>
             {switchComponent()}
             <div className={compareStyle.jobDescription}>
-                <div className={navRoute !== 1 ? compareStyle.exRight : compareStyle
+                <div className={navRoute !== 1 && navRoute !== 4 ? compareStyle.exRight : compareStyle
                     .openContainer}>
                     <div className={compareStyle.exRightContainer}>
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -125,6 +129,7 @@ export function Compare() {
                     <div className={compareStyle.profile_line}>
                     </div>
                     {navRoute === 1 ? <JobDescription jobID={selectedJob}/> : ''}
+                    {navRoute === 4 ? <JobDescription jobID={selectedJob}/> : ''}
                 </div>
             </div>
         </section>

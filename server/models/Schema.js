@@ -1,7 +1,7 @@
 import pkg from "graphql";
 import {getCompanyJobs, getJobs, unregisteredCompanies} from "../controllers/admin.js";
 import {companyType, jobType, userType} from "./Queries.js";
-import {getUser} from "../controllers/user.js";
+import {getAppliedJobs, getUser} from "../controllers/user.js";
 
 const {
     GraphQLInt,
@@ -58,6 +58,14 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return getUser(args.id);
             },
+        },
+        appliedJobs: {
+            type: new GraphQLList(jobType), args: {
+                ids: {type: new GraphQLList(GraphQLString), defaultValue: ""}
+            },
+            resolve(parent, args) {
+                return getAppliedJobs(args.ids)
+            }
         }
 
     },

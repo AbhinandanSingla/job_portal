@@ -8,7 +8,11 @@ import {useQuery} from "@apollo/client";
 import {getcompanyJob} from "../../../graphql/queries";
 
 export function Dashboard() {
-    const {data} = useQuery(getcompanyJob)
+    const {data} = useQuery(getcompanyJob, {
+        variables: {
+            id: "6303d00e01f05df8e6f6b2b6"
+        }
+    })
     const [show, setShow] = useState(false);
     const [popup, setPop] = useState(-1);
     const [hiddenClass, sethiddenClass] = useState(false);
@@ -34,7 +38,6 @@ export function Dashboard() {
             <div className={companyModule.hidden2}>
                 <h3 className={companyModule.hidden2Heading}>Deadline</h3>
                 <p className={companyModule.hidden2Para}>{Date(data.ApplicationDeadline)}</p>
-                >>>>>>> a3b661f48c4993a98f7c0431fc2c03c1a639617e
             </div>
         </div>
     );
@@ -174,11 +177,11 @@ export function Dashboard() {
                         </div>
 
                         <div className={companyModule.datePostedDiv}>
-                            <p>19 June 2022</p>
+                            <p>{Date(data.postDate).toString()}</p>
                         </div>
 
                         <div className={companyModule.appliedNumberDiv}>
-                            <p>300 people</p>
+                            <p>{data.applications.length} people</p>
                         </div>
 
                         <div className={companyModule.downloadBtnDiv}>

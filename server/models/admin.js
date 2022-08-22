@@ -133,6 +133,9 @@ const jobSchema = mongoose.Schema({
     }, skills: [],
     additionalLinks: {
         type: String,
+    },
+    postDate: {
+        type: Date
     }
 });
 adminSchema.plugin(passportLocalMongoose);

@@ -1,13 +1,18 @@
-import compareStyle from "../../../Assets/styles/compare.module.css";
-import {getJob} from "../../../graphql/queries";
-import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
+import {userAppliedJobs} from "../../../graphql/queries";
+import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../../../hooks/userContext";
+import compareStyle from "../../../Assets/styles/compare.module.css";
 
-export function FindWorkContainer({setJob}) {
-    const {data} = useQuery(getJob);
+export function AppliedJobs({setJob}) {
+    const {data} = useQuery(userAppliedJobs, {
+        variables: {
+            ids: ["6303d09701f05df8e6f6b2bc",
+                "6303d0fd01f05df8e6f6b2c7"]
+        }
+    });
     const [userContext, setUserContext] = useContext(UserContext)
-    const [bookmarkList, setBookmark] = useState([]);
+    const [bookmarkList, setBookmark] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"]);
 
     function bookmark(id) {
         fetch("http://127.0.0.1:8080/user/bookmark", {
@@ -35,7 +40,7 @@ export function FindWorkContainer({setJob}) {
 
     return (
         <div className={compareStyle.findWorkContainer}>
-            {(data) ? data.jobList.map((value, index) =>
+            {(data) ? data.appliedJobs.map((value, index) =>
                 <div className={compareStyle.findWorkCard} onClick={() => setJob(value._id)} key={index}>
                     <div className={compareStyle.fwc_profile}>
                         <img src={value.jobProfile} alt=""/>
