@@ -210,6 +210,8 @@
 }
 
 .home .btn, .navbar .btn {
+    cursor: pointer;
+    text-decoration: none;
     font-family: var(--OpenSans);
     font-style: normal;
     font-weight: 600;
@@ -224,6 +226,7 @@
 }
 
 .h_postJob {
+    text-decoration: none;
     margin-left: 4rem;
     font-family: var(--OpenSans);
     font-style: normal;

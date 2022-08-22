@@ -177,7 +177,7 @@
 }
 
 .dob input #dob {
-    width: 70;
+    width: 70px;
 }
 
 /* .button {
@@ -185,24 +185,23 @@
   flex-direction: column;
 } */
 .button button {
-<<<<<<< HEAD
-  bottom: 0;
-  height: 46px;
-  width: 150px;
-  padding: 1rem 0.5rem;
-  color: #e5e5e5;
-  background-color: #4743e0;
-  border-radius: 8px;
-  border: 1px solid rgb(8, 68, 6);
-  box-shadow: 1px 2px 3px #252525aa;
-  font-size: 14px;
-  margin: 0rem 1rem;
+    bottom: 0;
+    height: 46px;
+    width: 150px;
+    padding: 1rem 0.5rem;
+    color: #e5e5e5;
+    background-color: #4743e0;
+    border-radius: 8px;
+    border: 1px solid rgb(8, 68, 6);
+    box-shadow: 1px 2px 3px #252525aa;
+    font-size: 14px;
+    margin: 0rem 1rem;
 }
-.button button:hover{
-  background: white;
-  color:#4743e0;
-  cursor: pointer;
-=======
+
+.button button:hover {
+    background: white;
+    color: #4743e0;
+    cursor: pointer;
     bottom: 0;
     height: 46px;
     width: 150px;
@@ -231,7 +230,6 @@
 
 .buttonc {
     margin-left: 180px;
->>>>>>> a3b661f48c4993a98f7c0431fc2c03c1a639617e
 }
 
 .button a {
@@ -314,19 +312,15 @@
 }
 
 .para p {
-<<<<<<< HEAD
-  position: relative;
-  height: 40px;
-  width: 200px;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-
-=======
+    position: relative;
     height: 40px;
     width: 200px;
     padding: 5px;
->>>>>>> a3b661f48c4993a98f7c0431fc2c03c1a639617e
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    padding: 5px;
 }
 
 .illus img {

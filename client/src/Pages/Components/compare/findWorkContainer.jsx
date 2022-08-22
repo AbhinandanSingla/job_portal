@@ -5,6 +5,8 @@ import {useQuery} from "@apollo/client";
 
 export function FindWorkContainer({setJob}) {
     const {data} = useQuery(getJob);
+
+
     return (
         <div className={compareStyle.findWorkContainer}>
             {(data) ? data.jobList.map((value, index) =>

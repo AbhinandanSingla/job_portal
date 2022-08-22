@@ -1,14 +1,51 @@
 import compareStyle from "../../../Assets/styles/compare.module.css";
-import {useEffect} from "react";
+import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
-import {getJobDescription} from "../../../graphql/queries";
+import {getJobDescription, getUser} from "../../../graphql/queries";
+import {UserContext} from "../../../hooks/userContext";
 
 export function JobDescription({jobID}) {
+    const [userContext, setUserContext] = useContext(UserContext)
     const {data} = useQuery(getJobDescription, {
         variables: {
-            id: jobID
+            id: jobID,
         }
     });
+    const [appliedJob, setAppliedJob] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"])
+    const [jobs, setJobs] = useState(data)
+
+    useEffect(() => {
+        setJobs(data)
+    }, [data])
+
+    function applyJob(companyID, jobId) {
+        fetch("http://127.0.0.1:8080" + "/api/applyJob", {
+            method: "POST",
+            credentials: "include",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                companyID: companyID,
+                jobId: jobId,
+                userId: userContext.id
+            }),
+        })
+            .then(async response => {
+                if (!response.ok) {
+                    if (response.status === 400) {
+                    } else if (response.status === 401) {
+                    } else if (response.status === 500) {
+                        console.log(response)
+                        const data = await response.json()
+                    } else {
+                        setAppliedJob((val) => [...val, jobId])
+                    }
+                } else {
+
+                }
+            })
+            .catch(error => {
+            })
+    }
 
     function getDate(x) {
         console.log(x)
@@ -87,9 +124,14 @@ export function JobDescription({jobID}) {
             </div>
 
             <div className={compareStyle.j_btn}>
-                <div className={compareStyle.j_apply_btn}>
-                    Apply Now
-                </div>
+                {appliedJob.includes(data.jobDesc._id) ? <button className={compareStyle.j_applied_btn}>
+                        Applied
+                    </button> :
+                    <button className={compareStyle.j_apply_btn}
+                            onClick={() => applyJob(data.jobDesc.companyID, data.jobDesc._id)}>
+                        Apply Now
+                    </button>
+                }
                 <div className={compareStyle.j_message}>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                          xmlns="http://www.w3.org/2000/svg">

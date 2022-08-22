@@ -1,8 +1,19 @@
 import compareStyle from '../../../Assets/styles/compare.module.css';
 import logo from '../../../Assets/Images/common/logo.svg';
 import {Link} from "react-router-dom";
+import {useContext, useEffect} from "react";
+import {UserContext} from "../../../hooks/userContext";
 
 export function Navbar({navRoute, changeRoute}) {
+
+    const [userContext, setUserContext] = useContext(UserContext)
+    useEffect(() => {
+        if (userContext.userLogin) {
+
+        }
+    })
+
+
     function highlightRoute(index) {
         return navRoute === index ? compareStyle.selected : ''
     }
@@ -69,6 +80,21 @@ export function Navbar({navRoute, changeRoute}) {
 
                             <span>Guidance</span>
                         </li>
+                        {userContext.userLogin ? <li className={`${compareStyle.navs} ${highlightRoute(4)}`}
+                                                     id="appliedJobs"
+                                                     onClick={() => changeRoute(4)}>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" className={compareStyle.guidanceSvg}>
+                                <path
+                                    d="M15.5417 4.94165H4.45003C3.29944 4.94165 2.3667 5.87439 2.3667 7.02498V13.9083C2.3667 15.0589 3.29944 15.9917 4.45003 15.9917H15.5417C16.6923 15.9917 17.625 15.0589 17.625 13.9083V7.02498C17.625 5.87439 16.6923 4.94165 15.5417 4.94165Z"
+                                    stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path
+                                    d="M5.3916 7.5L9.35827 10C9.54988 10.1224 9.77254 10.1875 9.99993 10.1875C10.2273 10.1875 10.45 10.1224 10.6416 10L14.6083 7.5"
+                                    stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+
+                            <span>AppliedJob</span>
+                        </li> : ''}
                     </ul>
                 </div>
 

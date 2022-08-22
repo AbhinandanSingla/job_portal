@@ -7,6 +7,7 @@ const {
     GraphQLObjectType,
     GraphQLSchema,
     GraphQLString,
+    GraphQLBoolean
 } = pkg;
 
 export const jobType = new GraphQLObjectType({
@@ -80,4 +81,44 @@ export const companyType = new GraphQLObjectType({
             type: GraphQLString
         }
     })
+})
+
+export const userType = new GraphQLObjectType({
+    name: "user",
+    fields: () => ({
+        firstName: {
+            type: GraphQLString
+        },
+        lastName: {
+            type: GraphQLString,
+        },
+        DOB: {
+            type: GraphQLString,
+        }, address: {
+            type: GraphQLString,
+        },
+        city: {
+            type: GraphQLString,
+        },
+        country: {
+            type: GraphQLString,
+        },
+        zipCode: {
+            type: GraphQLInt,
+        },
+        workOutside: {
+            type: GraphQLBoolean,
+        },
+        phoneNumber: {
+            type: GraphQLString,
+        },
+        jobApplied: {
+            type: new GraphQLList(GraphQLString)
+        },
+        username: {
+            type: GraphQLString,
+        },
+    })
+
+
 })

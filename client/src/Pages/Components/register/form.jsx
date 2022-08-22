@@ -8,6 +8,18 @@ export function Form() {
     const [userContext, setUserContext] = useContext(UserContext)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState("")
+    const [skills, setSkills] = useState({
+        s1: '',
+        s2: '',
+        s3: '',
+    })
+
+    function hangleChange(e) {
+        setSkills((value => ({
+            ...value, [e.target.name]: e.target.value
+        })));
+    }
+
     const validate = (values) => {
         const errors = {};
 
@@ -63,10 +75,11 @@ export function Form() {
         if (!values.Education) {
             errors.Education = "Required";
         }
-       
+
         return errors;
     };
     const navigate = useNavigate();
+
     const formik = useFormik({
         initialValues: {
             FirstName: "",
@@ -77,14 +90,15 @@ export function Form() {
             password: "",
             repassword: "",
             Work: "",
-            Skills:"",
+            Skills: [Object.values(skills)],
             dob: "",
             Country: "",
             Education: "",
         },
         validate,
         onSubmit: (values) => {
-            const genericErrorMessage = "Something went wrong! Please try again later."
+            const genericErrorMessage = "Something went wrong! Please try again later.";
+            console.log(values)
             fetch("http://127.0.0.1:8080" + "/signup", {
                 method: "POST",
                 credentials: "include",
@@ -203,59 +217,59 @@ export function Form() {
                             <div className={loginstyle.error}>{formik.errors.password}</div>
                         ) : null}
 
-                        <label htmlFor="Work">Previous work Experience</label>
+                        {/*<label htmlFor="Work">Previous work Experience</label>*/}
 
-                        <input
-                            className={loginstyle.inputbox}
-                            id="Work"
-                            name="Work"
-                            type="Work"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.Work}
-                        />
-                        {formik.touched.Work && formik.errors.Work ? (
-                            <div className={loginstyle.error}>{formik.errors.Work}</div>
-                        ) : null}
+                        {/*<input*/}
+                        {/*    className={loginstyle.inputbox}*/}
+                        {/*    id="Work"*/}
+                        {/*    name="Work"*/}
+                        {/*    type="Work"*/}
+                        {/*    onChange={formik.handleChange}*/}
+                        {/*    onBlur={formik.handleBlur}*/}
+                        {/*    value={formik.values.Work}*/}
+                        {/*/>*/}
+                        {/*{formik.touched.Work && formik.errors.Work ? (*/}
+                        {/*    <div className={loginstyle.error}>{formik.errors.Work}</div>*/}
+                        {/*) : null}*/}
 
                         <label htmlFor="Skills">Skills</label>
                         <div className="skillscss">
-                        <input
-                            className={loginstyle.skill}
-                            id="Skills"
-                            name="Skills"
-                            type="Skills"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.Skills}
-                        />
-                        {formik.touched.Skills && formik.errors.Skills ? (
-                            <div className={loginstyle.error}>{formik.errors.Skills}</div>
-                        ) : null}
-                          <input
-                            className={loginstyle.skill}
-                            id="Skills"
-                            name="Skills"
-                            type="Skills"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.Skills}
-                        />
-                       
+                            <input
+                                className={loginstyle.skill}
+                                id="Skills"
+                                name="s1"
+                                type="text"
+                                onChange={hangleChange}
+                                onBlur={formik.handleBlur}
+                                value={skills.s1}
+                            />
+                            {formik.touched.Skills && formik.errors.Skills ? (
+                                <div className={loginstyle.error}>{formik.errors.Skills}</div>
+                            ) : null}
+                            <input
+                                className={loginstyle.skill}
+                                id="Skills"
+                                name="s2"
+                                type="text"
+                                onChange={hangleChange}
+                                onBlur={formik.handleBlur}
+                                value={skills.s2}
+                            />
 
-                          <input
-                            className={loginstyle.skill}
-                            id="Skills"
-                            name="Skills"
-                            type="Skills"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.Skills}
-                        />
-                       
+
+                            <input
+                                className={loginstyle.skill}
+                                id="Skills"
+                                name="s3"
+                                type="text"
+                                onChange={hangleChange}
+                                onBlur={formik.handleBlur}
+                                value={skills.s3}
+                            />
+
 
                         </div>
-                      
+
                     </div>
 
                     <div className={loginstyle.rightside}>

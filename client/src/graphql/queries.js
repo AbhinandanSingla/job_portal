@@ -28,8 +28,18 @@ export const getJobDescription = gql`
             SalaryRange,
             jobProfile,
             jobType
+        },
+    }
+`
+
+export const getUser = gql`
+    query getuser($id:String!){
+        user(id: $id){
+            username,
+            jobApplied
         }
     }
+
 `
 export const getUnregisterCompanies = gql`
     query{
@@ -51,7 +61,7 @@ export const getcompanyJob = gql`
             jobDescription,
             ApplicationDeadline,
             jobProfile,
-            
+
         }
     }
 `
