@@ -7,7 +7,11 @@ const Session = mongoose.Schema({
         default: "",
     },
 });
+
 const companySchema = mongoose.Schema({
+    password: {
+        type: String
+    },
     companyProfilePicture: {
         type: String,
     },
@@ -37,8 +41,11 @@ const companySchema = mongoose.Schema({
     },
     Jobs: [],
     JobsHistory: [],
+    purposals: [],
     refreshToken: {
         type: [Session]
+    }, appliedDate: {
+        type: String,
     },
 });
 ``
@@ -113,10 +120,18 @@ const jobSchema = mongoose.Schema({
         require: true,
     },
     applications: [],
+    numberApplicants: {
+        type: Number,
+        default: 999
+    }, skills: [],
+    additionalLinks: {
+        type: String,
+    }
 });
 adminSchema.plugin(passportLocalMongoose);
 companySchema.plugin(passportLocalMongoose);
 export const admin = mongoose.model("Admins", adminSchema);
 
 export const company = mongoose.model("Companies", companySchema);
+export const companyPurposals = mongoose.model('companyPurposals', companySchema);
 export const job = mongoose.model("jobs", jobSchema);

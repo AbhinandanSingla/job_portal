@@ -805,3 +805,86 @@ body {
 .registerLinkDiv a {
   transform: translate(3rem, 1rem);
 }
+
+/* company profile */
+.companyProfileContainer{
+  background: #E0E4F0;
+  padding: 8rem 5rem;
+}
+.companyProfilePic img {
+  border-radius: 100%;
+  background-color: #ffffff;
+  height: 15rem;
+  width: 15rem;
+}
+.profileMid{
+  display: flex;
+  flex-direction: row;
+  margin: 5rem 0rem;
+  gap: 5rem;
+}
+.profileEnd{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.details1,.details2,.details3{
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+}
+.profileHead i{
+  float: right;
+  width: 15px;
+  height: 15px;
+}
+
+.profileHead h1{
+font-size: 48px;
+}
+.profileHead  h2{
+  font-size: 16px;
+  font-weight: 400;
+}
+.profileInfo{
+  transform: translate(0rem , 4rem);
+}
+.profileInfo h3{
+  font-size: 24px;
+
+}
+.profileInfo p{
+  font-size: 16px;
+}
+.editProfileDiv {
+  transform: translate(80rem,5rem);
+}
+.editProfileDiv button{
+  border: 0.2rem solid #2C7FE0;
+  padding: 1rem 3rem;
+  border-radius: 3rem ;
+  color: #2C7FE0;
+  font-weight: 500;
+}
+.profileEnd input{
+  width: 57rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  border: none;
+}
+.profileEnd h5{
+  font-size: 20px;
+  font-weight: 500;
+}
+.saveBtn{
+  width: 20%;
+  padding: 1rem 0rem;
+  border-radius: 3rem;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  background: #2C7FE0;
+  border: none;
+  transform: translate(53rem,8rem);
+  margin: 3rem 0rem;
+}

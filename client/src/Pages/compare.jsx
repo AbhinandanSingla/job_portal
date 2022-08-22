@@ -49,9 +49,13 @@ export function Compare() {
     }, [setUserContext, userContext.token])
 
     useEffect(() => {
-        if (!userContext.details) {
-            fetchUserDetails()
+
+        if (userContext.userLogin) {
+            if (!userContext.details) {
+                fetchUserDetails()
+            }
         }
+
     }, [userContext.details, fetchUserDetails])
 
     function switchComponent() {

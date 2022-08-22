@@ -13,6 +13,7 @@ import {
     verifyUser,
 } from "./strategies/authenticate.js";
 import {REFRESH_TOKEN_SECRET} from "./strategies/config.js";
+import bcrypt from "bcrypt";
 
 router.post("/signup", (req, res, next) => {
     const {email, FirstName, LastName, Phonenum, Address, Work, dob} = req.body;
@@ -53,7 +54,7 @@ router.get("/me", verifyUser, (req, res, next) => {
     res.send(req.user);
 });
 
-router.post("/login", passport.authenticate("local"), (req, res, next) => {
+router.post("/login", passport.authenticate("user"), (req, res, next) => {
     console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});
@@ -188,24 +189,27 @@ router.post("/admin/signup", (req, res, next) => {
 });
 
 
-router.post("/admin/login", passport.authenticate("local"), (req, res, next) => {
+router.post("/admin/login", passport.authenticate("admin"), (req, res, next) => {
     console.log(req.user._id)
     const token = getToken({_id: req.user._id});
     const refreshToken = getRefreshToken({_id: req.user._id});
     admin.findById(req.user._id).then(
-        (user) => {
-            user.refreshToken.push({refreshToken});
-            user.save((err, user) => {
+        (admin) => {
+            admin.refreshToken.push({refreshToken});
+            admin.save((err, admin) => {
                 if (err) {
                     res.statusCode = 500;
                     res.send(err);
                 } else {
                     res.cookie("refreshToken", refreshToken);
-                    res.send({success: true, token, id: user._id});
+                    res.send({success: true, token, id: admin._id});
                 }
             });
         },
-        (err) => next(err)
+        (err) => {
+            console.log(err)
+            next(err);
+        }
     );
 });
 
@@ -300,7 +304,7 @@ router.post("/company/signup", (req, res, next) => {
             companyName: companyName,
             phoneNumber: phoneNo,
             GSTIN: GST,
-            companyType: CompanyType
+            companyType: CompanyType,
         }),
         req.body.password,
         (err, admin) => {
@@ -327,79 +331,13 @@ router.post("/company/signup", (req, res, next) => {
 });
 
 
-router.post("/company/login", passport.authenticate("local"), (req, res, next) => {
-    console.log(req.user._id)
-    const token = getToken({_id: req.user._id});
-    const refreshToken = getRefreshToken({_id: req.user._id});
-    company.findById(req.user._id).then(
-        (user) => {
-            user.refreshToken.push({refreshToken});
-            user.save((err, user) => {
-                if (err) {
-                    res.statusCode = 500;
-                    res.send(err);
-                } else {
-                    res.cookie("refreshToken", refreshToken);
-                    res.send({success: true, token, id: user._id});
-                }
-            });
-        },
-        (err) => next(err)
-    );
-});
-
-router.post("/company/refreshToken", (req, res, next) => {
-    const {cookies = {}} = req;
-    console.log(cookies)
-    const {refreshToken} = cookies;
-    if (refreshToken) {
-        try {
-            const payload = jwt.verify(
-                refreshToken,
-                REFRESH_TOKEN_SECRET
-            );
-            const userId = payload._id;
-            console.log(userId)
-            company.findOne({_id: userId}).then(
-                (user) => {
-                    if (user) {
-                        // Find the refresh token against the user record in database
-                        const tokenIndex = user.refreshToken.findIndex(
-                            (item) => item.refreshToken === refreshToken
-                        );
-
-                        if (tokenIndex === -1) {
-                            res.statusCode = 401;
-                            res.send("Unauthorized");
-                        } else {
-                            const token = getToken({_id: userId});
-                            const newRefreshToken = getRefreshToken({_id: userId});
-                            user.refreshToken[tokenIndex] = {refreshToken: newRefreshToken};
-                            user.save((err, user) => {
-                                if (err) {
-                                    res.statusCode = 500;
-                                    res.send(err);
-                                } else {
-                                    res.cookie("refreshToken", newRefreshToken);
-                                    res.send({success: true, token});
-                                }
-                            });
-                        }
-                    } else {
-                        res.statusCode = 401;
-                        res.send("Unauthorized");
-                    }
-                },
-                (err) => next(err)
-            );
-        } catch (err) {
-            res.statusCode = 401;
-            res.send("Unauthorized");
-        }
-    } else {
-        res.statusCode = 401;
-        res.send("Unauthorized");
-    }
+router.post("/company/login", (req, res, next) => {
+    company.findOne({username: req.body.username}).then(val => {
+        bcrypt.compare(req.body.password, val.password).then(val => {
+            console.log("user is authorizeed")
+            res.send({id: val._id, status: true, username: val.username, companyName: val.companyName});
+        })
+    })
 });
 
 router.get("/company/logout", verifyUser, (req, res, next) => {
