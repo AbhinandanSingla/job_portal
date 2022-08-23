@@ -1,13 +1,26 @@
 import compareStyle from "../../../Assets/styles/compare.module.css";
-import {getJob} from "../../../graphql/queries";
+import {getBookmarks, getJob} from "../../../graphql/queries";
 import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
 import {UserContext} from "../../../hooks/userContext";
 
 export function FindWorkContainer({setJob}) {
-    const {data} = useQuery(getJob);
+    const {refetch, data} = useQuery(getJob);
+    const user = useQuery(getBookmarks, {
+        variables: {
+            id: "62f807a92d20471cda9dab1a"
+        }
+    });
     const [userContext, setUserContext] = useContext(UserContext)
     const [bookmarkList, setBookmark] = useState([]);
+    useEffect(() => {
+        console.log(user.data)
+        if (user.data) {
+            setBookmark(user.data.user.bookmarks)
+        }
+        refetch().then(r => console.log())
+    })
+
 
     function bookmark(id) {
         fetch("http://127.0.0.1:8080/user/bookmark", {

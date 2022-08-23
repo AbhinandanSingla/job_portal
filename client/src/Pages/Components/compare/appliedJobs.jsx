@@ -1,16 +1,28 @@
 import {useQuery} from "@apollo/client";
-import {userAppliedJobs} from "../../../graphql/queries";
+import {userAppliedJobs, getAppliedJobs} from "../../../graphql/queries";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../../../hooks/userContext";
 import compareStyle from "../../../Assets/styles/compare.module.css";
 
 export function AppliedJobs({setJob}) {
-    const {data} = useQuery(userAppliedJobs, {
+    const user = useQuery(getAppliedJobs, {
         variables: {
-            ids: ["6303d09701f05df8e6f6b2bc",
-                "6303d0fd01f05df8e6f6b2c7"]
+            id: "62f807a92d20471cda9dab1a"
         }
-    });
+    })
+    const {refetch, data} = useQuery(userAppliedJobs, {
+            variables: {
+                ids: user.data.user.jobApplied
+            }
+        })
+    ;
+    useEffect(() => {
+        user.refetch({
+            id: "62f807a92d20471cda9dab1a"
+        }).then(r => console.log(r))
+        console.log(user)
+        console.log(user.data.user.jobApplied)
+    }, [user.data.user.jobApplied])
     const [userContext, setUserContext] = useContext(UserContext)
     const [bookmarkList, setBookmark] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"]);
 
