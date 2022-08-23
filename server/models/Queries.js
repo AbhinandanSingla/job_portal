@@ -52,7 +52,7 @@ export const jobType = new GraphQLObjectType({
         }, applications: {
             type: new GraphQLList(GraphQLString)
         }, postDate: {
-            type:  GraphQLString
+            type: GraphQLString
         }
     }),
 });
@@ -121,7 +121,9 @@ export const userType = new GraphQLObjectType({
         },
         username: {
             type: GraphQLString,
-        },
+        }, bookmarks: {
+            type: new GraphQLList(GraphQLString)
+        }
     })
 
 

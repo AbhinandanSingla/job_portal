@@ -35,7 +35,10 @@ export const addUser = (req, res) => {
     })
 }
 export const getUser = (id) => {
-    return User.findOne({_id: id})
+    if (id) {
+        return User.findOne({_id: id})
+    }
+    return {}
 }
 export const bookmark = (req, res) => {
     User.findById(req.body.id).then(val => {

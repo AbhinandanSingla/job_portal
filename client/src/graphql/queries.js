@@ -69,7 +69,6 @@ export const getcompanyJob = gql`
 `
 
 export const userAppliedJobs = gql`
-
     query getappliedJobs($ids:[String]!){
         appliedJobs(ids:$ids){
             _id,
@@ -88,3 +87,20 @@ export const userAppliedJobs = gql`
         }
     }
 `
+
+export const getAppliedJobs = gql`
+    query getuser($id:String!){
+        user(id: $id){
+            username,
+            jobApplied
+        }
+    }`
+
+export const getBookmarks = gql`
+    query getuser($id:String!){
+        user(id: $id){
+            username,
+            bookmarks
+        }
+    }`
+

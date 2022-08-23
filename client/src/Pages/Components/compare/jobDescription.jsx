@@ -1,7 +1,7 @@
 import compareStyle from "../../../Assets/styles/compare.module.css";
 import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
-import {getJobDescription, getUser} from "../../../graphql/queries";
+import {getAppliedJobs, getJobDescription, getUser} from "../../../graphql/queries";
 import {UserContext} from "../../../hooks/userContext";
 
 export function JobDescription({jobID}) {
@@ -11,10 +11,17 @@ export function JobDescription({jobID}) {
             id: jobID,
         }
     });
+
+    const user = useQuery(getAppliedJobs, {
+        variables: {
+            id: "62f807a92d20471cda9dab1a"
+        }
+    })
     const [appliedJob, setAppliedJob] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"])
     const [jobs, setJobs] = useState(data)
 
     useEffect(() => {
+        setAppliedJob(user.data.user.jobApplied)
         setJobs(data)
     }, [data])
 
