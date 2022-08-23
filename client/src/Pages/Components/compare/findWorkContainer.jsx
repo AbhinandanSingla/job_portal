@@ -15,7 +15,9 @@ export function FindWorkContainer({setJob}) {
     const [bookmarkList, setBookmark] = useState([]);
     useEffect(() => {
         console.log(user.data)
-        setBookmark(user.data.user.bookmarks)
+        if (user.data) {
+            setBookmark(user.data.user.bookmarks)
+        }
         refetch().then(r => console.log())
     })
 

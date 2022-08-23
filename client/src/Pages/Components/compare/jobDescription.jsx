@@ -21,7 +21,9 @@ export function JobDescription({jobID}) {
     const [jobs, setJobs] = useState(data)
 
     useEffect(() => {
-        setAppliedJob(user.data.user.jobApplied)
+        if (user.data) {
+            setAppliedJob(user.data.user.jobApplied)
+        }
         setJobs(data)
     }, [data])
 
