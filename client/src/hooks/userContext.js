@@ -2,7 +2,6 @@ import React, {createContext, useState} from "react"
 
 const UserContext = createContext([{}, p => {
 }])
-
 let initialState = {
     companyLogin: false,
     userLogin: false,
