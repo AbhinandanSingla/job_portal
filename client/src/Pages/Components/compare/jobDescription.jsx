@@ -3,8 +3,10 @@ import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
 import {getAppliedJobs, getJobDescription, getUser} from "../../../graphql/queries";
 import {UserContext} from "../../../hooks/userContext";
+import {useNavigate} from "react-router-dom";
 
 export function JobDescription({jobID}) {
+    const navigate = useNavigate()
     const [userContext, setUserContext] = useContext(UserContext)
     const {data} = useQuery(getJobDescription, {
         variables: {
@@ -14,14 +16,14 @@ export function JobDescription({jobID}) {
 
     const user = useQuery(getAppliedJobs, {
         variables: {
-            id: "62f807a92d20471cda9dab1a"
+            id: userContext.id
         }
     })
-    const [appliedJob, setAppliedJob] = useState(["6303d09701f05df8e6f6b2bc", "6303d0fd01f05df8e6f6b2c7"])
+    const [appliedJob, setAppliedJob] = useState([])
     const [jobs, setJobs] = useState(data)
-
     useEffect(() => {
-        if (user.data) {
+        console.log(user)
+        if (user.data !== undefined && user.data.user.jobApplied !== null) {
             setAppliedJob(user.data.user.jobApplied)
         }
         setJobs(data)
@@ -136,7 +138,7 @@ export function JobDescription({jobID}) {
                         Applied
                     </button> :
                     <button className={compareStyle.j_apply_btn}
-                            onClick={() => applyJob(data.jobDesc.companyID, data.jobDesc._id)}>
+                            onClick={() => userContext.userLogin ? applyJob(data.jobDesc.companyID, data.jobDesc._id) : navigate('/login')}>
                         Apply Now
                     </button>
                 }

@@ -3,24 +3,25 @@ import {getBookmarks, getJob} from "../../../graphql/queries";
 import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
 import {UserContext} from "../../../hooks/userContext";
+import {useNavigate} from "react-router-dom";
 
 export function FindWorkContainer({setJob}) {
     const {refetch, data} = useQuery(getJob);
+    const [userContext, setUserContext] = useContext(UserContext)
+    const navigate = useNavigate();
     const user = useQuery(getBookmarks, {
         variables: {
-            id: "62f807a92d20471cda9dab1a"
+            id: userContext.id
         }
     });
-    const [userContext, setUserContext] = useContext(UserContext)
     const [bookmarkList, setBookmark] = useState([]);
     useEffect(() => {
         console.log(user.data)
-        if (user.data) {
+        if (user.data !== undefined && user.data.user.bookmarks !== null) {
             setBookmark(user.data.user.bookmarks)
         }
         refetch().then(r => console.log())
     })
-
 
     function bookmark(id) {
         fetch("http://127.0.0.1:8080/user/bookmark", {
@@ -114,7 +115,7 @@ export function FindWorkContainer({setJob}) {
                       <svg width="23" height="38" viewBox="0 0 23 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M22 1H1V37L11.5 29.3944L22 37V1Z" fill="#6083FE" stroke="#6083FE"/>
                       </svg>
-                      : <svg onClick={() => bookmark(value._id)}
+                      : <svg onClick={() => userContext.userLogin ? bookmark(value._id) : navigate('/login')}
                              width="49"
                              height="56"
                              viewBox="0 0 49 56"

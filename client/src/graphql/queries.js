@@ -99,7 +99,6 @@ export const getAppliedJobs = gql`
 export const getBookmarks = gql`
     query getuser($id:String!){
         user(id: $id){
-            username,
             bookmarks
         }
     }`
