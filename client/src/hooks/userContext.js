@@ -6,7 +6,9 @@ const UserContext = createContext([{}, p => {
 let initialState = {
     companyLogin: false,
     userLogin: false,
-    adminLogin: false
+    adminLogin: false,
+    id: ''
+//    62f807a92d20471cda9dab1a
 }
 
 const UserProvider = props => {
