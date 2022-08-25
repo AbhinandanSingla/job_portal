@@ -627,11 +627,14 @@ body {
 }
 
 .photoDiv {
-    width: 14rem;
-    height: 14rem;
+    max-width: 14rem;
     background: #e0e4f0;
 
     border-radius: 1rem;
+}
+
+.photoDiv img {
+    max-width: 14rem;
 }
 
 .browseBtn {
