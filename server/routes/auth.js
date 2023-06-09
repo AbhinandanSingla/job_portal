@@ -16,7 +16,8 @@ import {REFRESH_TOKEN_SECRET} from "./strategies/config.js";
 import bcrypt from "bcrypt";
 
 router.post("/signup", (req, res, next) => {
-    const {email, FirstName, LastName, Phonenum, Address, Work, dob} = req.body;
+    console.log("requested Signup");
+    const {email, FirstName, LastName, Phonenum, Address, Work, dob, skills} = req.body.body;
     User.register(
         new User({
             username: email,
@@ -24,12 +25,13 @@ router.post("/signup", (req, res, next) => {
             lastName: LastName,
             phoneNumber: Phonenum,
             address: Address,
-            workOutside: Work,
-            DOB: dob,
+            workOutside: true,
+            DOB: dob, skills: skills
         }),
-        req.body.password,
+        req.body.body.password,
         (err, user) => {
             if (err) {
+                console.log(err)
                 res.statusCode = 500;
                 res.send(err);
             } else {
@@ -51,12 +53,14 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.get("/me", verifyUser, (req, res, next) => {
+    console.log(req.user);
     res.send(req.user);
 });
 
 router.post("/login", passport.authenticate("user"), (req, res, next) => {
-    console.log(req.user._id)
+    console.log(req.query)
     const token = getToken({_id: req.user._id});
+
     const refreshToken = getRefreshToken({_id: req.user._id});
     User.findById(req.user._id).then(
         (user) => {

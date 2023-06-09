@@ -17,7 +17,7 @@
 }
 
 .signin {
-    margin-left: 700px;
+    float: right;
     padding-top: 35px;
     display: flex;
     align-items: center;
@@ -119,11 +119,12 @@
 }
 
 .structure .inputboxp {
-    width: 350px;
+    width: 400px;
     height: 40px;
     padding: 10px;
     border: 1px solid #d1d1d1;
     margin-bottom: 14px;
+    margin: 0 2px;
     border-radius: 8px;
 }
 
@@ -246,8 +247,7 @@
 }
 
 .termsandconditions {
-    margin: 30px;
-    margin-right: 75px;
+    margin: 30px 0;
     border-top: 0.7px dashed #000000;
     padding: 20px;
     display: flex;
@@ -327,4 +327,89 @@
     margin-top: 175px;
     margin-left: 40px;
     width: 400px;
+}
+
+.errorBoard {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 30rem;
+    background: #fff;
+    padding: 2rem 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 12px 0 0 12px;
+}
+
+.errorClose {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+    .infostyle {
+        display: none;
+    }
+
+    .style {
+        width: 100%;
+    }
+
+    .formstyle {
+        width: 100% !important;
+    }
+
+    .structure {
+        justify-content: center;
+    }
+
+    .inputbox {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .structure {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputbox {
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 400px) {
+
+
+    .structure {
+        width: 100%;
+    }
+
+    .leftside {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .formcolor {
+        padding: 0;
+    }
+
+    .formcolor h1 {
+        font-size: 30px;
+    }
+
+    .rightside {
+        margin-right: 0 !important;
+        align-items: baseline;
+
+    }
+
+    .structure select {
+        width: 300px;
+        border-radius: 10px;
+        height: 50px;
+    }
 }

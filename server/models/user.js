@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
     },
     DOB: {
         type: Date,
-    },
+    }, skills: [],
     educationalQualifications: {
         tenth: {
             type: Buffer,

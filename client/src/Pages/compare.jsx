@@ -12,34 +12,32 @@ import {UserContext} from "../hooks/userContext";
 import {JobDescription} from "./Components/compare/jobDescription";
 import {Guideline} from "./Components/compare/guideline";
 import {AppliedJobs} from "./Components/compare/appliedJobs";
+import axios from "axios";
+import {baseURl} from "../config";
 
 AOS.init();
 
 export function Compare() {
     const [navRoute, setRoute] = useState(0);
     const [userContext, setUserContext] = useContext(UserContext)
-    const [selectedJob, setJob] = useState('630402e6708f17b9e4b05d84');
+    const [selectedJob, setJob] = useState('63083157a896b5ad646606fc');
     const fetchUserDetails = useCallback(() => {
-        fetch("http://127.0.0.1:8080/me", {
-            method: "GET",
-            credentials: "include",
-            // Pass authentication token as bearer token in header
+        console.log("Comp  ++++++++++" + userContext.token)
+        axios.get(baseURl + "/me", {
             headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${userContext.token}`,
+                "Authorization": `Bearer ${userContext.token}`,
+                'Content-Type': 'application/json',
             },
         }).then(async response => {
-            if (response.ok) {
-                const data = await response.json()
+            console.log(response)
+            if (response.statusText === 'OK') {
+                const data = await response.data;
                 console.log(data)
                 setUserContext(oldValues => {
                     return {...oldValues, details: data}
                 })
             } else {
                 if (response.status === 401) {
-                    // Edge case: when the token has expired.
-                    // This could happen if the refreshToken calls have failed due to network error or
-                    // User has had the tab open from previous day and tries to click on the Fetch button
                     window.location.reload()
                 } else {
                     setUserContext(oldValues => {

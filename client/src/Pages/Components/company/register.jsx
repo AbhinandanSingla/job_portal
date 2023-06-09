@@ -14,7 +14,6 @@ return (
           <Info />
         </div>
         <div className={registerstyle.formstyle}>
-         
           <Form />
           <Nav2 />
         </div>

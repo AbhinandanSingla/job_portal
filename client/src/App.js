@@ -11,7 +11,7 @@ import {Company} from "./Pages/company";
 
 import {Profilesection} from "./Pages/profilesection";
 import {Admin_aaditya} from "./Pages/admin_aaditya";
-import {Dashboardlogin} from "./Pages/Components/admin_aaditya/A_dashboardlogin"
+import {Dashboardlogin} from "./Pages/Components/admin/A_dashboardlogin"
 import {UserContext} from "./hooks/userContext";
 
 import {Guidance} from "./Pages/Components/compare/guidance";
@@ -27,11 +27,13 @@ import {Login_company} from "./Pages/Components/company/login";
 import {Companyprofile} from "./Pages/companyprofile";
 import {Resume} from "./Pages/Components/resume/template/resume1";
 import {Resume2} from "./Pages/Components/resume/template/resume2";
-import {A_Dashboard} from "./Pages/Components/admin_aaditya/A_dashboard";
+import {A_Dashboard} from "./Pages/Components/admin/A_dashboard";
 import {Registrations} from "./Pages/registrations_aaditya";
 import {Notifications} from "./Pages/Notifications";
 import {Registerc} from "./Pages/Components/company/register"
 import {Logincompany} from "./Pages/Components/company/login"
+import axios from "axios";
+import {baseURl} from "./config";
 
 
 // import {Admin} from "./Pages/admin";
@@ -42,16 +44,19 @@ const ProtectedRoute = ({user, children}) => {
     return children;
 }
 
+const CompanyProtectedRoute = ({user, children}) => {
+    if (!user.companyToken) {
+        return <Navigate to="/company/login" replace/>;
+    }
+    return children;
+}
+
 function App() {
     const [userContext, setUserContext] = useContext(UserContext)
     const verifyUser = useCallback(() => {
-        fetch("http://127.0.0.1:8080/refreshToken", {
-            method: "POST",
-            credentials: "include",
-            headers: {"Content-Type": "application/json"},
-        }).then(async response => {
-            if (response.ok) {
-                const data = await response.json()
+        axios.post(baseURl + "/refreshToken").then(async response => {
+            if (response.statusText === "OK") {
+                const data = await response.data;
                 console.log(data)
                 setUserContext(oldValues => {
                     return {...oldValues, ...data}
@@ -75,19 +80,21 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/company" element={<Company/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
                 <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
                 <Route path="/registrations_aaditya" element={<Registrations/>}/>
                 <Route path="/company/register" element={<Registerc/>}/>
                 <Route path="/company/login" element={<Logincompany/>}/>
-                <Route path="/compare" element={<Compare/>}/>
-                {/*<Route path="/compare"  element={<ProtectedRoute user={userContext}>*/}
-                {/*            <Compare/>*/}
-                {/*        </ProtectedRoute>*/}
-                {/*    }*/}
-                {/*/>*/}
+                {/*<Route path="/compare" element={<Compare/>}/>*/}
+                <Route path="/compare" element={<ProtectedRoute user={userContext}>
+                    <Compare/>
+                </ProtectedRoute>
+                }
+                />
+                <Route path="/company" element={<CompanyProtectedRoute user={userContext}>
+                    <Company/>
+                </CompanyProtectedRoute>}/>
 
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>

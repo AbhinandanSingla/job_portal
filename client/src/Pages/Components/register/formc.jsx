@@ -3,14 +3,20 @@ import {useFormik} from "formik";
 import loginstyle from "../../../Assets/styles/register.module.css";
 import {UserContext} from "../../../hooks/userContext";
 import {useNavigate} from "react-router-dom";
+import loader from "../../../Assets/styles/utils/loaders.module.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faXmark} from "@fortawesome/free-solid-svg-icons";
+import {baseURl} from "../../../config";
 
 export function Form() {
     const [userContext, setUserContext] = useContext(UserContext)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState("")
+    const [errorB, setErrorb] = useState(false)
+
     const validate = (values) => {
         const errors = {};
-
+        setErrorb(false)
         if (!values.CompanyName) {
             errors.CompanyName = "Required";
         }
@@ -25,6 +31,8 @@ export function Form() {
             errors.phoneNumber = "Required";
         } else if (values.phoneNumber.length < 10) {
             errors.phoneNumber = "Phone number must contain 10 digits ";
+        } else if (!/^\d+$/.test(values.phoneNumber.toString())) {
+            errors.phoneNumber = "Phone number must contain only Numbers";
         }
 
         if (!values.password) {
@@ -42,13 +50,16 @@ export function Form() {
         if (!values.GSTIN) {
             errors.GSTIN = "Required";
         } else if (values.GSTIN.length < 15) {
-            errors.repassword = "Number should be a 15 digit number";
+            errors.GSTIN = "Number should be a 15 digit number";
         }
 
         if (!values.companyType) {
             errors.companyType = "Required";
         }
-
+        if (!values.termsAndConditions) {
+            console.log(formik.values.termsAndConditions)
+            errors.termsAndConditions = "Please Agree Terms and Conditions"
+        }
         return errors;
     };
     const navigate = useNavigate();
@@ -61,15 +72,17 @@ export function Form() {
             repassword: "",
             companyType: "",
             GSTIN: "",
-            appliedDate: Date.now().toString()
+            appliedDate: Date.now().toString(),
+            termsAndConditions: false
         },
         validate,
         onSubmit:
             (values) => {
+                setErrorb(false)
+                console.log(values)
                 const genericErrorMessage = "Something went wrong! Please try again later."
-                fetch("http://127.0.0.1:8080" + "/api/addCompany", {
+                fetch(baseURl + "/api/addCompany", {
                     method: "POST",
-                    credentials: "include",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(values),
                 })
@@ -78,27 +91,38 @@ export function Form() {
                         if (!response.ok) {
                             if (response.status === 400) {
                                 setError("Please fill all the fields correctly!")
+                                setErrorb(true)
+                                setIsSubmitting(false)
                             } else if (response.status === 401) {
                                 setError("Invalid username and password combination.")
+                                console.log(response)
+                                setErrorb(true)
+                                setIsSubmitting(false)
                             } else if (response.status === 500) {
                                 console.log(response)
+                                setError(genericErrorMessage)
+                                setErrorb(true)
+                                setIsSubmitting(false)
                                 const data = await response.json()
                                 if (data.message) setError(data.message || genericErrorMessage)
                             } else {
                                 setError(genericErrorMessage)
                             }
                         } else {
-                            // const data = await response.json()
-                            // setUserContext(oldValues => {
-                            //     return {...oldValues, ...data}
-                            // })
+                            const data = await response.json()
+                            console.log(data)
+                            setUserContext(oldValues => {
+                                return {...oldValues, ...data}
+                            })
                             alert('Please wait till admin gave you access')
                             navigate('/');
                         }
                     })
                     .catch(error => {
-                        setIsSubmitting(false)
+                        console.log(error)
                         setError(genericErrorMessage)
+                        setErrorb(true)
+                        setIsSubmitting(false)
                     })
             },
     });
@@ -188,33 +212,40 @@ export function Form() {
                             <div className={loginstyle.error}>{formik.errors.GSTIN}</div>
                         ) : null}
 
-                        <div className="passcss">
-                            <label htmlFor="password">Password</label>
-                            <br></br>
-                            <input
-                                className={loginstyle.inputboxp}
-                                id="password"
-                                name="password"
-                                type="password"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.password}
-                            />
-                            {formik.touched.password && formik.errors.password ? (
-                                <div className={loginstyle.error}>{formik.errors.password}</div>
-                            ) : null}
+                        <div className="passcss" style={{
+                            position: "Relative",
+                            display: 'flex',
+                            justifyContent: 'space-between'
+                        }}>
+                            <div>
+                                <label htmlFor="password">Password</label>
+                                <br></br>
+                                <input
+                                    className={loginstyle.inputboxp}
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.password}
+                                />
+                                {formik.touched.password && formik.errors.password ? (
+                                    <div className={loginstyle.error}>{formik.errors.password}</div>
+                                ) : null}
+                            </div>
+                            <div style={{display: "grid"}}>
+                                <label htmlFor="repassword1">Confirm Password </label>
+                                <input
+                                    className={loginstyle.inputboxp}
+                                    id="repassword1"
+                                    name="repassword"
+                                    type="password"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.repassword}
+                                />
 
-                            <label htmlFor="repassword">Confirm Password </label>
-
-                            <input
-                                className={loginstyle.inputboxp}
-                                id="repassword"
-                                name="repassword"
-                                type="password"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.repassword}
-                            />
+                            </div>
                             {formik.touched.repassword && formik.errors.repassword ? (
                                 <div className={loginstyle.error}>{formik.errors.repassword}</div>
                             ) : null}
@@ -225,20 +256,48 @@ export function Form() {
                 <div className={loginstyle.termsandconditions}>
                     <div className={loginstyle.footer}>
                         <div>
-                            <input className={loginstyle.inputboxt} type="checkbox"/>
+                            <input className={loginstyle.inputboxt} type="checkbox"
+                                   onChange={(value) => formik.setFieldValue("termsAndConditions", value.target.checked)}
+                                   id="termsAndConditions"
+                                   value={formik.values.termsAndConditions}/>
+
                         </div>
                         <div>
-                            <p> I have read and agree to the Terms of Service
+                            <p style={{
+                                marginLeft: "2px"
+                            }}> I have read and agree to the Terms of Service
                             </p>
                         </div>
                     </div>
 
                 </div>
+                {formik.touched.termsAndConditions && formik.errors.termsAndConditions ? (
+                    <div className={loginstyle.error}>{formik.errors.termsAndConditions}
+                    </div>
+                ) : null}
                 <div className={loginstyle.buttonc}>
                     <button type="submit">Create Account</button>
                 </div>
             </form>
-
+            {isSubmitting ? <div className={loader.loaderBg}>
+                <div className={loader.loader}>
+                    <div className={loader.ldsHourglass}/>
+                    <div className="loaderText">
+                        Loading Please wait . . . .
+                    </div>
+                </div>
+            </div> : null
+            }
+            {errorB ? <div className={`${loginstyle.errorBoard} ${loginstyle.error} `} data-aos="fade-left"
+                           data-aos-duration="400">
+                <div style={{
+                    padding: "10px",
+                    fontSize: "larger"
+                }}>{error}</div>
+                <div className="errClose">
+                    <FontAwesomeIcon icon={faXmark} className={loginstyle.errorClose} onClick={() => setErrorb(false)}/>
+                </div>
+            </div> : null}
         </div>
     );
 }

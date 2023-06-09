@@ -5,9 +5,10 @@ import App from './App';
 import {UserProvider} from "./hooks/userContext";
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import {ResumeProvider} from "./hooks/ResumeData";
+import {baseURl} from "./config";
 
 const client = new ApolloClient({
-    uri: 'http://127.0.0.1:8080/graphsql',
+    uri: baseURl + '/graphsql',
     cache: new InMemoryCache(),
 });
 const root = ReactDOM.createRoot(document.getElementById('root'));

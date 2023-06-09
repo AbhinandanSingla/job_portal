@@ -2,6 +2,8 @@ import React, {useContext, useEffect, useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 import loginModule from "../Assets/styles/login.module.css";
 import {UserContext} from "../hooks/userContext";
+import {baseURl} from "../config";
+import axios from "axios";
 
 export function Login() {
     const navigate = useNavigate();
@@ -14,34 +16,32 @@ export function Login() {
         e.preventDefault()
         setErrorMessages("")
         const genericErrorMessage = "Something went wrong! Please try again later."
-        fetch("http://127.0.0.1:8080/login", {
-            method: "POST",
-            credentials: "include",
-            headers: {"Content-Type": "application/json", 'Origin': 'http://localhost:3000'},
-            body: JSON.stringify({username: uname, password: pass}),
-        })
-            .then(async response => {
-                if (!response.ok) {
-                    if (response.status === 400) {
-                        setErrorMessages("Please fill all the fields correctly!")
-                    } else if (response.status === 401) {
-                        setErrorMessages("Invalid email and password combination.")
-                    } else {
-                        setErrorMessages(genericErrorMessage)
-                    }
+        axios.post(baseURl + `/login?username=${uname}&password=${pass}`).then(async response => {
+            setIsSubmitted(true)
+            console.log(response)
+
+            if (!response.statusText === 'OK') {
+                if (response.status === 400) {
+                    setErrorMessages("Please fill all the fields correctly!")
+                } else if (response.status === 401) {
+                    setErrorMessages("Invalid email and password combination.")
                 } else {
-                    const data = await response.json()
-                    setUserContext(oldValues => {
-                        return {...oldValues, token: data.token, userLogin: true, id: data.id}
-                    });
-                    setIsSubmitted(true);
-                    navigate('/');
+                    setErrorMessages(genericErrorMessage)
                 }
-            })
-            .catch(error => {
-                setIsSubmitted(false)
-                setErrorMessages(genericErrorMessage)
-            })
+            } else if (response.status === 200) {
+                const data = await response.data;
+                console.log(data)
+                setUserContext(oldValues => {
+                    return {...oldValues, token: data.token, userLogin: true, id: data.id}
+                });
+                setIsSubmitted(false);
+                navigate('/')
+            }
+        }).catch(error => {
+            console.log(error)
+            setIsSubmitted(false)
+            setErrorMessages(genericErrorMessage)
+        })
     }
 
     return (

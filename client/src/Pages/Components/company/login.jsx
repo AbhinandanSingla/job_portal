@@ -41,7 +41,7 @@ export const Logincompany = () => {
                         setErrorMessages(genericErrorMessage)
                     }
                 } else {
-                    // const data = await response.json()
+                    const data = await response.json()
                     setUserContext(oldValues => {
                         return {...oldValues, ...data, companyLogin: true}
                     });
@@ -120,7 +120,7 @@ export const Logincompany = () => {
 
                 <div className={companyModule.registerLinkDiv}>
                     Don't have an account?
-                    <a href="#">Register Here</a>
+                    <a href="/company/register">Register Here</a>
                 </div>
             </div>
         </div>

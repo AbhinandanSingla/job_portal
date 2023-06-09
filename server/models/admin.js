@@ -17,7 +17,7 @@ const purposal = mongoose.Schema({
 
 const companySchema = mongoose.Schema({
     password: {
-        type: String
+            type: String
     },
     companyProfilePicture: {
         type: String,

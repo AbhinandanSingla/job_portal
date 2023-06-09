@@ -3,16 +3,71 @@ import {useFormik} from "formik";
 import loginstyle from "../../../Assets/styles/register.module.css";
 import {UserContext} from "../../../hooks/userContext";
 import {useNavigate} from "react-router-dom";
+import loader from "../../../Assets/styles/utils/loaders.module.css";
+import {baseURl} from "../../../config";
+import axios from "axios";
+import {faXmark} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export function Form() {
     const [userContext, setUserContext] = useContext(UserContext)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState("")
+    const [errorB, setErrorb] = useState(false)
     const [skills, setSkills] = useState({
         s1: '',
         s2: '',
         s3: '',
     })
+
+    function onSubmit(val) {
+        let values = formik.values;
+        validate(values)
+        setIsSubmitting(true)
+        setErrorb(false)
+        formik.setFieldValue("skills", skills)
+        const a = (values) => {
+            const genericErrorMessage = "Something went wrong! Please try again later.";
+            console.log(values)
+            axios.post(baseURl + "/signup", {
+
+                body: values,
+            }).then(async response => {
+                console.log("processing . . .. .")
+                console.log(response)
+                if (!response.statusText === 'OK') {
+                    if (response.status === 400) {
+                        setError("Please fill all the fields correctly!")
+                    } else if (response.status === 401) {
+                        setError("Invalid email and password combination.")
+                    } else if (response.status === 500) {
+                        console.log(response)
+                        const data = await response.json()
+                        if (data.message) setError(data.message || genericErrorMessage)
+                    } else {
+                        setError(genericErrorMessage)
+                    }
+                    setErrorb(true)
+                } else if (response.status === 200) {
+                    console.log(response)
+                    formik.resetForm()
+                    const data = await response.data;
+                    setUserContext(oldValues => {
+                        return {...oldValues, ...data}
+                    })
+                    navigate('/')
+                }
+                setIsSubmitting(false)
+            })
+                .catch(error => {
+                    console.log(error)
+                    setIsSubmitting(false)
+                    setError(genericErrorMessage)
+                    setErrorb(true)
+                })
+        }
+        a(values);
+    }
 
     function hangleChange(e) {
         setSkills((value => ({
@@ -96,42 +151,6 @@ export function Form() {
             Education: "",
         },
         validate,
-        onSubmit: (values) => {
-            const genericErrorMessage = "Something went wrong! Please try again later.";
-            console.log(values)
-            fetch("http://127.0.0.1:8080" + "/signup", {
-                method: "POST",
-                credentials: "include",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(values),
-            })
-                .then(async response => {
-                    setIsSubmitting(false)
-                    if (!response.ok) {
-                        if (response.status === 400) {
-                            setError("Please fill all the fields correctly!")
-                        } else if (response.status === 401) {
-                            setError("Invalid email and password combination.")
-                        } else if (response.status === 500) {
-                            console.log(response)
-                            const data = await response.json()
-                            if (data.message) setError(data.message || genericErrorMessage)
-                        } else {
-                            setError(genericErrorMessage)
-                        }
-                    } else {
-                        const data = await response.json()
-                        setUserContext(oldValues => {
-                            return {...oldValues, ...data}
-                        })
-                        navigate('/');
-                    }
-                })
-                .catch(error => {
-                    setIsSubmitting(false)
-                    setError(genericErrorMessage)
-                })
-        },
     });
 
     return (
@@ -358,29 +377,30 @@ export function Form() {
                     </div>
                 </div>
                 <div className={loginstyle.termsandconditions}>
-                    <div className={loginstyle.footer}>
-                        <div>
-                            <input className={loginstyle.inputbox} type="checkbox"/>
-                        </div>
-                        <div>
-                            <p>
-                                Upload Your {"  "}
-                                <a href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/">
-                                    resume.
-                                </a>
-                            </p>
-                        </div>
-                    </div>
                     <div className={loginstyle.button}>
-                        <button href="https://www.figma.com/file/9DXTPZBJdeOi0SaZ4EEy6k/Smart-India-Hackathon?node-id=503%3A67">
-                            Make your resume
-                        </button>
-                        <button type="submit">Register</button>
+                        <button type="submit" onClick={onSubmit}>Register</button>
                     </div>
                 </div>
-
             </form>
-
+            {isSubmitting ? <div className={loader.loaderBg}>
+                <div className={loader.loader}>
+                    <div className={loader.ldsHourglass}></div>
+                    <div className="loaderText">
+                        Loading Please wait . . . .
+                    </div>
+                </div>
+            </div> : null
+            }
+            {errorB ? <div className={`${loginstyle.errorBoard} ${loginstyle.error} `} data-aos="fade-left"
+                           data-aos-duration="400">
+                <div style={{
+                    padding: "10px",
+                    fontSize: "larger"
+                }}>{error}</div>
+                <div className="errClose">
+                    <FontAwesomeIcon icon={faXmark} className={loginstyle.errorClose} onClick={() => setErrorb(false)}/>
+                </div>
+            </div> : null}
         </div>
     );
 }

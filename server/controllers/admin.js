@@ -13,8 +13,9 @@ export const addCompany = async (req, res) => {
     company1.save((err, val) => {
         if (err) {
             res.statusCode = 500;
-            res.send({status: false});
             console.log(err)
+            res.send({status: false});
+
         } else {
             res.send({success: true});
         }

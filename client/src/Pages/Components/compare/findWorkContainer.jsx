@@ -4,6 +4,8 @@ import {useContext, useEffect, useState} from "react";
 import {useQuery} from "@apollo/client";
 import {UserContext} from "../../../hooks/userContext";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import {baseURl} from "../../../config";
 
 export function FindWorkContainer({setJob}) {
     const {refetch, data} = useQuery(getJob);
@@ -24,17 +26,14 @@ export function FindWorkContainer({setJob}) {
     })
 
     function bookmark(id) {
-        fetch("http://127.0.0.1:8080/user/bookmark", {
-            method: "POST",
-            credentials: "include",
-            headers: {"Content-Type": "application/json", 'Origin': 'http://localhost:3000'},
-            body: JSON.stringify({
+        axios.post(baseURl + "/user/bookmark", {
+            body: {
                 id: userContext.id,
                 jobId: id
-            }),
+            }
         })
             .then(async response => {
-                if (!response.ok) {
+                if (!response.statusText === "OK") {
                     if (response.status === 400) {
                     } else if (response.status === 401) {
                     } else {
@@ -44,6 +43,7 @@ export function FindWorkContainer({setJob}) {
                 }
             })
             .catch(error => {
+                console.log(error)
             })
     }
 
