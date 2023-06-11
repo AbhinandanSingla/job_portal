@@ -1,8 +1,8 @@
 import AWS from 'aws-sdk'
 
 AWS.config.update({
-    accessKeyId: "AKIAQCMWXZIQOF2A2PM6",
-    secretAccessKey: "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"
+    accessKeyId: "Add accessID",
+    secretAccessKey: "Secret AccessKey"
 });
 
 var s3 = new AWS.S3();

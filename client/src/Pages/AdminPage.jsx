@@ -1,27 +1,30 @@
 import React from "react";
 import {useState} from "react";
-import {Navbar} from "./Components/admin/navbar_aaditya";
-import {Registrations} from "./registrations_aaditya";
+import {Navbar} from "./Components/admin/AdminNavbar";
+import {Registrations} from "./AdminCompanyRegistration";
 import {Jobs} from "./Components/admin/jobs";
-import {A_Dashboard} from "./Components/admin/A_dashboard";
+import {AdminDashboard} from "./Components/admin/A_dashboard";
 
-export function Admin_aaditya() {
+export function AdminPage() {
     const [navRoute, setRoute] = useState(0);
+
     function changeRoute() {
         switch (navRoute) {
             case 0:
-                return <A_Dashboard/>;
+                return <AdminDashboard/>;
             case 1:
                 return <Registrations/>;
             case 2:
                 return <Jobs/>;
             default:
-                return <A_Dashboard/>;
+                return <AdminDashboard/>;
         }
     }
 
     return (
-        <section>
+        <section style={{
+            height: "120vh"
+        }}>
             <Navbar changeRoute={setRoute} navRoute={navRoute}/>
             {changeRoute()}
         </section>

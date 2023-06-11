@@ -1,5 +1,5 @@
 // import aadityaModule from "../../../Assets/styles/company.module.css";
-import aadityaModule from "../../../Assets/styles/aaditya.module.css";
+import aadityaModule from "../../../Assets/styles/admin.module.css";
 import logo from "../../../Assets/Images/common/logo.svg";
 import {Link} from "react-router-dom";
 

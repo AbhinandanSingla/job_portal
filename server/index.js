@@ -14,8 +14,11 @@ import "./routes/strategies/JwtStrategy.js";
 import LocalStrategy from "passport-local";
 import {COOKIE_SECRET} from "./routes/strategies/config.js";
 import cors from "cors";
+import dotenv from 'dotenv';
 const port = process.env.PORT || 8080;
 const app = express();
+dotenv.config()
+
 app.use(cookieParser(COOKIE_SECRET));
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from

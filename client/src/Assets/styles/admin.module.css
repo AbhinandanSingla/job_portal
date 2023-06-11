@@ -890,7 +890,8 @@
     margin-left: 280px;
     color: #25324b;
     line-height: 120%;
-    margin-top: 40px;
+    padding-top: 40px;
+    padding-left: 20px;
     z-index: 1;
 
 

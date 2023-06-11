@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-import aadityaModule from "../Assets/styles/aaditya.module.css";
+import aadityaModule from "../Assets/styles/admin.module.css";
 import {useQuery} from "@apollo/client";
 import {getUnregisterCompanies} from "../graphql/queries";
 
@@ -17,7 +17,6 @@ export const Registrations = () => {
         function acceptCompany(id, index) {
             fetch("http://127.0.0.1:8080" + "/api/acceptCompany", {
                 method: "POST",
-                credentials: "include",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({id: id}),
             })
@@ -51,7 +50,6 @@ export const Registrations = () => {
         function rejectCompany(id, index) {
             fetch("http://127.0.0.1:8080" + "/api/rejectCompany", {
                 method: "POST",
-                credentials: "include",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({id: id}),
             })
@@ -102,7 +100,7 @@ export const Registrations = () => {
                 <p5>Action</p5>
             </div>
 
-            {(company) ? company.unregistercompanies.map((data, index) => <div className={aadityaModule.ll}>
+            {(company) ? company.unregistercompanies.map((data, index) => <div key={index} className={aadityaModule.ll}>
 
                 <div className={aadityaModule.cs}>
 

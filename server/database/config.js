@@ -1,5 +1,4 @@
-const CONNECTION_URL =
-    "mongodb+srv://Abhinandan:deepusingla0448@cluster0.trl8w.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION_URL =process.env.MONGO_DB_CONNECTION_STRING
 import mongoose from "mongoose";
 const connectDB = async () => {
     mongoose.connect(CONNECTION_URL, {

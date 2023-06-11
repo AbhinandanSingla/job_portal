@@ -10,8 +10,8 @@ import {Register} from "./Pages/register";
 import {Company} from "./Pages/company";
 
 import {Profilesection} from "./Pages/profilesection";
-import {Admin_aaditya} from "./Pages/admin_aaditya";
-import {Dashboardlogin} from "./Pages/Components/admin/A_dashboardlogin"
+import {AdminPage} from "./Pages/AdminPage";
+import {Dashboardlogin} from "./Pages/Components/admin/AdminLogin"
 import {UserContext} from "./hooks/userContext";
 
 import {Guidance} from "./Pages/Components/compare/guidance";
@@ -28,7 +28,7 @@ import {Companyprofile} from "./Pages/companyprofile";
 import {Resume} from "./Pages/Components/resume/template/resume1";
 import {Resume2} from "./Pages/Components/resume/template/resume2";
 import {A_Dashboard} from "./Pages/Components/admin/A_dashboard";
-import {Registrations} from "./Pages/registrations_aaditya";
+import {Registrations} from "./Pages/AdminCompanyRegistration";
 import {Notifications} from "./Pages/Notifications";
 import {Registerc} from "./Pages/Components/company/register"
 import {Logincompany} from "./Pages/Components/company/login"
@@ -82,8 +82,8 @@ function App() {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profilesection/>}/>
-                <Route path="/admin_aaditya" element={<Admin_aaditya/>}/>
-                <Route path="/registrations_aaditya" element={<Registrations/>}/>
+                <Route path="/admin/dashboard" element={<AdminPage/>}/>
+                {/*<Route path="/registrations_aaditya" element={<Registrations/>}/>*/}
                 <Route path="/company/register" element={<Registerc/>}/>
                 <Route path="/company/login" element={<Logincompany/>}/>
                 {/*<Route path="/compare" element={<Compare/>}/>*/}
@@ -95,6 +95,10 @@ function App() {
                 <Route path="/company" element={<CompanyProtectedRoute user={userContext}>
                     <Company/>
                 </CompanyProtectedRoute>}/>
+                <Route path="/admin/login" element={<Dashboardlogin/>}/>
+
+
+
 
                 <Route path={'/resume'} element={<StudentResume/>}/>
                 <Route path={'resume/heading'} element={<ResumeHeading/>}/>
@@ -103,8 +107,7 @@ function App() {
                 <Route path={'resume/educationList'} element={<EducationList/>}/>
                 <Route path={'resume/workHistoryList'} element={<WorkHistoryList/>}/>
                 <Route path={'guidance'} element={<Guidance/>}/>
-                <Route path="/admin/login" element={<Dashboardlogin/>}/>
-                <Route path="/admin/dashboard" element={<A_Dashboard/>}/>
+                {/*<Route path="/admin/dashboard" element={<A_Dashboard/>}/>*/}
             </Routes>
         </BrowserRouter>
     );
