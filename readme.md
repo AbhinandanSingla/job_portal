@@ -11,7 +11,6 @@ and React.js as frontend frameworks during the Smart India Hackathon 2022.
 * [**Installation**](#installation)
 * [**Usage**](#usage)
 * [**Contributing**](#contribution)
-* [**License**](#license)
 
 # Introduction
 
@@ -116,9 +115,6 @@ Contributions to the Job Portal project are welcome. If you want to contribute, 
 4. Test your changes thoroughly.
 5. Commit and push your changes to your forked repository.
 6. Submit a pull request to the original repository.
-
-
-
 
 
 
