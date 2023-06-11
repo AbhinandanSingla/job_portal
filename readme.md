@@ -1,6 +1,5 @@
-# Job Portal Project - Rojgar
+# Job Portal Project - Rojgar 
 
-***
 This readme provides an overview of the Job Portal project (Rojgar), which was developed using the Express.js as Backend
 and React.js as frontend frameworks during the Smart India Hackathon 2022.
 
